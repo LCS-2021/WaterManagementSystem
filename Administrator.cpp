@@ -11,3 +11,4 @@ void main(array<String^>^ args)
 	WaterManagementSystem::Administrator frm;
 	Application::Run(% frm);
 }
+
