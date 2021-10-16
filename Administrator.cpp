@@ -1,4 +1,12 @@
 #include "Administrator.h"
+//#include <string>
+#include <random>
+#include <time.h>
+#include <ctime>
+#include <stdio.h>
+#include <cstring>
+
+
 
 using namespace System;
 using namespace System::Windows::Forms;

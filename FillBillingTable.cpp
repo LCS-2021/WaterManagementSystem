@@ -93,7 +93,8 @@ int maine()
 		meter_reading = to_string(rand() % 20000001 + 10000000);
 		String^ meter_reading2 = gcnew String(meter_reading.c_str());
 		
-		meter_reading_date = "2021-10-10";
+		//meter_reading_date = "2021-10-10";
+		meter_reading_date = to_string(rand() % 32 + 1990)+"-" + to_string(rand() % 12 + 1)+"-"+ to_string(rand() % 28 + 1);
 		String^ meter_reading_date2 = gcnew String(meter_reading_date.c_str());
 		
 

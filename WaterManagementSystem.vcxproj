@@ -73,9 +73,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <PropertyGroup Label="Vcpkg">
-    <VcpkgEnabled>false</VcpkgEnabled>
+    <VcpkgEnabled>true</VcpkgEnabled>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -98,6 +101,9 @@
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
+    <PostBuildEvent>
+      <Command>copy app.config "$(TargetPath).config"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -223,6 +229,9 @@
     <Reference Include="DevExpress.Charts.v20.1.Core">
       <HintPath>DevExpress.Charts.v20.1.Core</HintPath>
     </Reference>
+    <Reference Include="DevExpress.CodeParser.v20.1">
+      <HintPath>DevExpress.CodeParser.v20.1</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Dashboard.v20.1.Core">
       <HintPath>DevExpress.Dashboard.v20.1.Core</HintPath>
     </Reference>
@@ -283,6 +292,9 @@
     <Reference Include="DevExpress.XtraCharts.v20.1">
       <HintPath>DevExpress.XtraCharts.v20.1</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraCharts.v20.1.Extensions">
+      <HintPath>DevExpress.XtraCharts.v20.1.Extensions</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XtraCharts.v20.1.UI">
       <HintPath>DevExpress.XtraCharts.v20.1.UI</HintPath>
     </Reference>
@@ -310,6 +322,9 @@
     <Reference Include="DevExpress.XtraMap.v20.1">
       <HintPath>DevExpress.XtraMap.v20.1</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v20.1">
+      <HintPath>DevExpress.XtraNavBar.v20.1</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XtraPivotGrid.v20.1">
       <HintPath>DevExpress.XtraPivotGrid.v20.1</HintPath>
     </Reference>
@@ -318,6 +333,9 @@
     </Reference>
     <Reference Include="DevExpress.XtraReports.v20.1">
       <HintPath>DevExpress.XtraReports.v20.1</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v20.1.Extensions">
+      <HintPath>..\..\..\..\..\Program Files (x86)\DevExpress 20.1\Components\Bin\Framework\DevExpress.XtraReports.v20.1.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraRichEdit.v20.1">
       <HintPath>DevExpress.XtraRichEdit.v20.1</HintPath>
@@ -334,16 +352,22 @@
     <Reference Include="DevExpress.XtraTreeMap.v20.1">
       <HintPath>DevExpress.XtraTreeMap.v20.1</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v20.1">
+      <HintPath>DevExpress.XtraVerticalGrid.v20.1</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\..\..\Downloads\Guna.UI2\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Design" />
     <Reference Include="System.Device" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -367,6 +391,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="licenses.licx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
