@@ -14,7 +14,6 @@ namespace WaterManagementSystem {
 	using namespace System::Configuration;
 	using namespace Devart::Data::PostgreSql;
 	using namespace std;
-	
 
 	/// <summary>
 	/// Summary for Administrator
@@ -61,8 +60,7 @@ namespace WaterManagementSystem {
 	private: Guna::UI2::WinForms::Guna2Button^ btnAllBills;
 
 	private: Guna::UI2::WinForms::Guna2Button^ btnDueBills;
-
-	private: Guna::UI2::WinForms::Guna2Button^ btnPaidBills;
+	private: Guna::UI2::WinForms::Guna2Button^ btnPayments;
 
 	private: Guna::UI2::WinForms::Guna2Button^ btnAddClient;
 
@@ -111,7 +109,7 @@ namespace WaterManagementSystem {
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel17;
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel16;
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel15;
-	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel14;
+
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel13;
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel12;
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel11;
@@ -119,7 +117,6 @@ namespace WaterManagementSystem {
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel6;
 	private: Guna::UI2::WinForms::Guna2TextBox^ txt_CurrentMeterReading;
 	private: Guna::UI2::WinForms::Guna2TextBox^ txt_PricePerUnit;
-	private: Guna::UI2::WinForms::Guna2TextBox^ txt_Balance;
 
 	private: Guna::UI2::WinForms::Guna2TextBox^ txt_UnitsConsumed;
 
@@ -131,94 +128,60 @@ namespace WaterManagementSystem {
 
 	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel8;
 	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel9;
-	private: Bunifu::UI::WinForms::BunifuDataGridView^ bunifuDataGridView4;
-	private: Guna::UI2::WinForms::Guna2TextBox^ txt_BillNo;
+	private: Bunifu::UI::WinForms::BunifuDataGridView^ ClientFinancialStatusDataGridView;
 
-	private: Guna::UI2::WinForms::Guna2TextBox^ txt_TotalPrice;
+	private: Guna::UI2::WinForms::Guna2TextBox^ txt_RefNo;
+	private: Guna::UI2::WinForms::Guna2TextBox^ txt_Debit;
 
-	private: Guna::UI2::WinForms::Guna2DateTimePicker^ guna2DateTimePicker1;
+	private: Guna::UI2::WinForms::Guna2DateTimePicker^ txt_MeterReadingDateTimePicker;
+
 	private: Guna::UI2::WinForms::Guna2Button^ btnSubmit;
 	private: System::Windows::Forms::TabPage^ AddClientTabPage;
 	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel10;
-private: Guna::UI2::WinForms::Guna2TextBox^ txt_Search;
+	private: Guna::UI2::WinForms::Guna2TextBox^ txt_Search;
+	private: System::Windows::Forms::TabPage^ PaymentsTabPage;
+	private: System::Windows::Forms::TabPage^ FinanceTabPage;
 
-
-
-	private: System::Windows::Forms::TabPage^ PaidBillsTabPage;
-	private: System::Windows::Forms::TabPage^ DueBillsTabPage;
 	private: System::Windows::Forms::TabPage^ AllBillsTabPage;
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel32;
 
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel33;
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel34;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column9;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column7;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column8;
+
 	private: Bunifu::UI::WinForms::BunifuShadowPanel^ bunifuShadowPanel1;
 	private: Bunifu::UI::WinForms::BunifuShadowPanel^ bunifuShadowPanel8;
 	private: Bunifu::UI::WinForms::BunifuShadowPanel^ bunifuShadowPanel6;
 	private: Bunifu::UI::WinForms::BunifuShadowPanel^ bunifuShadowPanel5;
 	private: Bunifu::UI::WinForms::BunifuShadowPanel^ bunifuShadowPanel4;
 	private: Bunifu::UI::WinForms::BunifuShadowPanel^ bunifuShadowPanel3;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column10;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column11;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column17;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column16;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column12;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column13;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column15;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column18;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column14;
-	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel12;
 
-	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel11;
-	private: Bunifu::UI::WinForms::BunifuDataGridView^ PaidBillsDataGridView;
+
+
+
+
 	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel14;
-	private: Bunifu::UI::WinForms::BunifuDataGridView^ bunifuDataGridView1;
+
 	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel13;
 	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel16;
 	private: Bunifu::UI::WinForms::BunifuDataGridView^ AllBillsDataGridView;
 	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel15;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column19;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column20;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column21;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column22;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column23;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column28;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column24;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column25;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column26;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column27;
+
 	private: Guna::UI2::WinForms::Guna2TextBox^ txtAllBillsSearchBox;
 
 	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel17;
 	private: Bunifu::UI::WinForms::BunifuDataGridView^ ClientsDataGridView;
 
-
-
-
-
-
 	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel18;
-private: Bunifu::UI::WinForms::BunifuLabel^ lblTotalNumberofClients;
+	private: Bunifu::UI::WinForms::BunifuLabel^ lblTotalNumberofClients;
 
 	private: Guna::UI2::WinForms::Guna2Button^ btn_Back;
 	private: System::Windows::Forms::ErrorProvider^ errorProvider1;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column34;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column35;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column36;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column37;
+
 	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel19;
 	private: System::Windows::Forms::GroupBox^ groupBox1;
-private: Guna::UI2::WinForms::Guna2RadioButton^ rbtnFemale;
+	private: Guna::UI2::WinForms::Guna2RadioButton^ rbtnFemale;
 
-private: Guna::UI2::WinForms::Guna2RadioButton^ rbtnMale;
+	private: Guna::UI2::WinForms::Guna2RadioButton^ rbtnMale;
 
 	private: Guna::UI2::WinForms::Guna2Button^ btn_Submt;
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel31;
@@ -233,24 +196,156 @@ private: Guna::UI2::WinForms::Guna2RadioButton^ rbtnMale;
 	private: Guna::UI2::WinForms::Guna2TextBox^ txtClientName;
 	private: Guna::UI2::WinForms::Guna2TextBox^ txtIDNo;
 	private: Guna::UI2::WinForms::Guna2TextBox^ txtEmail;
-private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel22;
+	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel22;
+
+	private: Guna::UI2::WinForms::Guna2VSeparator^ guna2VSeparator1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column29;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column30;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column31;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column32;
+	private: Guna::UI2::WinForms::Guna2Button^ btnFilterBillsByDue;
+	private: Guna::UI2::WinForms::Guna2Button^ btnFilterBillsByPaid;
+
+	private: System::Windows::Forms::GroupBox^ groupBox2;
+	private: Guna::UI2::WinForms::Guna2Button^ btnFilterBillsByAll;
+
+	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel23;
+	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel21;
+	private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsToDatePicker;
+	private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
+
+	private: Bunifu::UI::WinForms::BunifuPages^ bunifuPages3;
+	private: System::Windows::Forms::TabPage^ ClientsListTabPage;
+private: Bunifu::UI::WinForms::BunifuDataGridView^ ClientsPaymentsListDataGridView;
+
+	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel11;
+	private: System::Windows::Forms::TabPage^ PaymentTabPage;
+	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel20;
+	private: Bunifu::UI::WinForms::BunifuDataGridView^ PaymentDataGridView;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column33;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column41;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column38;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column39;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column40;
+	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel12;
+	private: Guna::UI2::WinForms::Guna2Button^ btn_Submit;
+
+	private: Bunifu::UI::WinForms::BunifuDatePicker^ bunifuDatePicker1;
+	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel40;
+	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel39;
+	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel38;
+	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel37;
+	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel36;
+	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel28;
+	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel26;
+	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel25;
+	private: Guna::UI2::WinForms::Guna2TextBox^ guna2TextBox9;
+	private: Guna::UI2::WinForms::Guna2TextBox^ guna2TextBox8;
+	private: Guna::UI2::WinForms::Guna2TextBox^ guna2TextBox7;
+	private: Guna::UI2::WinForms::Guna2TextBox^ guna2TextBox5;
+	private: Guna::UI2::WinForms::Guna2TextBox^ guna2TextBox3;
+	private: Guna::UI2::WinForms::Guna2TextBox^ txt_Credit;
+
+	private: Guna::UI2::WinForms::Guna2TextBox^ guna2TextBox1;
+	private: System::Windows::Forms::ErrorProvider^ errorProvider2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column9;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column7;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column8;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column10;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column11;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column17;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column16;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column12;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column13;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column15;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column14;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column34;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column35;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column36;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column37;
 
 
 
 
-private: Guna::UI2::WinForms::Guna2VSeparator^ guna2VSeparator1;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column29;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column30;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column31;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column32;
-private: Guna::UI2::WinForms::Guna2Button^ guna2Button2;
-private: Guna::UI2::WinForms::Guna2Button^ guna2Button1;
-private: System::Windows::Forms::GroupBox^ groupBox2;
-private: Guna::UI2::WinForms::Guna2Button^ guna2Button3;
-private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel23;
-private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel21;
-private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsToDatePicker;
-private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
+
+
+	private: DevExpress::XtraCharts::ChartControl^ chartControl4;
+	private: DevExpress::XtraCharts::ChartControl^ chartControl3;
+	private: Guna::UI2::WinForms::Guna2TextBox^ txt_Balance;
+	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel14;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column19;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column20;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column21;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column22;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column23;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column28;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column27;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column24;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column25;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column26;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column18;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column42;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column43;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column44;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column45;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -274,7 +369,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Administrator::typeid));
-			Utilities::BunifuPages::BunifuAnimatorNS::Animation^ animation2 = (gcnew Utilities::BunifuPages::BunifuAnimatorNS::Animation());
+			Utilities::BunifuPages::BunifuAnimatorNS::Animation^ animation3 = (gcnew Utilities::BunifuPages::BunifuAnimatorNS::Animation());
 			DevExpress::XtraCharts::XYDiagram^ xyDiagram1 = (gcnew DevExpress::XtraCharts::XYDiagram());
 			DevExpress::XtraCharts::Series^ series1 = (gcnew DevExpress::XtraCharts::Series());
 			DevExpress::XtraCharts::SplineSeriesView^ splineSeriesView1 = (gcnew DevExpress::XtraCharts::SplineSeriesView());
@@ -283,29 +378,59 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			DevExpress::XtraCharts::XYDiagram^ xyDiagram2 = (gcnew DevExpress::XtraCharts::XYDiagram());
 			DevExpress::XtraCharts::Series^ series2 = (gcnew DevExpress::XtraCharts::Series());
 			DevExpress::XtraCharts::SplineSeriesView^ splineSeriesView2 = (gcnew DevExpress::XtraCharts::SplineSeriesView());
 			Utilities::BunifuPages::BunifuAnimatorNS::Animation^ animation1 = (gcnew Utilities::BunifuPages::BunifuAnimatorNS::Animation());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle10 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle11 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle16 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle12 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle13 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle14 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle15 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle16 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle17 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle18 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle23 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle19 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle20 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle21 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle22 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle23 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle24 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle25 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle26 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			Utilities::BunifuPages::BunifuAnimatorNS::Animation^ animation2 = (gcnew Utilities::BunifuPages::BunifuAnimatorNS::Animation());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle27 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle28 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle31 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle32 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle33 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle38 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle34 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle35 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle36 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle37 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			DevExpress::XtraCharts::XYDiagram^ xyDiagram3 = (gcnew DevExpress::XtraCharts::XYDiagram());
+			DevExpress::XtraCharts::Series^ series3 = (gcnew DevExpress::XtraCharts::Series());
+			DevExpress::XtraCharts::SideBySideBarSeriesView^ sideBySideBarSeriesView1 = (gcnew DevExpress::XtraCharts::SideBySideBarSeriesView());
+			DevExpress::XtraCharts::ChartTitle^ chartTitle1 = (gcnew DevExpress::XtraCharts::ChartTitle());
+			DevExpress::XtraCharts::XYDiagram^ xyDiagram4 = (gcnew DevExpress::XtraCharts::XYDiagram());
+			DevExpress::XtraCharts::Series^ series4 = (gcnew DevExpress::XtraCharts::Series());
+			DevExpress::XtraCharts::LineSeriesView^ lineSeriesView1 = (gcnew DevExpress::XtraCharts::LineSeriesView());
+			DevExpress::XtraCharts::ChartTitle^ chartTitle2 = (gcnew DevExpress::XtraCharts::ChartTitle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle39 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle40 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle45 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle41 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle42 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle43 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle44 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle29 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle30 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->guna2Panel1 = (gcnew Guna::UI2::WinForms::Guna2Panel());
 			this->bunifuLabel32 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
 			this->guna2PictureBox1 = (gcnew Guna::UI2::WinForms::Guna2PictureBox());
@@ -314,7 +439,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->guna2Button7 = (gcnew Guna::UI2::WinForms::Guna2Button());
 			this->btnAllBills = (gcnew Guna::UI2::WinForms::Guna2Button());
 			this->btnDueBills = (gcnew Guna::UI2::WinForms::Guna2Button());
-			this->btnPaidBills = (gcnew Guna::UI2::WinForms::Guna2Button());
+			this->btnPayments = (gcnew Guna::UI2::WinForms::Guna2Button());
 			this->btnAddClient = (gcnew Guna::UI2::WinForms::Guna2Button());
 			this->btnGenerateBill = (gcnew Guna::UI2::WinForms::Guna2Button());
 			this->btnDashboard = (gcnew Guna::UI2::WinForms::Guna2Button());
@@ -356,6 +481,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->LatestMeterReadingsDataGridView = (gcnew Bunifu::UI::WinForms::BunifuDataGridView());
 			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column26 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->chartControl1 = (gcnew DevExpress::XtraCharts::ChartControl());
@@ -371,34 +497,33 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->Column12 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column13 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column15 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column18 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column14 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->guna2Panel5 = (gcnew Guna::UI2::WinForms::Guna2Panel());
 			this->txt_SearchBox = (gcnew Guna::UI2::WinForms::Guna2TextBox());
 			this->BillingTabPage = (gcnew System::Windows::Forms::TabPage());
 			this->guna2Panel7 = (gcnew Guna::UI2::WinForms::Guna2Panel());
 			this->guna2Panel9 = (gcnew Guna::UI2::WinForms::Guna2Panel());
-			this->bunifuDataGridView4 = (gcnew Bunifu::UI::WinForms::BunifuDataGridView());
+			this->ClientFinancialStatusDataGridView = (gcnew Bunifu::UI::WinForms::BunifuDataGridView());
 			this->Column34 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column35 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column36 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column37 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->guna2Panel8 = (gcnew Guna::UI2::WinForms::Guna2Panel());
+			this->txt_Balance = (gcnew Guna::UI2::WinForms::Guna2TextBox());
 			this->btnSubmit = (gcnew Guna::UI2::WinForms::Guna2Button());
-			this->txt_BillNo = (gcnew Guna::UI2::WinForms::Guna2TextBox());
-			this->txt_TotalPrice = (gcnew Guna::UI2::WinForms::Guna2TextBox());
-			this->guna2DateTimePicker1 = (gcnew Guna::UI2::WinForms::Guna2DateTimePicker());
+			this->txt_RefNo = (gcnew Guna::UI2::WinForms::Guna2TextBox());
+			this->txt_Debit = (gcnew Guna::UI2::WinForms::Guna2TextBox());
+			this->txt_MeterReadingDateTimePicker = (gcnew Guna::UI2::WinForms::Guna2DateTimePicker());
 			this->txt_PreviousMeterReading = (gcnew Guna::UI2::WinForms::Guna2TextBox());
 			this->txt_ClientID = (gcnew Guna::UI2::WinForms::Guna2TextBox());
 			this->bunifuLabel18 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
 			this->txt_ClientName = (gcnew Guna::UI2::WinForms::Guna2TextBox());
 			this->bunifuLabel17 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
 			this->txt_UnitsConsumed = (gcnew Guna::UI2::WinForms::Guna2TextBox());
+			this->bunifuLabel14 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
 			this->bunifuLabel16 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
-			this->txt_Balance = (gcnew Guna::UI2::WinForms::Guna2TextBox());
 			this->bunifuLabel15 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
 			this->txt_PricePerUnit = (gcnew Guna::UI2::WinForms::Guna2TextBox());
-			this->bunifuLabel14 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
 			this->txt_CurrentMeterReading = (gcnew Guna::UI2::WinForms::Guna2TextBox());
 			this->bunifuLabel13 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
 			this->bunifuLabel6 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
@@ -435,13 +560,41 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->guna2Panel18 = (gcnew Guna::UI2::WinForms::Guna2Panel());
 			this->txt_Search = (gcnew Guna::UI2::WinForms::Guna2TextBox());
 			this->lblTotalNumberofClients = (gcnew Bunifu::UI::WinForms::BunifuLabel());
-			this->PaidBillsTabPage = (gcnew System::Windows::Forms::TabPage());
-			this->guna2Panel12 = (gcnew Guna::UI2::WinForms::Guna2Panel());
-			this->PaidBillsDataGridView = (gcnew Bunifu::UI::WinForms::BunifuDataGridView());
+			this->PaymentsTabPage = (gcnew System::Windows::Forms::TabPage());
+			this->bunifuPages3 = (gcnew Bunifu::UI::WinForms::BunifuPages());
+			this->ClientsListTabPage = (gcnew System::Windows::Forms::TabPage());
+			this->ClientsPaymentsListDataGridView = (gcnew Bunifu::UI::WinForms::BunifuDataGridView());
 			this->guna2Panel11 = (gcnew Guna::UI2::WinForms::Guna2Panel());
-			this->DueBillsTabPage = (gcnew System::Windows::Forms::TabPage());
+			this->PaymentTabPage = (gcnew System::Windows::Forms::TabPage());
+			this->guna2Panel20 = (gcnew Guna::UI2::WinForms::Guna2Panel());
+			this->PaymentDataGridView = (gcnew Bunifu::UI::WinForms::BunifuDataGridView());
+			this->Column33 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column41 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column38 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column39 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column40 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->guna2Panel12 = (gcnew Guna::UI2::WinForms::Guna2Panel());
+			this->btn_Submit = (gcnew Guna::UI2::WinForms::Guna2Button());
+			this->bunifuDatePicker1 = (gcnew Bunifu::UI::WinForms::BunifuDatePicker());
+			this->bunifuLabel40 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
+			this->bunifuLabel39 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
+			this->bunifuLabel38 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
+			this->bunifuLabel37 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
+			this->bunifuLabel36 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
+			this->bunifuLabel28 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
+			this->bunifuLabel26 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
+			this->bunifuLabel25 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
+			this->guna2TextBox9 = (gcnew Guna::UI2::WinForms::Guna2TextBox());
+			this->guna2TextBox8 = (gcnew Guna::UI2::WinForms::Guna2TextBox());
+			this->guna2TextBox7 = (gcnew Guna::UI2::WinForms::Guna2TextBox());
+			this->guna2TextBox5 = (gcnew Guna::UI2::WinForms::Guna2TextBox());
+			this->guna2TextBox3 = (gcnew Guna::UI2::WinForms::Guna2TextBox());
+			this->txt_Credit = (gcnew Guna::UI2::WinForms::Guna2TextBox());
+			this->guna2TextBox1 = (gcnew Guna::UI2::WinForms::Guna2TextBox());
+			this->FinanceTabPage = (gcnew System::Windows::Forms::TabPage());
 			this->guna2Panel14 = (gcnew Guna::UI2::WinForms::Guna2Panel());
-			this->bunifuDataGridView1 = (gcnew Bunifu::UI::WinForms::BunifuDataGridView());
+			this->chartControl4 = (gcnew DevExpress::XtraCharts::ChartControl());
+			this->chartControl3 = (gcnew DevExpress::XtraCharts::ChartControl());
 			this->guna2Panel13 = (gcnew Guna::UI2::WinForms::Guna2Panel());
 			this->AllBillsTabPage = (gcnew System::Windows::Forms::TabPage());
 			this->guna2Panel16 = (gcnew Guna::UI2::WinForms::Guna2Panel());
@@ -452,21 +605,27 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->Column22 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column23 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column28 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column27 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column24 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column25 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column26 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column27 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->guna2Panel15 = (gcnew Guna::UI2::WinForms::Guna2Panel());
 			this->AllBillsToDatePicker = (gcnew Bunifu::UI::WinForms::BunifuDatePicker());
 			this->bunifuLabel23 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->guna2Button3 = (gcnew Guna::UI2::WinForms::Guna2Button());
-			this->guna2Button2 = (gcnew Guna::UI2::WinForms::Guna2Button());
-			this->guna2Button1 = (gcnew Guna::UI2::WinForms::Guna2Button());
+			this->btnFilterBillsByAll = (gcnew Guna::UI2::WinForms::Guna2Button());
+			this->btnFilterBillsByDue = (gcnew Guna::UI2::WinForms::Guna2Button());
+			this->btnFilterBillsByPaid = (gcnew Guna::UI2::WinForms::Guna2Button());
 			this->bunifuLabel21 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
 			this->txtAllBillsSearchBox = (gcnew Guna::UI2::WinForms::Guna2TextBox());
 			this->AllBillsFromDatePicker = (gcnew Bunifu::UI::WinForms::BunifuDatePicker());
 			this->errorProvider1 = (gcnew System::Windows::Forms::ErrorProvider(this->components));
+			this->errorProvider2 = (gcnew System::Windows::Forms::ErrorProvider(this->components));
+			this->Column18 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column42 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column43 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column44 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column45 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column46 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->guna2Panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->guna2PictureBox1))->BeginInit();
 			this->guna2Panel2->SuspendLayout();
@@ -500,7 +659,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->BillingTabPage->SuspendLayout();
 			this->guna2Panel7->SuspendLayout();
 			this->guna2Panel9->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bunifuDataGridView4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ClientFinancialStatusDataGridView))->BeginInit();
 			this->guna2Panel8->SuspendLayout();
 			this->AddClientTabPage->SuspendLayout();
 			this->guna2Panel10->SuspendLayout();
@@ -509,18 +668,31 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->guna2Panel17->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ClientsDataGridView))->BeginInit();
 			this->guna2Panel18->SuspendLayout();
-			this->PaidBillsTabPage->SuspendLayout();
+			this->PaymentsTabPage->SuspendLayout();
+			this->bunifuPages3->SuspendLayout();
+			this->ClientsListTabPage->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ClientsPaymentsListDataGridView))->BeginInit();
+			this->PaymentTabPage->SuspendLayout();
+			this->guna2Panel20->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PaymentDataGridView))->BeginInit();
 			this->guna2Panel12->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PaidBillsDataGridView))->BeginInit();
-			this->DueBillsTabPage->SuspendLayout();
+			this->FinanceTabPage->SuspendLayout();
 			this->guna2Panel14->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bunifuDataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chartControl4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(xyDiagram3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(series3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(sideBySideBarSeriesView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chartControl3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(xyDiagram4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(series4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(lineSeriesView1))->BeginInit();
 			this->AllBillsTabPage->SuspendLayout();
 			this->guna2Panel16->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->AllBillsDataGridView))->BeginInit();
 			this->guna2Panel15->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->errorProvider1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->errorProvider2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// guna2Panel1
@@ -533,7 +705,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->guna2Panel1->Controls->Add(this->guna2Button7);
 			this->guna2Panel1->Controls->Add(this->btnAllBills);
 			this->guna2Panel1->Controls->Add(this->btnDueBills);
-			this->guna2Panel1->Controls->Add(this->btnPaidBills);
+			this->guna2Panel1->Controls->Add(this->btnPayments);
 			this->guna2Panel1->Controls->Add(this->btnAddClient);
 			this->guna2Panel1->Controls->Add(this->btnGenerateBill);
 			this->guna2Panel1->Controls->Add(this->btnDashboard);
@@ -607,7 +779,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->guna2Button8->HoverState->Parent = this->guna2Button8;
 			this->guna2Button8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"guna2Button8.Image")));
 			this->guna2Button8->ImageAlign = System::Windows::Forms::HorizontalAlignment::Left;
-			this->guna2Button8->ImageSize = System::Drawing::Size(30, 30);
+			this->guna2Button8->ImageSize = System::Drawing::Size(28, 28);
 			this->guna2Button8->Location = System::Drawing::Point(12, 546);
 			this->guna2Button8->Name = L"guna2Button8";
 			this->guna2Button8->ShadowDecoration->Parent = this->guna2Button8;
@@ -680,27 +852,27 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->btnDueBills->UseTransparentBackground = true;
 			this->btnDueBills->Click += gcnew System::EventHandler(this, &Administrator::btnDueBills_Click);
 			// 
-			// btnPaidBills
+			// btnPayments
 			// 
-			this->btnPaidBills->BackColor = System::Drawing::Color::Transparent;
-			this->btnPaidBills->ButtonMode = Guna::UI2::WinForms::Enums::ButtonMode::RadioButton;
-			this->btnPaidBills->CheckedState->Parent = this->btnPaidBills;
-			this->btnPaidBills->CustomImages->Parent = this->btnPaidBills;
-			this->btnPaidBills->FillColor = System::Drawing::Color::Transparent;
-			this->btnPaidBills->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F));
-			this->btnPaidBills->ForeColor = System::Drawing::Color::White;
-			this->btnPaidBills->HoverState->Parent = this->btnPaidBills;
-			this->btnPaidBills->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnPaidBills.Image")));
-			this->btnPaidBills->ImageAlign = System::Windows::Forms::HorizontalAlignment::Left;
-			this->btnPaidBills->ImageSize = System::Drawing::Size(27, 27);
-			this->btnPaidBills->Location = System::Drawing::Point(12, 360);
-			this->btnPaidBills->Name = L"btnPaidBills";
-			this->btnPaidBills->ShadowDecoration->Parent = this->btnPaidBills;
-			this->btnPaidBills->Size = System::Drawing::Size(147, 39);
-			this->btnPaidBills->TabIndex = 3;
-			this->btnPaidBills->Text = L"Paid Bills";
-			this->btnPaidBills->UseTransparentBackground = true;
-			this->btnPaidBills->Click += gcnew System::EventHandler(this, &Administrator::btnPaidBills_Click);
+			this->btnPayments->BackColor = System::Drawing::Color::Transparent;
+			this->btnPayments->ButtonMode = Guna::UI2::WinForms::Enums::ButtonMode::RadioButton;
+			this->btnPayments->CheckedState->Parent = this->btnPayments;
+			this->btnPayments->CustomImages->Parent = this->btnPayments;
+			this->btnPayments->FillColor = System::Drawing::Color::Transparent;
+			this->btnPayments->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F));
+			this->btnPayments->ForeColor = System::Drawing::Color::White;
+			this->btnPayments->HoverState->Parent = this->btnPayments;
+			this->btnPayments->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnPayments.Image")));
+			this->btnPayments->ImageAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			this->btnPayments->ImageSize = System::Drawing::Size(30, 30);
+			this->btnPayments->Location = System::Drawing::Point(12, 360);
+			this->btnPayments->Name = L"btnPayments";
+			this->btnPayments->ShadowDecoration->Parent = this->btnPayments;
+			this->btnPayments->Size = System::Drawing::Size(147, 39);
+			this->btnPayments->TabIndex = 3;
+			this->btnPayments->Text = L"Payments";
+			this->btnPayments->UseTransparentBackground = true;
+			this->btnPayments->Click += gcnew System::EventHandler(this, &Administrator::btnPayments_Click);
 			// 
 			// btnAddClient
 			// 
@@ -855,36 +1027,36 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->bunifuPages1->Controls->Add(this->DashboardTabPage);
 			this->bunifuPages1->Controls->Add(this->GenerateBillTabPage);
 			this->bunifuPages1->Controls->Add(this->AddClientTabPage);
-			this->bunifuPages1->Controls->Add(this->PaidBillsTabPage);
-			this->bunifuPages1->Controls->Add(this->DueBillsTabPage);
+			this->bunifuPages1->Controls->Add(this->PaymentsTabPage);
+			this->bunifuPages1->Controls->Add(this->FinanceTabPage);
 			this->bunifuPages1->Controls->Add(this->AllBillsTabPage);
 			this->bunifuPages1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->bunifuPages1->Location = System::Drawing::Point(0, 0);
 			this->bunifuPages1->Multiline = true;
 			this->bunifuPages1->Name = L"bunifuPages1";
-			this->bunifuPages1->Page = this->AllBillsTabPage;
-			this->bunifuPages1->PageIndex = 5;
-			this->bunifuPages1->PageName = L"AllBillsTabPage";
-			this->bunifuPages1->PageTitle = L"All Bills";
+			this->bunifuPages1->Page = this->PaymentsTabPage;
+			this->bunifuPages1->PageIndex = 3;
+			this->bunifuPages1->PageName = L"PaymentsTabPage";
+			this->bunifuPages1->PageTitle = L"PaymentsTabPage";
 			this->bunifuPages1->SelectedIndex = 0;
 			this->bunifuPages1->Size = System::Drawing::Size(1170, 671);
 			this->bunifuPages1->TabIndex = 0;
-			animation2->AnimateOnlyDifferences = true;
-			animation2->BlindCoeff = (cli::safe_cast<System::Drawing::PointF>(resources->GetObject(L"animation2.BlindCoeff")));
-			animation2->LeafCoeff = 0;
-			animation2->MaxTime = 1;
-			animation2->MinTime = 0;
-			animation2->MosaicCoeff = (cli::safe_cast<System::Drawing::PointF>(resources->GetObject(L"animation2.MosaicCoeff")));
-			animation2->MosaicShift = (cli::safe_cast<System::Drawing::PointF>(resources->GetObject(L"animation2.MosaicShift")));
-			animation2->MosaicSize = 0;
-			animation2->Padding = System::Windows::Forms::Padding(0, 0, 0, 0);
-			animation2->RotateCoeff = 0;
-			animation2->RotateLimit = 0;
-			animation2->ScaleCoeff = (cli::safe_cast<System::Drawing::PointF>(resources->GetObject(L"animation2.ScaleCoeff")));
-			animation2->SlideCoeff = (cli::safe_cast<System::Drawing::PointF>(resources->GetObject(L"animation2.SlideCoeff")));
-			animation2->TimeCoeff = 0;
-			animation2->TransparencyCoeff = 0;
-			this->bunifuPages1->Transition = animation2;
+			animation3->AnimateOnlyDifferences = true;
+			animation3->BlindCoeff = (cli::safe_cast<System::Drawing::PointF>(resources->GetObject(L"animation3.BlindCoeff")));
+			animation3->LeafCoeff = 0;
+			animation3->MaxTime = 1;
+			animation3->MinTime = 0;
+			animation3->MosaicCoeff = (cli::safe_cast<System::Drawing::PointF>(resources->GetObject(L"animation3.MosaicCoeff")));
+			animation3->MosaicShift = (cli::safe_cast<System::Drawing::PointF>(resources->GetObject(L"animation3.MosaicShift")));
+			animation3->MosaicSize = 0;
+			animation3->Padding = System::Windows::Forms::Padding(0, 0, 0, 0);
+			animation3->RotateCoeff = 0;
+			animation3->RotateLimit = 0;
+			animation3->ScaleCoeff = (cli::safe_cast<System::Drawing::PointF>(resources->GetObject(L"animation3.ScaleCoeff")));
+			animation3->SlideCoeff = (cli::safe_cast<System::Drawing::PointF>(resources->GetObject(L"animation3.SlideCoeff")));
+			animation3->TimeCoeff = 0;
+			animation3->TransparencyCoeff = 0;
+			this->bunifuPages1->Transition = animation3;
 			this->bunifuPages1->TransitionType = Utilities::BunifuPages::BunifuAnimatorNS::AnimationType::HorizSlide;
 			// 
 			// DashboardTabPage
@@ -1268,6 +1440,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->bunifuLabel34->Cursor = System::Windows::Forms::Cursors::Default;
 			this->bunifuLabel34->CursorType = System::Windows::Forms::Cursors::Default;
 			this->bunifuLabel34->Font = (gcnew System::Drawing::Font(L"Saira", 11.25F));
+			this->bunifuLabel34->ForeColor = System::Drawing::Color::Navy;
 			this->bunifuLabel34->Location = System::Drawing::Point(583, 380);
 			this->bunifuLabel34->Name = L"bunifuLabel34";
 			this->bunifuLabel34->RightToLeft = System::Windows::Forms::RightToLeft::No;
@@ -1285,6 +1458,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->bunifuLabel33->Cursor = System::Windows::Forms::Cursors::Default;
 			this->bunifuLabel33->CursorType = System::Windows::Forms::Cursors::Default;
 			this->bunifuLabel33->Font = (gcnew System::Drawing::Font(L"Saira", 11.25F));
+			this->bunifuLabel33->ForeColor = System::Drawing::Color::Navy;
 			this->bunifuLabel33->Location = System::Drawing::Point(3, 380);
 			this->bunifuLabel33->Name = L"bunifuLabel33";
 			this->bunifuLabel33->RightToLeft = System::Windows::Forms::RightToLeft::No;
@@ -1324,8 +1498,8 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->LatestPaidBillsDataGridView->AllowCustomTheming = true;
 			this->LatestPaidBillsDataGridView->AllowUserToAddRows = false;
 			this->LatestPaidBillsDataGridView->AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(198)),
-				static_cast<System::Int32>(static_cast<System::Byte>(227)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			dataGridViewCellStyle1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
+				static_cast<System::Int32>(static_cast<System::Byte>(191)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
 			dataGridViewCellStyle1->ForeColor = System::Drawing::Color::Black;
 			this->LatestPaidBillsDataGridView->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this->LatestPaidBillsDataGridView->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
@@ -1334,74 +1508,74 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->LatestPaidBillsDataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
 			this->LatestPaidBillsDataGridView->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
 			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::Color::DodgerBlue;
+			dataGridViewCellStyle2->BackColor = System::Drawing::Color::Navy;
 			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Saira", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			dataGridViewCellStyle2->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)),
-				static_cast<System::Int32>(static_cast<System::Byte>(115)), static_cast<System::Int32>(static_cast<System::Byte>(204)));
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(102)));
 			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::Color::White;
 			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
 			this->LatestPaidBillsDataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-			this->LatestPaidBillsDataGridView->ColumnHeadersHeight = 35;
+			this->LatestPaidBillsDataGridView->ColumnHeadersHeight = 40;
 			this->LatestPaidBillsDataGridView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
 				this->Column5,
 					this->Column6, this->Column9, this->Column7, this->Column8
 			});
-			this->LatestPaidBillsDataGridView->CurrentTheme->AlternatingRowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(198)),
-				static_cast<System::Int32>(static_cast<System::Byte>(227)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->LatestPaidBillsDataGridView->CurrentTheme->AlternatingRowsStyle->Font = (gcnew System::Drawing::Font(L"Sora", 9.749999F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->LatestPaidBillsDataGridView->CurrentTheme->AlternatingRowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
+				static_cast<System::Int32>(static_cast<System::Byte>(191)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
+			this->LatestPaidBillsDataGridView->CurrentTheme->AlternatingRowsStyle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold",
+				9.75F, System::Drawing::FontStyle::Bold));
 			this->LatestPaidBillsDataGridView->CurrentTheme->AlternatingRowsStyle->ForeColor = System::Drawing::Color::Black;
-			this->LatestPaidBillsDataGridView->CurrentTheme->AlternatingRowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(120)),
-				static_cast<System::Int32>(static_cast<System::Byte>(188)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->LatestPaidBillsDataGridView->CurrentTheme->AlternatingRowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
 			this->LatestPaidBillsDataGridView->CurrentTheme->AlternatingRowsStyle->SelectionForeColor = System::Drawing::Color::White;
-			this->LatestPaidBillsDataGridView->CurrentTheme->BackColor = System::Drawing::Color::DodgerBlue;
-			this->LatestPaidBillsDataGridView->CurrentTheme->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(187)),
-				static_cast<System::Int32>(static_cast<System::Byte>(221)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->LatestPaidBillsDataGridView->CurrentTheme->HeaderStyle->BackColor = System::Drawing::Color::DodgerBlue;
+			this->LatestPaidBillsDataGridView->CurrentTheme->BackColor = System::Drawing::Color::Navy;
+			this->LatestPaidBillsDataGridView->CurrentTheme->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(178)),
+				static_cast<System::Int32>(static_cast<System::Byte>(178)), static_cast<System::Int32>(static_cast<System::Byte>(216)));
+			this->LatestPaidBillsDataGridView->CurrentTheme->HeaderStyle->BackColor = System::Drawing::Color::Navy;
 			this->LatestPaidBillsDataGridView->CurrentTheme->HeaderStyle->Font = (gcnew System::Drawing::Font(L"Saira", 11.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->LatestPaidBillsDataGridView->CurrentTheme->HeaderStyle->ForeColor = System::Drawing::Color::White;
-			this->LatestPaidBillsDataGridView->CurrentTheme->HeaderStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)),
-				static_cast<System::Int32>(static_cast<System::Byte>(115)), static_cast<System::Int32>(static_cast<System::Byte>(204)));
+			this->LatestPaidBillsDataGridView->CurrentTheme->HeaderStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(102)));
 			this->LatestPaidBillsDataGridView->CurrentTheme->HeaderStyle->SelectionForeColor = System::Drawing::Color::White;
 			this->LatestPaidBillsDataGridView->CurrentTheme->Name = nullptr;
-			this->LatestPaidBillsDataGridView->CurrentTheme->RowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(210)),
-				static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->LatestPaidBillsDataGridView->CurrentTheme->RowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
+				static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(229)));
 			this->LatestPaidBillsDataGridView->CurrentTheme->RowsStyle->Font = (gcnew System::Drawing::Font(L"Sora", 9.749999F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->LatestPaidBillsDataGridView->CurrentTheme->RowsStyle->ForeColor = System::Drawing::Color::Black;
-			this->LatestPaidBillsDataGridView->CurrentTheme->RowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(120)),
-				static_cast<System::Int32>(static_cast<System::Byte>(188)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->LatestPaidBillsDataGridView->CurrentTheme->RowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
 			this->LatestPaidBillsDataGridView->CurrentTheme->RowsStyle->SelectionForeColor = System::Drawing::Color::White;
 			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(210)),
-				static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			dataGridViewCellStyle3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
+				static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(229)));
 			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Sora", 9.749999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			dataGridViewCellStyle3->ForeColor = System::Drawing::Color::Black;
-			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(120)),
-				static_cast<System::Int32>(static_cast<System::Byte>(188)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
 			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::Color::White;
 			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->LatestPaidBillsDataGridView->DefaultCellStyle = dataGridViewCellStyle3;
 			this->LatestPaidBillsDataGridView->Dock = System::Windows::Forms::DockStyle::Right;
 			this->LatestPaidBillsDataGridView->EnableHeadersVisualStyles = false;
-			this->LatestPaidBillsDataGridView->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(187)),
-				static_cast<System::Int32>(static_cast<System::Byte>(221)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->LatestPaidBillsDataGridView->HeaderBackColor = System::Drawing::Color::DodgerBlue;
+			this->LatestPaidBillsDataGridView->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(178)),
+				static_cast<System::Int32>(static_cast<System::Byte>(178)), static_cast<System::Int32>(static_cast<System::Byte>(216)));
+			this->LatestPaidBillsDataGridView->HeaderBackColor = System::Drawing::Color::Navy;
 			this->LatestPaidBillsDataGridView->HeaderBgColor = System::Drawing::Color::Empty;
 			this->LatestPaidBillsDataGridView->HeaderForeColor = System::Drawing::Color::White;
 			this->LatestPaidBillsDataGridView->Location = System::Drawing::Point(580, 0);
 			this->LatestPaidBillsDataGridView->Name = L"LatestPaidBillsDataGridView";
 			this->LatestPaidBillsDataGridView->ReadOnly = true;
 			this->LatestPaidBillsDataGridView->RowHeadersVisible = false;
-			this->LatestPaidBillsDataGridView->RowTemplate->Height = 30;
+			this->LatestPaidBillsDataGridView->RowTemplate->Height = 40;
 			this->LatestPaidBillsDataGridView->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
 			this->LatestPaidBillsDataGridView->Size = System::Drawing::Size(576, 230);
 			this->LatestPaidBillsDataGridView->TabIndex = 1;
-			this->LatestPaidBillsDataGridView->Theme = Bunifu::UI::WinForms::BunifuDataGridView::PresetThemes::DodgerBlue;
+			this->LatestPaidBillsDataGridView->Theme = Bunifu::UI::WinForms::BunifuDataGridView::PresetThemes::Navy;
 			// 
 			// Column5
 			// 
@@ -1424,11 +1598,11 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			// Column9
 			// 
 			this->Column9->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			this->Column9->DataPropertyName = L"bill_no";
-			this->Column9->HeaderText = L"Bill No.";
+			this->Column9->DataPropertyName = L"reference_no";
+			this->Column9->HeaderText = L"Ref No.";
 			this->Column9->Name = L"Column9";
 			this->Column9->ReadOnly = true;
-			this->Column9->Width = 82;
+			this->Column9->Width = 84;
 			// 
 			// Column7
 			// 
@@ -1453,8 +1627,8 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->LatestMeterReadingsDataGridView->AllowCustomTheming = true;
 			this->LatestMeterReadingsDataGridView->AllowUserToAddRows = false;
 			this->LatestMeterReadingsDataGridView->AllowUserToDeleteRows = false;
-			dataGridViewCellStyle4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(198)),
-				static_cast<System::Int32>(static_cast<System::Byte>(227)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			dataGridViewCellStyle4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
+				static_cast<System::Int32>(static_cast<System::Byte>(191)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
 			dataGridViewCellStyle4->ForeColor = System::Drawing::Color::Black;
 			this->LatestMeterReadingsDataGridView->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
 			this->LatestMeterReadingsDataGridView->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
@@ -1465,73 +1639,73 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->LatestMeterReadingsDataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
 			this->LatestMeterReadingsDataGridView->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
 			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle5->BackColor = System::Drawing::Color::DodgerBlue;
+			dataGridViewCellStyle5->BackColor = System::Drawing::Color::Navy;
 			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Saira", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			dataGridViewCellStyle5->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)),
-				static_cast<System::Int32>(static_cast<System::Byte>(115)), static_cast<System::Int32>(static_cast<System::Byte>(204)));
+			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(102)));
 			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::Color::White;
 			dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
 			this->LatestMeterReadingsDataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-			this->LatestMeterReadingsDataGridView->ColumnHeadersHeight = 35;
-			this->LatestMeterReadingsDataGridView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
+			this->LatestMeterReadingsDataGridView->ColumnHeadersHeight = 40;
+			this->LatestMeterReadingsDataGridView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
 				this->Column1,
-					this->Column2, this->Column3, this->Column4
+					this->Column2, this->Column26, this->Column3, this->Column4
 			});
-			this->LatestMeterReadingsDataGridView->CurrentTheme->AlternatingRowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(198)),
-				static_cast<System::Int32>(static_cast<System::Byte>(227)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->LatestMeterReadingsDataGridView->CurrentTheme->AlternatingRowsStyle->Font = (gcnew System::Drawing::Font(L"Sora", 9.749999F,
-				System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->LatestMeterReadingsDataGridView->CurrentTheme->AlternatingRowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
+				static_cast<System::Int32>(static_cast<System::Byte>(191)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
+			this->LatestMeterReadingsDataGridView->CurrentTheme->AlternatingRowsStyle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold",
+				9.75F, System::Drawing::FontStyle::Bold));
 			this->LatestMeterReadingsDataGridView->CurrentTheme->AlternatingRowsStyle->ForeColor = System::Drawing::Color::Black;
-			this->LatestMeterReadingsDataGridView->CurrentTheme->AlternatingRowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(120)),
-				static_cast<System::Int32>(static_cast<System::Byte>(188)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->LatestMeterReadingsDataGridView->CurrentTheme->AlternatingRowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
 			this->LatestMeterReadingsDataGridView->CurrentTheme->AlternatingRowsStyle->SelectionForeColor = System::Drawing::Color::White;
-			this->LatestMeterReadingsDataGridView->CurrentTheme->BackColor = System::Drawing::Color::DodgerBlue;
-			this->LatestMeterReadingsDataGridView->CurrentTheme->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(187)),
-				static_cast<System::Int32>(static_cast<System::Byte>(221)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->LatestMeterReadingsDataGridView->CurrentTheme->HeaderStyle->BackColor = System::Drawing::Color::DodgerBlue;
+			this->LatestMeterReadingsDataGridView->CurrentTheme->BackColor = System::Drawing::Color::Navy;
+			this->LatestMeterReadingsDataGridView->CurrentTheme->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(178)),
+				static_cast<System::Int32>(static_cast<System::Byte>(178)), static_cast<System::Int32>(static_cast<System::Byte>(216)));
+			this->LatestMeterReadingsDataGridView->CurrentTheme->HeaderStyle->BackColor = System::Drawing::Color::Navy;
 			this->LatestMeterReadingsDataGridView->CurrentTheme->HeaderStyle->Font = (gcnew System::Drawing::Font(L"Saira", 11.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->LatestMeterReadingsDataGridView->CurrentTheme->HeaderStyle->ForeColor = System::Drawing::Color::White;
-			this->LatestMeterReadingsDataGridView->CurrentTheme->HeaderStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)),
-				static_cast<System::Int32>(static_cast<System::Byte>(115)), static_cast<System::Int32>(static_cast<System::Byte>(204)));
+			this->LatestMeterReadingsDataGridView->CurrentTheme->HeaderStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(102)));
 			this->LatestMeterReadingsDataGridView->CurrentTheme->HeaderStyle->SelectionForeColor = System::Drawing::Color::White;
 			this->LatestMeterReadingsDataGridView->CurrentTheme->Name = nullptr;
-			this->LatestMeterReadingsDataGridView->CurrentTheme->RowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(210)),
-				static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->LatestMeterReadingsDataGridView->CurrentTheme->RowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
+				static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(229)));
 			this->LatestMeterReadingsDataGridView->CurrentTheme->RowsStyle->Font = (gcnew System::Drawing::Font(L"Sora", 9.749999F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->LatestMeterReadingsDataGridView->CurrentTheme->RowsStyle->ForeColor = System::Drawing::Color::Black;
-			this->LatestMeterReadingsDataGridView->CurrentTheme->RowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(120)),
-				static_cast<System::Int32>(static_cast<System::Byte>(188)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->LatestMeterReadingsDataGridView->CurrentTheme->RowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
 			this->LatestMeterReadingsDataGridView->CurrentTheme->RowsStyle->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(210)),
-				static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Sora", 9.749999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
+				static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(229)));
+			dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Sora", 9.749999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle6->ForeColor = System::Drawing::Color::Black;
-			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(120)),
-				static_cast<System::Int32>(static_cast<System::Byte>(188)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->LatestMeterReadingsDataGridView->DefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle9->ForeColor = System::Drawing::Color::Black;
+			dataGridViewCellStyle9->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
+			dataGridViewCellStyle9->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle9->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->LatestMeterReadingsDataGridView->DefaultCellStyle = dataGridViewCellStyle9;
 			this->LatestMeterReadingsDataGridView->EnableHeadersVisualStyles = false;
-			this->LatestMeterReadingsDataGridView->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(187)),
-				static_cast<System::Int32>(static_cast<System::Byte>(221)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->LatestMeterReadingsDataGridView->HeaderBackColor = System::Drawing::Color::DodgerBlue;
+			this->LatestMeterReadingsDataGridView->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(178)),
+				static_cast<System::Int32>(static_cast<System::Byte>(178)), static_cast<System::Int32>(static_cast<System::Byte>(216)));
+			this->LatestMeterReadingsDataGridView->HeaderBackColor = System::Drawing::Color::Navy;
 			this->LatestMeterReadingsDataGridView->HeaderBgColor = System::Drawing::Color::Empty;
 			this->LatestMeterReadingsDataGridView->HeaderForeColor = System::Drawing::Color::White;
 			this->LatestMeterReadingsDataGridView->Location = System::Drawing::Point(0, 0);
 			this->LatestMeterReadingsDataGridView->Name = L"LatestMeterReadingsDataGridView";
 			this->LatestMeterReadingsDataGridView->ReadOnly = true;
 			this->LatestMeterReadingsDataGridView->RowHeadersVisible = false;
-			this->LatestMeterReadingsDataGridView->RowTemplate->Height = 30;
+			this->LatestMeterReadingsDataGridView->RowTemplate->Height = 40;
 			this->LatestMeterReadingsDataGridView->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
 			this->LatestMeterReadingsDataGridView->Size = System::Drawing::Size(576, 230);
 			this->LatestMeterReadingsDataGridView->TabIndex = 0;
-			this->LatestMeterReadingsDataGridView->Theme = Bunifu::UI::WinForms::BunifuDataGridView::PresetThemes::DodgerBlue;
+			this->LatestMeterReadingsDataGridView->Theme = Bunifu::UI::WinForms::BunifuDataGridView::PresetThemes::Navy;
 			// 
 			// Column1
 			// 
@@ -1551,23 +1725,41 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->Column2->ReadOnly = true;
 			this->Column2->Width = 117;
 			// 
+			// Column26
+			// 
+			this->Column26->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column26->DataPropertyName = L"meter_reading";
+			dataGridViewCellStyle6->Format = L"N0";
+			dataGridViewCellStyle6->NullValue = L"0";
+			this->Column26->DefaultCellStyle = dataGridViewCellStyle6;
+			this->Column26->HeaderText = L"Reading";
+			this->Column26->Name = L"Column26";
+			this->Column26->ReadOnly = true;
+			this->Column26->Width = 91;
+			// 
 			// Column3
 			// 
 			this->Column3->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 			this->Column3->DataPropertyName = L"units_consumed";
-			this->Column3->HeaderText = L"Units Consumed";
+			dataGridViewCellStyle7->Format = L"N2";
+			dataGridViewCellStyle7->NullValue = L"0";
+			this->Column3->DefaultCellStyle = dataGridViewCellStyle7;
+			this->Column3->HeaderText = L"Consumed";
 			this->Column3->Name = L"Column3";
 			this->Column3->ReadOnly = true;
-			this->Column3->Width = 146;
+			this->Column3->Width = 106;
 			// 
 			// Column4
 			// 
 			this->Column4->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 			this->Column4->DataPropertyName = L"meter_reading_date";
-			this->Column4->HeaderText = L"Reading Date";
+			dataGridViewCellStyle8->Format = L"d";
+			dataGridViewCellStyle8->NullValue = nullptr;
+			this->Column4->DefaultCellStyle = dataGridViewCellStyle8;
+			this->Column4->HeaderText = L"Date";
 			this->Column4->Name = L"Column4";
 			this->Column4->ReadOnly = true;
-			this->Column4->Width = 127;
+			this->Column4->Width = 65;
 			// 
 			// chartControl1
 			// 
@@ -1656,29 +1848,29 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->ClientListDataGridView->AllowCustomTheming = true;
 			this->ClientListDataGridView->AllowUserToAddRows = false;
 			this->ClientListDataGridView->AllowUserToDeleteRows = false;
-			dataGridViewCellStyle7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
+			dataGridViewCellStyle10->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
 				static_cast<System::Int32>(static_cast<System::Byte>(191)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
-			dataGridViewCellStyle7->ForeColor = System::Drawing::Color::Black;
-			this->ClientListDataGridView->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle10->ForeColor = System::Drawing::Color::Black;
+			this->ClientListDataGridView->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
 			this->ClientListDataGridView->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->ClientListDataGridView->BackgroundColor = System::Drawing::SystemColors::Window;
 			this->ClientListDataGridView->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ClientListDataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
 			this->ClientListDataGridView->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle8->BackColor = System::Drawing::Color::Navy;
-			dataGridViewCellStyle8->Font = (gcnew System::Drawing::Font(L"Saira", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle11->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle11->BackColor = System::Drawing::Color::Navy;
+			dataGridViewCellStyle11->Font = (gcnew System::Drawing::Font(L"Saira", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle8->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle8->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+			dataGridViewCellStyle11->ForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle11->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(102)));
-			dataGridViewCellStyle8->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->ClientListDataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle11->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle11->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->ClientListDataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
 			this->ClientListDataGridView->ColumnHeadersHeight = 40;
-			this->ClientListDataGridView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(9) {
+			this->ClientListDataGridView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(8) {
 				this->Column10,
-					this->Column11, this->Column17, this->Column16, this->Column12, this->Column13, this->Column15, this->Column18, this->Column14
+					this->Column11, this->Column17, this->Column16, this->Column12, this->Column13, this->Column15, this->Column14
 			});
 			this->ClientListDataGridView->CurrentTheme->AlternatingRowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
 				static_cast<System::Int32>(static_cast<System::Byte>(191)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
@@ -1707,17 +1899,17 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->ClientListDataGridView->CurrentTheme->RowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
 				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
 			this->ClientListDataGridView->CurrentTheme->RowsStyle->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
+			dataGridViewCellStyle16->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle16->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
 				static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(229)));
-			dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Sora", 9.749999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle16->Font = (gcnew System::Drawing::Font(L"Sora", 9.749999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle9->ForeColor = System::Drawing::Color::Black;
-			dataGridViewCellStyle9->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+			dataGridViewCellStyle16->ForeColor = System::Drawing::Color::Black;
+			dataGridViewCellStyle16->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
 				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
-			dataGridViewCellStyle9->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle9->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->ClientListDataGridView->DefaultCellStyle = dataGridViewCellStyle9;
+			dataGridViewCellStyle16->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle16->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->ClientListDataGridView->DefaultCellStyle = dataGridViewCellStyle16;
 			this->ClientListDataGridView->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->ClientListDataGridView->EnableHeadersVisualStyles = false;
 			this->ClientListDataGridView->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(178)),
@@ -1776,6 +1968,9 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			// 
 			this->Column12->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 			this->Column12->DataPropertyName = L"previous_meter_reading";
+			dataGridViewCellStyle12->Format = L"N0";
+			dataGridViewCellStyle12->NullValue = L"0";
+			this->Column12->DefaultCellStyle = dataGridViewCellStyle12;
 			this->Column12->HeaderText = L"Prev. Meter Reading";
 			this->Column12->Name = L"Column12";
 			this->Column12->ReadOnly = true;
@@ -1785,6 +1980,8 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			// 
 			this->Column13->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 			this->Column13->DataPropertyName = L"units_consumed";
+			dataGridViewCellStyle13->NullValue = L"0";
+			this->Column13->DefaultCellStyle = dataGridViewCellStyle13;
 			this->Column13->HeaderText = L"Units Consumed";
 			this->Column13->Name = L"Column13";
 			this->Column13->ReadOnly = true;
@@ -1793,25 +1990,22 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			// Column15
 			// 
 			this->Column15->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			this->Column15->DataPropertyName = L"debit";
-			this->Column15->HeaderText = L"Debit";
+			this->Column15->DataPropertyName = L"balance";
+			dataGridViewCellStyle14->Format = L"N2";
+			dataGridViewCellStyle14->NullValue = L"0";
+			this->Column15->DefaultCellStyle = dataGridViewCellStyle14;
+			this->Column15->HeaderText = L"Balance";
 			this->Column15->Name = L"Column15";
 			this->Column15->ReadOnly = true;
-			this->Column15->Width = 74;
-			// 
-			// Column18
-			// 
-			this->Column18->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			this->Column18->DataPropertyName = L"credit";
-			this->Column18->HeaderText = L"Credit";
-			this->Column18->Name = L"Column18";
-			this->Column18->ReadOnly = true;
-			this->Column18->Width = 78;
+			this->Column15->Width = 94;
 			// 
 			// Column14
 			// 
 			this->Column14->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->Column14->DataPropertyName = L"meter_reading_date";
+			dataGridViewCellStyle15->Format = L"d";
+			dataGridViewCellStyle15->NullValue = nullptr;
+			this->Column14->DefaultCellStyle = dataGridViewCellStyle15;
 			this->Column14->HeaderText = L"Date";
 			this->Column14->Name = L"Column14";
 			this->Column14->ReadOnly = true;
@@ -1882,7 +2076,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			// 
 			// guna2Panel9
 			// 
-			this->guna2Panel9->Controls->Add(this->bunifuDataGridView4);
+			this->guna2Panel9->Controls->Add(this->ClientFinancialStatusDataGridView);
 			this->guna2Panel9->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->guna2Panel9->Location = System::Drawing::Point(556, 0);
 			this->guna2Panel9->Name = L"guna2Panel9";
@@ -1890,135 +2084,152 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->guna2Panel9->Size = System::Drawing::Size(586, 603);
 			this->guna2Panel9->TabIndex = 19;
 			// 
-			// bunifuDataGridView4
+			// ClientFinancialStatusDataGridView
 			// 
-			this->bunifuDataGridView4->AllowCustomTheming = true;
-			this->bunifuDataGridView4->AllowUserToAddRows = false;
-			this->bunifuDataGridView4->AllowUserToDeleteRows = false;
-			dataGridViewCellStyle10->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
+			this->ClientFinancialStatusDataGridView->AllowCustomTheming = true;
+			this->ClientFinancialStatusDataGridView->AllowUserToAddRows = false;
+			this->ClientFinancialStatusDataGridView->AllowUserToDeleteRows = false;
+			dataGridViewCellStyle17->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
 				static_cast<System::Int32>(static_cast<System::Byte>(191)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
-			dataGridViewCellStyle10->ForeColor = System::Drawing::Color::Black;
-			this->bunifuDataGridView4->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-			this->bunifuDataGridView4->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-			this->bunifuDataGridView4->BackgroundColor = System::Drawing::SystemColors::Window;
-			this->bunifuDataGridView4->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->bunifuDataGridView4->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
-			this->bunifuDataGridView4->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			dataGridViewCellStyle11->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle11->BackColor = System::Drawing::Color::Navy;
-			dataGridViewCellStyle11->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 11.75F, System::Drawing::FontStyle::Bold));
-			dataGridViewCellStyle11->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle11->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+			dataGridViewCellStyle17->ForeColor = System::Drawing::Color::Black;
+			this->ClientFinancialStatusDataGridView->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+			this->ClientFinancialStatusDataGridView->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->ClientFinancialStatusDataGridView->BackgroundColor = System::Drawing::SystemColors::Window;
+			this->ClientFinancialStatusDataGridView->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->ClientFinancialStatusDataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
+			this->ClientFinancialStatusDataGridView->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+			dataGridViewCellStyle18->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle18->BackColor = System::Drawing::Color::Navy;
+			dataGridViewCellStyle18->Font = (gcnew System::Drawing::Font(L"Saira", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle18->ForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle18->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(102)));
-			dataGridViewCellStyle11->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle11->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->bunifuDataGridView4->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-			this->bunifuDataGridView4->ColumnHeadersHeight = 40;
-			this->bunifuDataGridView4->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
+			dataGridViewCellStyle18->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle18->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->ClientFinancialStatusDataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+			this->ClientFinancialStatusDataGridView->ColumnHeadersHeight = 40;
+			this->ClientFinancialStatusDataGridView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
 				this->Column34,
 					this->Column35, this->Column36, this->Column37
 			});
-			this->bunifuDataGridView4->CurrentTheme->AlternatingRowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
+			this->ClientFinancialStatusDataGridView->CurrentTheme->AlternatingRowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
 				static_cast<System::Int32>(static_cast<System::Byte>(191)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
-			this->bunifuDataGridView4->CurrentTheme->AlternatingRowsStyle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold));
-			this->bunifuDataGridView4->CurrentTheme->AlternatingRowsStyle->ForeColor = System::Drawing::Color::Black;
-			this->bunifuDataGridView4->CurrentTheme->AlternatingRowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+			this->ClientFinancialStatusDataGridView->CurrentTheme->AlternatingRowsStyle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold",
+				9.75F, System::Drawing::FontStyle::Bold));
+			this->ClientFinancialStatusDataGridView->CurrentTheme->AlternatingRowsStyle->ForeColor = System::Drawing::Color::Black;
+			this->ClientFinancialStatusDataGridView->CurrentTheme->AlternatingRowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
 				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
-			this->bunifuDataGridView4->CurrentTheme->AlternatingRowsStyle->SelectionForeColor = System::Drawing::Color::White;
-			this->bunifuDataGridView4->CurrentTheme->BackColor = System::Drawing::Color::Navy;
-			this->bunifuDataGridView4->CurrentTheme->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(178)),
+			this->ClientFinancialStatusDataGridView->CurrentTheme->AlternatingRowsStyle->SelectionForeColor = System::Drawing::Color::White;
+			this->ClientFinancialStatusDataGridView->CurrentTheme->BackColor = System::Drawing::Color::Navy;
+			this->ClientFinancialStatusDataGridView->CurrentTheme->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(178)),
 				static_cast<System::Int32>(static_cast<System::Byte>(178)), static_cast<System::Int32>(static_cast<System::Byte>(216)));
-			this->bunifuDataGridView4->CurrentTheme->HeaderStyle->BackColor = System::Drawing::Color::Navy;
-			this->bunifuDataGridView4->CurrentTheme->HeaderStyle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 11.75F, System::Drawing::FontStyle::Bold));
-			this->bunifuDataGridView4->CurrentTheme->HeaderStyle->ForeColor = System::Drawing::Color::White;
-			this->bunifuDataGridView4->CurrentTheme->HeaderStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+			this->ClientFinancialStatusDataGridView->CurrentTheme->HeaderStyle->BackColor = System::Drawing::Color::Navy;
+			this->ClientFinancialStatusDataGridView->CurrentTheme->HeaderStyle->Font = (gcnew System::Drawing::Font(L"Saira", 11.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ClientFinancialStatusDataGridView->CurrentTheme->HeaderStyle->ForeColor = System::Drawing::Color::White;
+			this->ClientFinancialStatusDataGridView->CurrentTheme->HeaderStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(102)));
-			this->bunifuDataGridView4->CurrentTheme->HeaderStyle->SelectionForeColor = System::Drawing::Color::White;
-			this->bunifuDataGridView4->CurrentTheme->Name = nullptr;
-			this->bunifuDataGridView4->CurrentTheme->RowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
+			this->ClientFinancialStatusDataGridView->CurrentTheme->HeaderStyle->SelectionForeColor = System::Drawing::Color::White;
+			this->ClientFinancialStatusDataGridView->CurrentTheme->Name = nullptr;
+			this->ClientFinancialStatusDataGridView->CurrentTheme->RowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
 				static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(229)));
-			this->bunifuDataGridView4->CurrentTheme->RowsStyle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold));
-			this->bunifuDataGridView4->CurrentTheme->RowsStyle->ForeColor = System::Drawing::Color::Black;
-			this->bunifuDataGridView4->CurrentTheme->RowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+			this->ClientFinancialStatusDataGridView->CurrentTheme->RowsStyle->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ClientFinancialStatusDataGridView->CurrentTheme->RowsStyle->ForeColor = System::Drawing::Color::Black;
+			this->ClientFinancialStatusDataGridView->CurrentTheme->RowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
 				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
-			this->bunifuDataGridView4->CurrentTheme->RowsStyle->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle12->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle12->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
+			this->ClientFinancialStatusDataGridView->CurrentTheme->RowsStyle->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle23->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle23->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
 				static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(229)));
-			dataGridViewCellStyle12->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold));
-			dataGridViewCellStyle12->ForeColor = System::Drawing::Color::Black;
-			dataGridViewCellStyle12->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+			dataGridViewCellStyle23->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle23->ForeColor = System::Drawing::Color::Black;
+			dataGridViewCellStyle23->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
 				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
-			dataGridViewCellStyle12->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle12->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->bunifuDataGridView4->DefaultCellStyle = dataGridViewCellStyle12;
-			this->bunifuDataGridView4->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->bunifuDataGridView4->EnableHeadersVisualStyles = false;
-			this->bunifuDataGridView4->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(178)),
+			dataGridViewCellStyle23->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle23->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->ClientFinancialStatusDataGridView->DefaultCellStyle = dataGridViewCellStyle23;
+			this->ClientFinancialStatusDataGridView->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->ClientFinancialStatusDataGridView->EnableHeadersVisualStyles = false;
+			this->ClientFinancialStatusDataGridView->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(178)),
 				static_cast<System::Int32>(static_cast<System::Byte>(178)), static_cast<System::Int32>(static_cast<System::Byte>(216)));
-			this->bunifuDataGridView4->HeaderBackColor = System::Drawing::Color::Navy;
-			this->bunifuDataGridView4->HeaderBgColor = System::Drawing::Color::Empty;
-			this->bunifuDataGridView4->HeaderForeColor = System::Drawing::Color::White;
-			this->bunifuDataGridView4->Location = System::Drawing::Point(0, 0);
-			this->bunifuDataGridView4->Name = L"bunifuDataGridView4";
-			this->bunifuDataGridView4->ReadOnly = true;
-			this->bunifuDataGridView4->RowHeadersVisible = false;
-			this->bunifuDataGridView4->RowTemplate->Height = 40;
-			this->bunifuDataGridView4->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->bunifuDataGridView4->Size = System::Drawing::Size(586, 603);
-			this->bunifuDataGridView4->TabIndex = 0;
-			this->bunifuDataGridView4->Theme = Bunifu::UI::WinForms::BunifuDataGridView::PresetThemes::Navy;
+			this->ClientFinancialStatusDataGridView->HeaderBackColor = System::Drawing::Color::Navy;
+			this->ClientFinancialStatusDataGridView->HeaderBgColor = System::Drawing::Color::Empty;
+			this->ClientFinancialStatusDataGridView->HeaderForeColor = System::Drawing::Color::White;
+			this->ClientFinancialStatusDataGridView->Location = System::Drawing::Point(0, 0);
+			this->ClientFinancialStatusDataGridView->Name = L"ClientFinancialStatusDataGridView";
+			this->ClientFinancialStatusDataGridView->ReadOnly = true;
+			this->ClientFinancialStatusDataGridView->RowHeadersVisible = false;
+			this->ClientFinancialStatusDataGridView->RowTemplate->Height = 40;
+			this->ClientFinancialStatusDataGridView->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
+			this->ClientFinancialStatusDataGridView->Size = System::Drawing::Size(586, 603);
+			this->ClientFinancialStatusDataGridView->TabIndex = 0;
+			this->ClientFinancialStatusDataGridView->Theme = Bunifu::UI::WinForms::BunifuDataGridView::PresetThemes::Navy;
 			// 
 			// Column34
 			// 
-			this->Column34->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column34->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column34->DataPropertyName = L"timestamp";
+			dataGridViewCellStyle19->Format = L"d";
+			dataGridViewCellStyle19->NullValue = nullptr;
+			this->Column34->DefaultCellStyle = dataGridViewCellStyle19;
 			this->Column34->HeaderText = L"Date";
 			this->Column34->Name = L"Column34";
 			this->Column34->ReadOnly = true;
-			this->Column34->Width = 67;
 			// 
 			// Column35
 			// 
-			this->Column35->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column35->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column35->DataPropertyName = L"debit";
+			dataGridViewCellStyle20->Format = L"N2";
+			dataGridViewCellStyle20->NullValue = L"0";
+			this->Column35->DefaultCellStyle = dataGridViewCellStyle20;
 			this->Column35->HeaderText = L"Debit";
 			this->Column35->Name = L"Column35";
 			this->Column35->ReadOnly = true;
-			this->Column35->Width = 73;
 			// 
 			// Column36
 			// 
-			this->Column36->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column36->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column36->DataPropertyName = L"credit";
+			dataGridViewCellStyle21->Format = L"N2";
+			dataGridViewCellStyle21->NullValue = L"0";
+			this->Column36->DefaultCellStyle = dataGridViewCellStyle21;
 			this->Column36->HeaderText = L"Credit";
 			this->Column36->Name = L"Column36";
 			this->Column36->ReadOnly = true;
-			this->Column36->Width = 78;
 			// 
 			// Column37
 			// 
-			this->Column37->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column37->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column37->DataPropertyName = L"balance";
+			dataGridViewCellStyle22->Format = L"N2";
+			dataGridViewCellStyle22->NullValue = L"0";
+			this->Column37->DefaultCellStyle = dataGridViewCellStyle22;
 			this->Column37->HeaderText = L"Balance";
 			this->Column37->Name = L"Column37";
 			this->Column37->ReadOnly = true;
-			this->Column37->Width = 89;
 			// 
 			// guna2Panel8
 			// 
+			this->guna2Panel8->Controls->Add(this->txt_Balance);
 			this->guna2Panel8->Controls->Add(this->btn_Back);
 			this->guna2Panel8->Controls->Add(this->btnSubmit);
-			this->guna2Panel8->Controls->Add(this->txt_BillNo);
-			this->guna2Panel8->Controls->Add(this->txt_TotalPrice);
-			this->guna2Panel8->Controls->Add(this->guna2DateTimePicker1);
+			this->guna2Panel8->Controls->Add(this->txt_RefNo);
+			this->guna2Panel8->Controls->Add(this->txt_Debit);
+			this->guna2Panel8->Controls->Add(this->txt_MeterReadingDateTimePicker);
 			this->guna2Panel8->Controls->Add(this->txt_PreviousMeterReading);
 			this->guna2Panel8->Controls->Add(this->txt_ClientID);
 			this->guna2Panel8->Controls->Add(this->bunifuLabel18);
 			this->guna2Panel8->Controls->Add(this->txt_ClientName);
 			this->guna2Panel8->Controls->Add(this->bunifuLabel17);
 			this->guna2Panel8->Controls->Add(this->txt_UnitsConsumed);
+			this->guna2Panel8->Controls->Add(this->bunifuLabel14);
 			this->guna2Panel8->Controls->Add(this->bunifuLabel16);
-			this->guna2Panel8->Controls->Add(this->txt_Balance);
 			this->guna2Panel8->Controls->Add(this->bunifuLabel15);
 			this->guna2Panel8->Controls->Add(this->txt_PricePerUnit);
-			this->guna2Panel8->Controls->Add(this->bunifuLabel14);
 			this->guna2Panel8->Controls->Add(this->txt_CurrentMeterReading);
 			this->guna2Panel8->Controls->Add(this->bunifuLabel13);
 			this->guna2Panel8->Controls->Add(this->bunifuLabel6);
@@ -2031,6 +2242,36 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->guna2Panel8->ShadowDecoration->Parent = this->guna2Panel8;
 			this->guna2Panel8->Size = System::Drawing::Size(556, 603);
 			this->guna2Panel8->TabIndex = 18;
+			// 
+			// txt_Balance
+			// 
+			this->txt_Balance->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->txt_Balance->DefaultText = L"";
+			this->txt_Balance->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
+			this->txt_Balance->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
+			this->txt_Balance->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->txt_Balance->DisabledState->Parent = this->txt_Balance;
+			this->txt_Balance->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->txt_Balance->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->txt_Balance->FocusedState->Parent = this->txt_Balance;
+			this->txt_Balance->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->txt_Balance->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->txt_Balance->HoverState->Parent = this->txt_Balance;
+			this->txt_Balance->Location = System::Drawing::Point(166, 464);
+			this->txt_Balance->Name = L"txt_Balance";
+			this->txt_Balance->PasswordChar = '\0';
+			this->txt_Balance->PlaceholderText = L"";
+			this->txt_Balance->SelectedText = L"";
+			this->txt_Balance->ShadowDecoration->Parent = this->txt_Balance;
+			this->txt_Balance->Size = System::Drawing::Size(200, 36);
+			this->txt_Balance->TabIndex = 21;
 			// 
 			// btnSubmit
 			// 
@@ -2059,83 +2300,87 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->btnSubmit->UseTransparentBackground = true;
 			this->btnSubmit->Click += gcnew System::EventHandler(this, &Administrator::btnSubmit_Click);
 			// 
-			// txt_BillNo
+			// txt_RefNo
 			// 
-			this->txt_BillNo->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->txt_BillNo->DefaultText = L"";
-			this->txt_BillNo->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+			this->txt_RefNo->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->txt_RefNo->DefaultText = L"";
+			this->txt_RefNo->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
 				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
-			this->txt_BillNo->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+			this->txt_RefNo->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
 				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
-			this->txt_BillNo->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+			this->txt_RefNo->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
 				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->txt_BillNo->DisabledState->Parent = this->txt_BillNo;
-			this->txt_BillNo->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+			this->txt_RefNo->DisabledState->Parent = this->txt_RefNo;
+			this->txt_RefNo->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
 				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->txt_BillNo->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+			this->txt_RefNo->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->txt_BillNo->FocusedState->Parent = this->txt_BillNo;
-			this->txt_BillNo->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->txt_RefNo->FocusedState->Parent = this->txt_RefNo;
+			this->txt_RefNo->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txt_BillNo->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+			this->txt_RefNo->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->txt_BillNo->HoverState->Parent = this->txt_BillNo;
-			this->txt_BillNo->Location = System::Drawing::Point(166, 521);
-			this->txt_BillNo->Name = L"txt_BillNo";
-			this->txt_BillNo->PasswordChar = '\0';
-			this->txt_BillNo->PlaceholderText = L"";
-			this->txt_BillNo->ReadOnly = true;
-			this->txt_BillNo->SelectedText = L"";
-			this->txt_BillNo->ShadowDecoration->Parent = this->txt_BillNo;
-			this->txt_BillNo->Size = System::Drawing::Size(200, 36);
-			this->txt_BillNo->TabIndex = 19;
+			this->txt_RefNo->HoverState->Parent = this->txt_RefNo;
+			this->txt_RefNo->Location = System::Drawing::Point(166, 515);
+			this->txt_RefNo->Name = L"txt_RefNo";
+			this->txt_RefNo->PasswordChar = '\0';
+			this->txt_RefNo->PlaceholderText = L"";
+			this->txt_RefNo->ReadOnly = true;
+			this->txt_RefNo->SelectedText = L"";
+			this->txt_RefNo->ShadowDecoration->Parent = this->txt_RefNo;
+			this->txt_RefNo->Size = System::Drawing::Size(200, 36);
+			this->txt_RefNo->TabIndex = 19;
 			// 
-			// txt_TotalPrice
+			// txt_Debit
 			// 
-			this->txt_TotalPrice->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->txt_TotalPrice->DefaultText = L"";
-			this->txt_TotalPrice->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+			this->txt_Debit->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->txt_Debit->DefaultText = L"";
+			this->txt_Debit->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
 				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
-			this->txt_TotalPrice->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+			this->txt_Debit->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
 				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
-			this->txt_TotalPrice->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+			this->txt_Debit->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
 				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->txt_TotalPrice->DisabledState->Parent = this->txt_TotalPrice;
-			this->txt_TotalPrice->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+			this->txt_Debit->DisabledState->Parent = this->txt_Debit;
+			this->txt_Debit->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
 				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->txt_TotalPrice->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+			this->txt_Debit->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->txt_TotalPrice->FocusedState->Parent = this->txt_TotalPrice;
-			this->txt_TotalPrice->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->txt_Debit->FocusedState->Parent = this->txt_Debit;
+			this->txt_Debit->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txt_TotalPrice->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+			this->txt_Debit->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->txt_TotalPrice->HoverState->Parent = this->txt_TotalPrice;
-			this->txt_TotalPrice->Location = System::Drawing::Point(166, 468);
-			this->txt_TotalPrice->Name = L"txt_TotalPrice";
-			this->txt_TotalPrice->PasswordChar = '\0';
-			this->txt_TotalPrice->PlaceholderText = L"";
-			this->txt_TotalPrice->ReadOnly = true;
-			this->txt_TotalPrice->SelectedText = L"";
-			this->txt_TotalPrice->ShadowDecoration->Parent = this->txt_TotalPrice;
-			this->txt_TotalPrice->Size = System::Drawing::Size(200, 36);
-			this->txt_TotalPrice->TabIndex = 18;
+			this->txt_Debit->HoverState->Parent = this->txt_Debit;
+			this->txt_Debit->Location = System::Drawing::Point(166, 413);
+			this->txt_Debit->Name = L"txt_Debit";
+			this->txt_Debit->PasswordChar = '\0';
+			this->txt_Debit->PlaceholderText = L"";
+			this->txt_Debit->ReadOnly = true;
+			this->txt_Debit->SelectedText = L"";
+			this->txt_Debit->ShadowDecoration->Parent = this->txt_Debit;
+			this->txt_Debit->Size = System::Drawing::Size(200, 36);
+			this->txt_Debit->TabIndex = 18;
 			// 
-			// guna2DateTimePicker1
+			// txt_MeterReadingDateTimePicker
 			// 
-			this->guna2DateTimePicker1->CheckedState->Parent = this->guna2DateTimePicker1;
-			this->guna2DateTimePicker1->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->guna2DateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Long;
-			this->guna2DateTimePicker1->HoverState->Parent = this->guna2DateTimePicker1;
-			this->guna2DateTimePicker1->Location = System::Drawing::Point(166, 309);
-			this->guna2DateTimePicker1->MaxDate = System::DateTime(9998, 12, 31, 0, 0, 0, 0);
-			this->guna2DateTimePicker1->MinDate = System::DateTime(1753, 1, 1, 0, 0, 0, 0);
-			this->guna2DateTimePicker1->Name = L"guna2DateTimePicker1";
-			this->guna2DateTimePicker1->ShadowDecoration->Parent = this->guna2DateTimePicker1;
-			this->guna2DateTimePicker1->Size = System::Drawing::Size(200, 36);
-			this->guna2DateTimePicker1->TabIndex = 17;
-			this->guna2DateTimePicker1->Value = System::DateTime(2021, 10, 9, 23, 34, 59, 170);
+			this->txt_MeterReadingDateTimePicker->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(218)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
+			this->txt_MeterReadingDateTimePicker->BorderThickness = 1;
+			this->txt_MeterReadingDateTimePicker->CheckedState->Parent = this->txt_MeterReadingDateTimePicker;
+			this->txt_MeterReadingDateTimePicker->FillColor = System::Drawing::Color::Transparent;
+			this->txt_MeterReadingDateTimePicker->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F));
+			this->txt_MeterReadingDateTimePicker->Format = System::Windows::Forms::DateTimePickerFormat::Long;
+			this->txt_MeterReadingDateTimePicker->HoverState->Parent = this->txt_MeterReadingDateTimePicker;
+			this->txt_MeterReadingDateTimePicker->Location = System::Drawing::Point(166, 309);
+			this->txt_MeterReadingDateTimePicker->MaxDate = System::DateTime(2021, 10, 23, 7, 14, 16, 456);
+			this->txt_MeterReadingDateTimePicker->MinDate = System::DateTime(2000, 1, 1, 0, 0, 0, 0);
+			this->txt_MeterReadingDateTimePicker->Name = L"txt_MeterReadingDateTimePicker";
+			this->txt_MeterReadingDateTimePicker->ShadowDecoration->Parent = this->txt_MeterReadingDateTimePicker;
+			this->txt_MeterReadingDateTimePicker->Size = System::Drawing::Size(200, 36);
+			this->txt_MeterReadingDateTimePicker->TabIndex = 17;
+			this->txt_MeterReadingDateTimePicker->UseTransparentBackground = true;
+			this->txt_MeterReadingDateTimePicker->Value = System::DateTime(2021, 10, 17, 0, 0, 0, 0);
 			// 
 			// txt_PreviousMeterReading
 			// 
@@ -2162,7 +2407,6 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->txt_PreviousMeterReading->Name = L"txt_PreviousMeterReading";
 			this->txt_PreviousMeterReading->PasswordChar = '\0';
 			this->txt_PreviousMeterReading->PlaceholderText = L"";
-			this->txt_PreviousMeterReading->ReadOnly = true;
 			this->txt_PreviousMeterReading->SelectedText = L"";
 			this->txt_PreviousMeterReading->ShadowDecoration->Parent = this->txt_PreviousMeterReading;
 			this->txt_PreviousMeterReading->Size = System::Drawing::Size(199, 36);
@@ -2280,8 +2524,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->txt_UnitsConsumed->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->txt_UnitsConsumed->FocusedState->Parent = this->txt_UnitsConsumed;
-			this->txt_UnitsConsumed->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->txt_UnitsConsumed->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F));
 			this->txt_UnitsConsumed->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->txt_UnitsConsumed->HoverState->Parent = this->txt_UnitsConsumed;
@@ -2296,6 +2539,23 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->txt_UnitsConsumed->TabIndex = 3;
 			this->txt_UnitsConsumed->TextChanged += gcnew System::EventHandler(this, &Administrator::txt_UnitsConsumed_TextChanged);
 			// 
+			// bunifuLabel14
+			// 
+			this->bunifuLabel14->AllowParentOverrides = false;
+			this->bunifuLabel14->AutoEllipsis = false;
+			this->bunifuLabel14->Cursor = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel14->CursorType = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel14->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bunifuLabel14->Location = System::Drawing::Point(26, 464);
+			this->bunifuLabel14->Name = L"bunifuLabel14";
+			this->bunifuLabel14->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->bunifuLabel14->Size = System::Drawing::Size(46, 15);
+			this->bunifuLabel14->TabIndex = 14;
+			this->bunifuLabel14->Text = L"Balance";
+			this->bunifuLabel14->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
+			this->bunifuLabel14->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
+			// 
 			// bunifuLabel16
 			// 
 			this->bunifuLabel16->AllowParentOverrides = false;
@@ -2304,45 +2564,14 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->bunifuLabel16->CursorType = System::Windows::Forms::Cursors::Default;
 			this->bunifuLabel16->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bunifuLabel16->Location = System::Drawing::Point(26, 521);
+			this->bunifuLabel16->Location = System::Drawing::Point(26, 515);
 			this->bunifuLabel16->Name = L"bunifuLabel16";
 			this->bunifuLabel16->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->bunifuLabel16->Size = System::Drawing::Size(65, 15);
+			this->bunifuLabel16->Size = System::Drawing::Size(107, 15);
 			this->bunifuLabel16->TabIndex = 14;
-			this->bunifuLabel16->Text = L"Bill Number";
+			this->bunifuLabel16->Text = L"Reference Number";
 			this->bunifuLabel16->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
 			this->bunifuLabel16->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
-			// 
-			// txt_Balance
-			// 
-			this->txt_Balance->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->txt_Balance->DefaultText = L"";
-			this->txt_Balance->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
-				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
-			this->txt_Balance->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
-				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
-			this->txt_Balance->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
-				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->txt_Balance->DisabledState->Parent = this->txt_Balance;
-			this->txt_Balance->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
-				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->txt_Balance->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
-				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->txt_Balance->FocusedState->Parent = this->txt_Balance;
-			this->txt_Balance->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->txt_Balance->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
-				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->txt_Balance->HoverState->Parent = this->txt_Balance;
-			this->txt_Balance->Location = System::Drawing::Point(166, 415);
-			this->txt_Balance->Name = L"txt_Balance";
-			this->txt_Balance->PasswordChar = '\0';
-			this->txt_Balance->PlaceholderText = L"";
-			this->txt_Balance->ReadOnly = true;
-			this->txt_Balance->SelectedText = L"";
-			this->txt_Balance->ShadowDecoration->Parent = this->txt_Balance;
-			this->txt_Balance->Size = System::Drawing::Size(199, 36);
-			this->txt_Balance->TabIndex = 4;
 			// 
 			// bunifuLabel15
 			// 
@@ -2391,23 +2620,6 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->txt_PricePerUnit->Size = System::Drawing::Size(199, 36);
 			this->txt_PricePerUnit->TabIndex = 5;
 			// 
-			// bunifuLabel14
-			// 
-			this->bunifuLabel14->AllowParentOverrides = false;
-			this->bunifuLabel14->AutoEllipsis = false;
-			this->bunifuLabel14->Cursor = System::Windows::Forms::Cursors::Default;
-			this->bunifuLabel14->CursorType = System::Windows::Forms::Cursors::Default;
-			this->bunifuLabel14->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->bunifuLabel14->Location = System::Drawing::Point(26, 415);
-			this->bunifuLabel14->Name = L"bunifuLabel14";
-			this->bunifuLabel14->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->bunifuLabel14->Size = System::Drawing::Size(46, 15);
-			this->bunifuLabel14->TabIndex = 12;
-			this->bunifuLabel14->Text = L"Balance";
-			this->bunifuLabel14->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
-			this->bunifuLabel14->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
-			// 
 			// txt_CurrentMeterReading
 			// 
 			this->txt_CurrentMeterReading->Cursor = System::Windows::Forms::Cursors::IBeam;
@@ -2448,12 +2660,12 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->bunifuLabel13->CursorType = System::Windows::Forms::Cursors::Default;
 			this->bunifuLabel13->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bunifuLabel13->Location = System::Drawing::Point(26, 468);
+			this->bunifuLabel13->Location = System::Drawing::Point(26, 413);
 			this->bunifuLabel13->Name = L"bunifuLabel13";
 			this->bunifuLabel13->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->bunifuLabel13->Size = System::Drawing::Size(61, 15);
+			this->bunifuLabel13->Size = System::Drawing::Size(30, 15);
 			this->bunifuLabel13->TabIndex = 11;
-			this->bunifuLabel13->Text = L"Total Price";
+			this->bunifuLabel13->Text = L"Debit";
 			this->bunifuLabel13->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
 			this->bunifuLabel13->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
 			// 
@@ -2654,18 +2866,27 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			// 
 			// btn_Submt
 			// 
+			this->btn_Submt->AutoRoundedCorners = true;
+			this->btn_Submt->BorderColor = System::Drawing::Color::Navy;
+			this->btn_Submt->BorderRadius = 16;
+			this->btn_Submt->BorderThickness = 2;
+			this->btn_Submt->ButtonMode = Guna::UI2::WinForms::Enums::ButtonMode::RadioButton;
 			this->btn_Submt->CheckedState->Parent = this->btn_Submt;
 			this->btn_Submt->CustomImages->Parent = this->btn_Submt;
-			this->btn_Submt->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->btn_Submt->ForeColor = System::Drawing::Color::White;
+			this->btn_Submt->FillColor = System::Drawing::Color::Transparent;
+			this->btn_Submt->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F));
+			this->btn_Submt->ForeColor = System::Drawing::Color::Navy;
 			this->btn_Submt->HoverState->Parent = this->btn_Submt;
+			this->btn_Submt->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btn_Submt.Image")));
+			this->btn_Submt->ImageAlign = System::Windows::Forms::HorizontalAlignment::Left;
 			this->btn_Submt->Location = System::Drawing::Point(244, 521);
 			this->btn_Submt->Name = L"btn_Submt";
 			this->btn_Submt->ShadowDecoration->Parent = this->btn_Submt;
-			this->btn_Submt->Size = System::Drawing::Size(109, 34);
+			this->btn_Submt->Size = System::Drawing::Size(100, 34);
 			this->btn_Submt->TabIndex = 37;
 			this->btn_Submt->Text = L"Submit";
+			this->btn_Submt->TextOffset = System::Drawing::Point(5, 0);
+			this->btn_Submt->UseTransparentBackground = true;
 			this->btn_Submt->Click += gcnew System::EventHandler(this, &Administrator::btn_Submt_Click);
 			// 
 			// bunifuLabel31
@@ -2968,24 +3189,24 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->ClientsDataGridView->AllowCustomTheming = true;
 			this->ClientsDataGridView->AllowUserToAddRows = false;
 			this->ClientsDataGridView->AllowUserToDeleteRows = false;
-			dataGridViewCellStyle13->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
+			dataGridViewCellStyle24->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
 				static_cast<System::Int32>(static_cast<System::Byte>(191)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
-			dataGridViewCellStyle13->ForeColor = System::Drawing::Color::Black;
-			this->ClientsDataGridView->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+			dataGridViewCellStyle24->ForeColor = System::Drawing::Color::Black;
+			this->ClientsDataGridView->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle24;
 			this->ClientsDataGridView->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->ClientsDataGridView->BackgroundColor = System::Drawing::SystemColors::Window;
 			this->ClientsDataGridView->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ClientsDataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
 			this->ClientsDataGridView->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			dataGridViewCellStyle14->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle14->BackColor = System::Drawing::Color::Navy;
-			dataGridViewCellStyle14->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 11.75F, System::Drawing::FontStyle::Bold));
-			dataGridViewCellStyle14->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle14->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+			dataGridViewCellStyle25->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle25->BackColor = System::Drawing::Color::Navy;
+			dataGridViewCellStyle25->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 11.75F, System::Drawing::FontStyle::Bold));
+			dataGridViewCellStyle25->ForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle25->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(102)));
-			dataGridViewCellStyle14->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle14->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->ClientsDataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+			dataGridViewCellStyle25->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle25->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->ClientsDataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
 			this->ClientsDataGridView->ColumnHeadersHeight = 40;
 			this->ClientsDataGridView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
 				this->Column29,
@@ -3015,16 +3236,16 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->ClientsDataGridView->CurrentTheme->RowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
 				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
 			this->ClientsDataGridView->CurrentTheme->RowsStyle->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle15->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle15->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
+			dataGridViewCellStyle26->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle26->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
 				static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(229)));
-			dataGridViewCellStyle15->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold));
-			dataGridViewCellStyle15->ForeColor = System::Drawing::Color::Black;
-			dataGridViewCellStyle15->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+			dataGridViewCellStyle26->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold));
+			dataGridViewCellStyle26->ForeColor = System::Drawing::Color::Black;
+			dataGridViewCellStyle26->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
 				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
-			dataGridViewCellStyle15->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle15->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->ClientsDataGridView->DefaultCellStyle = dataGridViewCellStyle15;
+			dataGridViewCellStyle26->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle26->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->ClientsDataGridView->DefaultCellStyle = dataGridViewCellStyle26;
 			this->ClientsDataGridView->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->ClientsDataGridView->EnableHeadersVisualStyles = false;
 			this->ClientsDataGridView->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(178)),
@@ -3135,100 +3356,147 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->lblTotalNumberofClients->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
 			this->lblTotalNumberofClients->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
 			// 
-			// PaidBillsTabPage
+			// PaymentsTabPage
 			// 
-			this->PaidBillsTabPage->Controls->Add(this->guna2Panel12);
-			this->PaidBillsTabPage->Controls->Add(this->guna2Panel11);
-			this->PaidBillsTabPage->Location = System::Drawing::Point(4, 4);
-			this->PaidBillsTabPage->Name = L"PaidBillsTabPage";
-			this->PaidBillsTabPage->Padding = System::Windows::Forms::Padding(3);
-			this->PaidBillsTabPage->Size = System::Drawing::Size(1162, 643);
-			this->PaidBillsTabPage->TabIndex = 3;
-			this->PaidBillsTabPage->Text = L"Paid Bills";
-			this->PaidBillsTabPage->UseVisualStyleBackColor = true;
+			this->PaymentsTabPage->Controls->Add(this->bunifuPages3);
+			this->PaymentsTabPage->Location = System::Drawing::Point(4, 4);
+			this->PaymentsTabPage->Name = L"PaymentsTabPage";
+			this->PaymentsTabPage->Padding = System::Windows::Forms::Padding(3);
+			this->PaymentsTabPage->Size = System::Drawing::Size(1162, 643);
+			this->PaymentsTabPage->TabIndex = 3;
+			this->PaymentsTabPage->Text = L"PaymentsTabPage";
+			this->PaymentsTabPage->UseVisualStyleBackColor = true;
 			// 
-			// guna2Panel12
+			// bunifuPages3
 			// 
-			this->guna2Panel12->Controls->Add(this->PaidBillsDataGridView);
-			this->guna2Panel12->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->guna2Panel12->Location = System::Drawing::Point(3, 103);
-			this->guna2Panel12->Name = L"guna2Panel12";
-			this->guna2Panel12->ShadowDecoration->Parent = this->guna2Panel12;
-			this->guna2Panel12->Size = System::Drawing::Size(1156, 537);
-			this->guna2Panel12->TabIndex = 1;
+			this->bunifuPages3->Alignment = System::Windows::Forms::TabAlignment::Bottom;
+			this->bunifuPages3->AllowTransitions = true;
+			this->bunifuPages3->Controls->Add(this->ClientsListTabPage);
+			this->bunifuPages3->Controls->Add(this->PaymentTabPage);
+			this->bunifuPages3->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->bunifuPages3->Location = System::Drawing::Point(3, 3);
+			this->bunifuPages3->Multiline = true;
+			this->bunifuPages3->Name = L"bunifuPages3";
+			this->bunifuPages3->Page = this->ClientsListTabPage;
+			this->bunifuPages3->PageIndex = 0;
+			this->bunifuPages3->PageName = L"ClientsListTabPage";
+			this->bunifuPages3->PageTitle = L"ClientsListTabPage";
+			this->bunifuPages3->SelectedIndex = 0;
+			this->bunifuPages3->Size = System::Drawing::Size(1156, 637);
+			this->bunifuPages3->TabIndex = 0;
+			animation2->AnimateOnlyDifferences = true;
+			animation2->BlindCoeff = (cli::safe_cast<System::Drawing::PointF>(resources->GetObject(L"animation2.BlindCoeff")));
+			animation2->LeafCoeff = 0;
+			animation2->MaxTime = 1;
+			animation2->MinTime = 0;
+			animation2->MosaicCoeff = (cli::safe_cast<System::Drawing::PointF>(resources->GetObject(L"animation2.MosaicCoeff")));
+			animation2->MosaicShift = (cli::safe_cast<System::Drawing::PointF>(resources->GetObject(L"animation2.MosaicShift")));
+			animation2->MosaicSize = 0;
+			animation2->Padding = System::Windows::Forms::Padding(0, 0, 0, 0);
+			animation2->RotateCoeff = 0;
+			animation2->RotateLimit = 0;
+			animation2->ScaleCoeff = (cli::safe_cast<System::Drawing::PointF>(resources->GetObject(L"animation2.ScaleCoeff")));
+			animation2->SlideCoeff = (cli::safe_cast<System::Drawing::PointF>(resources->GetObject(L"animation2.SlideCoeff")));
+			animation2->TimeCoeff = 0;
+			animation2->TransparencyCoeff = 0;
+			this->bunifuPages3->Transition = animation2;
+			this->bunifuPages3->TransitionType = Utilities::BunifuPages::BunifuAnimatorNS::AnimationType::HorizSlide;
 			// 
-			// PaidBillsDataGridView
+			// ClientsListTabPage
 			// 
-			this->PaidBillsDataGridView->AllowCustomTheming = false;
-			this->PaidBillsDataGridView->AllowUserToAddRows = false;
-			this->PaidBillsDataGridView->AllowUserToDeleteRows = false;
-			dataGridViewCellStyle16->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(248)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			dataGridViewCellStyle16->ForeColor = System::Drawing::Color::Black;
-			this->PaidBillsDataGridView->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-			this->PaidBillsDataGridView->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-			this->PaidBillsDataGridView->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->PaidBillsDataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
-			this->PaidBillsDataGridView->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			dataGridViewCellStyle17->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle17->BackColor = System::Drawing::Color::DodgerBlue;
-			dataGridViewCellStyle17->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 11.75F, System::Drawing::FontStyle::Bold));
-			dataGridViewCellStyle17->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle17->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)),
-				static_cast<System::Int32>(static_cast<System::Byte>(115)), static_cast<System::Int32>(static_cast<System::Byte>(204)));
-			dataGridViewCellStyle17->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle17->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->PaidBillsDataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
-			this->PaidBillsDataGridView->ColumnHeadersHeight = 40;
-			this->PaidBillsDataGridView->CurrentTheme->AlternatingRowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(248)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->PaidBillsDataGridView->CurrentTheme->AlternatingRowsStyle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F,
-				System::Drawing::FontStyle::Bold));
-			this->PaidBillsDataGridView->CurrentTheme->AlternatingRowsStyle->ForeColor = System::Drawing::Color::Black;
-			this->PaidBillsDataGridView->CurrentTheme->AlternatingRowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(210)),
-				static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->PaidBillsDataGridView->CurrentTheme->AlternatingRowsStyle->SelectionForeColor = System::Drawing::Color::Black;
-			this->PaidBillsDataGridView->CurrentTheme->BackColor = System::Drawing::Color::White;
-			this->PaidBillsDataGridView->CurrentTheme->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(221)),
-				static_cast<System::Int32>(static_cast<System::Byte>(238)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->PaidBillsDataGridView->CurrentTheme->HeaderStyle->BackColor = System::Drawing::Color::DodgerBlue;
-			this->PaidBillsDataGridView->CurrentTheme->HeaderStyle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 11.75F, System::Drawing::FontStyle::Bold));
-			this->PaidBillsDataGridView->CurrentTheme->HeaderStyle->ForeColor = System::Drawing::Color::White;
-			this->PaidBillsDataGridView->CurrentTheme->HeaderStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)),
-				static_cast<System::Int32>(static_cast<System::Byte>(115)), static_cast<System::Int32>(static_cast<System::Byte>(204)));
-			this->PaidBillsDataGridView->CurrentTheme->HeaderStyle->SelectionForeColor = System::Drawing::Color::White;
-			this->PaidBillsDataGridView->CurrentTheme->Name = nullptr;
-			this->PaidBillsDataGridView->CurrentTheme->RowsStyle->BackColor = System::Drawing::Color::White;
-			this->PaidBillsDataGridView->CurrentTheme->RowsStyle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold));
-			this->PaidBillsDataGridView->CurrentTheme->RowsStyle->ForeColor = System::Drawing::Color::Black;
-			this->PaidBillsDataGridView->CurrentTheme->RowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(210)),
-				static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->PaidBillsDataGridView->CurrentTheme->RowsStyle->SelectionForeColor = System::Drawing::Color::Black;
-			dataGridViewCellStyle18->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle18->BackColor = System::Drawing::Color::White;
-			dataGridViewCellStyle18->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold));
-			dataGridViewCellStyle18->ForeColor = System::Drawing::Color::Black;
-			dataGridViewCellStyle18->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(210)),
-				static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			dataGridViewCellStyle18->SelectionForeColor = System::Drawing::Color::Black;
-			dataGridViewCellStyle18->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->PaidBillsDataGridView->DefaultCellStyle = dataGridViewCellStyle18;
-			this->PaidBillsDataGridView->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->PaidBillsDataGridView->EnableHeadersVisualStyles = false;
-			this->PaidBillsDataGridView->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(221)),
-				static_cast<System::Int32>(static_cast<System::Byte>(238)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->PaidBillsDataGridView->HeaderBackColor = System::Drawing::Color::DodgerBlue;
-			this->PaidBillsDataGridView->HeaderBgColor = System::Drawing::Color::Empty;
-			this->PaidBillsDataGridView->HeaderForeColor = System::Drawing::Color::White;
-			this->PaidBillsDataGridView->Location = System::Drawing::Point(0, 0);
-			this->PaidBillsDataGridView->Name = L"PaidBillsDataGridView";
-			this->PaidBillsDataGridView->ReadOnly = true;
-			this->PaidBillsDataGridView->RowHeadersVisible = false;
-			this->PaidBillsDataGridView->RowTemplate->Height = 40;
-			this->PaidBillsDataGridView->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->PaidBillsDataGridView->Size = System::Drawing::Size(1156, 537);
-			this->PaidBillsDataGridView->TabIndex = 0;
-			this->PaidBillsDataGridView->Theme = Bunifu::UI::WinForms::BunifuDataGridView::PresetThemes::Light;
+			this->ClientsListTabPage->Controls->Add(this->ClientsPaymentsListDataGridView);
+			this->ClientsListTabPage->Controls->Add(this->guna2Panel11);
+			this->ClientsListTabPage->Location = System::Drawing::Point(4, 4);
+			this->ClientsListTabPage->Name = L"ClientsListTabPage";
+			this->ClientsListTabPage->Padding = System::Windows::Forms::Padding(3);
+			this->ClientsListTabPage->Size = System::Drawing::Size(1148, 609);
+			this->ClientsListTabPage->TabIndex = 0;
+			this->ClientsListTabPage->Text = L"ClientsListTabPage";
+			this->ClientsListTabPage->UseVisualStyleBackColor = true;
+			// 
+			// ClientsPaymentsListDataGridView
+			// 
+			this->ClientsPaymentsListDataGridView->AllowCustomTheming = true;
+			this->ClientsPaymentsListDataGridView->AllowUserToAddRows = false;
+			this->ClientsPaymentsListDataGridView->AllowUserToDeleteRows = false;
+			dataGridViewCellStyle27->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
+				static_cast<System::Int32>(static_cast<System::Byte>(191)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
+			dataGridViewCellStyle27->ForeColor = System::Drawing::Color::Black;
+			this->ClientsPaymentsListDataGridView->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
+			this->ClientsPaymentsListDataGridView->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->ClientsPaymentsListDataGridView->BackgroundColor = System::Drawing::SystemColors::Window;
+			this->ClientsPaymentsListDataGridView->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->ClientsPaymentsListDataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
+			this->ClientsPaymentsListDataGridView->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+			dataGridViewCellStyle28->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle28->BackColor = System::Drawing::Color::Navy;
+			dataGridViewCellStyle28->Font = (gcnew System::Drawing::Font(L"Saira", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle28->ForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle28->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(102)));
+			dataGridViewCellStyle28->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle28->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->ClientsPaymentsListDataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+			this->ClientsPaymentsListDataGridView->ColumnHeadersHeight = 40;
+			this->ClientsPaymentsListDataGridView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
+				this->Column18,
+					this->Column42, this->Column43, this->Column44, this->Column45, this->Column46
+			});
+			this->ClientsPaymentsListDataGridView->CurrentTheme->AlternatingRowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
+				static_cast<System::Int32>(static_cast<System::Byte>(191)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
+			this->ClientsPaymentsListDataGridView->CurrentTheme->AlternatingRowsStyle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold",
+				9.75F, System::Drawing::FontStyle::Bold));
+			this->ClientsPaymentsListDataGridView->CurrentTheme->AlternatingRowsStyle->ForeColor = System::Drawing::Color::Black;
+			this->ClientsPaymentsListDataGridView->CurrentTheme->AlternatingRowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
+			this->ClientsPaymentsListDataGridView->CurrentTheme->AlternatingRowsStyle->SelectionForeColor = System::Drawing::Color::White;
+			this->ClientsPaymentsListDataGridView->CurrentTheme->BackColor = System::Drawing::Color::Navy;
+			this->ClientsPaymentsListDataGridView->CurrentTheme->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(178)),
+				static_cast<System::Int32>(static_cast<System::Byte>(178)), static_cast<System::Int32>(static_cast<System::Byte>(216)));
+			this->ClientsPaymentsListDataGridView->CurrentTheme->HeaderStyle->BackColor = System::Drawing::Color::Navy;
+			this->ClientsPaymentsListDataGridView->CurrentTheme->HeaderStyle->Font = (gcnew System::Drawing::Font(L"Saira", 12, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ClientsPaymentsListDataGridView->CurrentTheme->HeaderStyle->ForeColor = System::Drawing::Color::White;
+			this->ClientsPaymentsListDataGridView->CurrentTheme->HeaderStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(102)));
+			this->ClientsPaymentsListDataGridView->CurrentTheme->HeaderStyle->SelectionForeColor = System::Drawing::Color::White;
+			this->ClientsPaymentsListDataGridView->CurrentTheme->Name = nullptr;
+			this->ClientsPaymentsListDataGridView->CurrentTheme->RowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
+				static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(229)));
+			this->ClientsPaymentsListDataGridView->CurrentTheme->RowsStyle->Font = (gcnew System::Drawing::Font(L"Sora", 9.749999F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ClientsPaymentsListDataGridView->CurrentTheme->RowsStyle->ForeColor = System::Drawing::Color::Black;
+			this->ClientsPaymentsListDataGridView->CurrentTheme->RowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
+			this->ClientsPaymentsListDataGridView->CurrentTheme->RowsStyle->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle31->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle31->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
+				static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(229)));
+			dataGridViewCellStyle31->Font = (gcnew System::Drawing::Font(L"Sora", 9.749999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle31->ForeColor = System::Drawing::Color::Black;
+			dataGridViewCellStyle31->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
+			dataGridViewCellStyle31->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle31->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->ClientsPaymentsListDataGridView->DefaultCellStyle = dataGridViewCellStyle31;
+			this->ClientsPaymentsListDataGridView->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->ClientsPaymentsListDataGridView->EnableHeadersVisualStyles = false;
+			this->ClientsPaymentsListDataGridView->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(178)),
+				static_cast<System::Int32>(static_cast<System::Byte>(178)), static_cast<System::Int32>(static_cast<System::Byte>(216)));
+			this->ClientsPaymentsListDataGridView->HeaderBackColor = System::Drawing::Color::Navy;
+			this->ClientsPaymentsListDataGridView->HeaderBgColor = System::Drawing::Color::Empty;
+			this->ClientsPaymentsListDataGridView->HeaderForeColor = System::Drawing::Color::White;
+			this->ClientsPaymentsListDataGridView->Location = System::Drawing::Point(3, 71);
+			this->ClientsPaymentsListDataGridView->Name = L"ClientsPaymentsListDataGridView";
+			this->ClientsPaymentsListDataGridView->ReadOnly = true;
+			this->ClientsPaymentsListDataGridView->RowHeadersVisible = false;
+			this->ClientsPaymentsListDataGridView->RowTemplate->Height = 40;
+			this->ClientsPaymentsListDataGridView->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
+			this->ClientsPaymentsListDataGridView->Size = System::Drawing::Size(1142, 535);
+			this->ClientsPaymentsListDataGridView->TabIndex = 1;
+			this->ClientsPaymentsListDataGridView->Theme = Bunifu::UI::WinForms::BunifuDataGridView::PresetThemes::Navy;
 			// 
 			// guna2Panel11
 			// 
@@ -3236,24 +3504,607 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->guna2Panel11->Location = System::Drawing::Point(3, 3);
 			this->guna2Panel11->Name = L"guna2Panel11";
 			this->guna2Panel11->ShadowDecoration->Parent = this->guna2Panel11;
-			this->guna2Panel11->Size = System::Drawing::Size(1156, 100);
+			this->guna2Panel11->Size = System::Drawing::Size(1142, 68);
 			this->guna2Panel11->TabIndex = 0;
 			// 
-			// DueBillsTabPage
+			// PaymentTabPage
 			// 
-			this->DueBillsTabPage->Controls->Add(this->guna2Panel14);
-			this->DueBillsTabPage->Controls->Add(this->guna2Panel13);
-			this->DueBillsTabPage->Location = System::Drawing::Point(4, 4);
-			this->DueBillsTabPage->Name = L"DueBillsTabPage";
-			this->DueBillsTabPage->Padding = System::Windows::Forms::Padding(3);
-			this->DueBillsTabPage->Size = System::Drawing::Size(1162, 643);
-			this->DueBillsTabPage->TabIndex = 4;
-			this->DueBillsTabPage->Text = L"Due Bills";
-			this->DueBillsTabPage->UseVisualStyleBackColor = true;
+			this->PaymentTabPage->Controls->Add(this->guna2Panel20);
+			this->PaymentTabPage->Controls->Add(this->guna2Panel12);
+			this->PaymentTabPage->Location = System::Drawing::Point(4, 4);
+			this->PaymentTabPage->Name = L"PaymentTabPage";
+			this->PaymentTabPage->Padding = System::Windows::Forms::Padding(3);
+			this->PaymentTabPage->Size = System::Drawing::Size(1148, 609);
+			this->PaymentTabPage->TabIndex = 1;
+			this->PaymentTabPage->Text = L"PaymentTabPage";
+			this->PaymentTabPage->UseVisualStyleBackColor = true;
+			// 
+			// guna2Panel20
+			// 
+			this->guna2Panel20->Controls->Add(this->PaymentDataGridView);
+			this->guna2Panel20->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->guna2Panel20->Location = System::Drawing::Point(441, 3);
+			this->guna2Panel20->Name = L"guna2Panel20";
+			this->guna2Panel20->ShadowDecoration->Parent = this->guna2Panel20;
+			this->guna2Panel20->Size = System::Drawing::Size(704, 603);
+			this->guna2Panel20->TabIndex = 1;
+			// 
+			// PaymentDataGridView
+			// 
+			this->PaymentDataGridView->AllowCustomTheming = true;
+			this->PaymentDataGridView->AllowUserToAddRows = false;
+			this->PaymentDataGridView->AllowUserToDeleteRows = false;
+			dataGridViewCellStyle32->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
+				static_cast<System::Int32>(static_cast<System::Byte>(191)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
+			dataGridViewCellStyle32->ForeColor = System::Drawing::Color::Black;
+			this->PaymentDataGridView->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle32;
+			this->PaymentDataGridView->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->PaymentDataGridView->BackgroundColor = System::Drawing::SystemColors::Window;
+			this->PaymentDataGridView->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->PaymentDataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
+			this->PaymentDataGridView->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+			dataGridViewCellStyle33->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle33->BackColor = System::Drawing::Color::Navy;
+			dataGridViewCellStyle33->Font = (gcnew System::Drawing::Font(L"Saira", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle33->ForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle33->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(102)));
+			dataGridViewCellStyle33->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle33->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->PaymentDataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
+			this->PaymentDataGridView->ColumnHeadersHeight = 40;
+			this->PaymentDataGridView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
+				this->Column33,
+					this->Column41, this->Column38, this->Column39, this->Column40
+			});
+			this->PaymentDataGridView->CurrentTheme->AlternatingRowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
+				static_cast<System::Int32>(static_cast<System::Byte>(191)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
+			this->PaymentDataGridView->CurrentTheme->AlternatingRowsStyle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold));
+			this->PaymentDataGridView->CurrentTheme->AlternatingRowsStyle->ForeColor = System::Drawing::Color::Black;
+			this->PaymentDataGridView->CurrentTheme->AlternatingRowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
+			this->PaymentDataGridView->CurrentTheme->AlternatingRowsStyle->SelectionForeColor = System::Drawing::Color::White;
+			this->PaymentDataGridView->CurrentTheme->BackColor = System::Drawing::Color::Navy;
+			this->PaymentDataGridView->CurrentTheme->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(178)),
+				static_cast<System::Int32>(static_cast<System::Byte>(178)), static_cast<System::Int32>(static_cast<System::Byte>(216)));
+			this->PaymentDataGridView->CurrentTheme->HeaderStyle->BackColor = System::Drawing::Color::Navy;
+			this->PaymentDataGridView->CurrentTheme->HeaderStyle->Font = (gcnew System::Drawing::Font(L"Saira", 12, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->PaymentDataGridView->CurrentTheme->HeaderStyle->ForeColor = System::Drawing::Color::White;
+			this->PaymentDataGridView->CurrentTheme->HeaderStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(102)));
+			this->PaymentDataGridView->CurrentTheme->HeaderStyle->SelectionForeColor = System::Drawing::Color::White;
+			this->PaymentDataGridView->CurrentTheme->Name = nullptr;
+			this->PaymentDataGridView->CurrentTheme->RowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
+				static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(229)));
+			this->PaymentDataGridView->CurrentTheme->RowsStyle->Font = (gcnew System::Drawing::Font(L"Sora", 9.749999F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->PaymentDataGridView->CurrentTheme->RowsStyle->ForeColor = System::Drawing::Color::Black;
+			this->PaymentDataGridView->CurrentTheme->RowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
+			this->PaymentDataGridView->CurrentTheme->RowsStyle->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle38->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle38->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
+				static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(229)));
+			dataGridViewCellStyle38->Font = (gcnew System::Drawing::Font(L"Sora", 9.749999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle38->ForeColor = System::Drawing::Color::Black;
+			dataGridViewCellStyle38->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
+			dataGridViewCellStyle38->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle38->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->PaymentDataGridView->DefaultCellStyle = dataGridViewCellStyle38;
+			this->PaymentDataGridView->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->PaymentDataGridView->EnableHeadersVisualStyles = false;
+			this->PaymentDataGridView->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(178)),
+				static_cast<System::Int32>(static_cast<System::Byte>(178)), static_cast<System::Int32>(static_cast<System::Byte>(216)));
+			this->PaymentDataGridView->HeaderBackColor = System::Drawing::Color::Navy;
+			this->PaymentDataGridView->HeaderBgColor = System::Drawing::Color::Empty;
+			this->PaymentDataGridView->HeaderForeColor = System::Drawing::Color::White;
+			this->PaymentDataGridView->Location = System::Drawing::Point(0, 0);
+			this->PaymentDataGridView->Name = L"PaymentDataGridView";
+			this->PaymentDataGridView->ReadOnly = true;
+			this->PaymentDataGridView->RowHeadersVisible = false;
+			this->PaymentDataGridView->RowTemplate->Height = 40;
+			this->PaymentDataGridView->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
+			this->PaymentDataGridView->Size = System::Drawing::Size(704, 603);
+			this->PaymentDataGridView->TabIndex = 0;
+			this->PaymentDataGridView->Theme = Bunifu::UI::WinForms::BunifuDataGridView::PresetThemes::Navy;
+			// 
+			// Column33
+			// 
+			this->Column33->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			dataGridViewCellStyle34->Format = L"d";
+			dataGridViewCellStyle34->NullValue = nullptr;
+			this->Column33->DefaultCellStyle = dataGridViewCellStyle34;
+			this->Column33->HeaderText = L"Date";
+			this->Column33->Name = L"Column33";
+			this->Column33->ReadOnly = true;
+			this->Column33->Width = 70;
+			// 
+			// Column41
+			// 
+			this->Column41->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column41->HeaderText = L"Ref No.";
+			this->Column41->Name = L"Column41";
+			this->Column41->ReadOnly = true;
+			this->Column41->Width = 90;
+			// 
+			// Column38
+			// 
+			this->Column38->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			dataGridViewCellStyle35->Format = L"N2";
+			dataGridViewCellStyle35->NullValue = L"0";
+			this->Column38->DefaultCellStyle = dataGridViewCellStyle35;
+			this->Column38->HeaderText = L"Debit";
+			this->Column38->Name = L"Column38";
+			this->Column38->ReadOnly = true;
+			this->Column38->Width = 74;
+			// 
+			// Column39
+			// 
+			this->Column39->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			dataGridViewCellStyle36->Format = L"N2";
+			dataGridViewCellStyle36->NullValue = L"0";
+			this->Column39->DefaultCellStyle = dataGridViewCellStyle36;
+			this->Column39->HeaderText = L"Credit";
+			this->Column39->Name = L"Column39";
+			this->Column39->ReadOnly = true;
+			this->Column39->Width = 78;
+			// 
+			// Column40
+			// 
+			this->Column40->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			dataGridViewCellStyle37->Format = L"N2";
+			dataGridViewCellStyle37->NullValue = L"0";
+			this->Column40->DefaultCellStyle = dataGridViewCellStyle37;
+			this->Column40->HeaderText = L"Balance";
+			this->Column40->Name = L"Column40";
+			this->Column40->ReadOnly = true;
+			this->Column40->Width = 94;
+			// 
+			// guna2Panel12
+			// 
+			this->guna2Panel12->Controls->Add(this->btn_Submit);
+			this->guna2Panel12->Controls->Add(this->bunifuDatePicker1);
+			this->guna2Panel12->Controls->Add(this->bunifuLabel40);
+			this->guna2Panel12->Controls->Add(this->bunifuLabel39);
+			this->guna2Panel12->Controls->Add(this->bunifuLabel38);
+			this->guna2Panel12->Controls->Add(this->bunifuLabel37);
+			this->guna2Panel12->Controls->Add(this->bunifuLabel36);
+			this->guna2Panel12->Controls->Add(this->bunifuLabel28);
+			this->guna2Panel12->Controls->Add(this->bunifuLabel26);
+			this->guna2Panel12->Controls->Add(this->bunifuLabel25);
+			this->guna2Panel12->Controls->Add(this->guna2TextBox9);
+			this->guna2Panel12->Controls->Add(this->guna2TextBox8);
+			this->guna2Panel12->Controls->Add(this->guna2TextBox7);
+			this->guna2Panel12->Controls->Add(this->guna2TextBox5);
+			this->guna2Panel12->Controls->Add(this->guna2TextBox3);
+			this->guna2Panel12->Controls->Add(this->txt_Credit);
+			this->guna2Panel12->Controls->Add(this->guna2TextBox1);
+			this->guna2Panel12->Dock = System::Windows::Forms::DockStyle::Left;
+			this->guna2Panel12->Location = System::Drawing::Point(3, 3);
+			this->guna2Panel12->Name = L"guna2Panel12";
+			this->guna2Panel12->ShadowDecoration->Parent = this->guna2Panel12;
+			this->guna2Panel12->Size = System::Drawing::Size(438, 603);
+			this->guna2Panel12->TabIndex = 0;
+			// 
+			// btn_Submit
+			// 
+			this->btn_Submit->Animated = true;
+			this->btn_Submit->AutoRoundedCorners = true;
+			this->btn_Submit->BorderColor = System::Drawing::Color::Navy;
+			this->btn_Submit->BorderRadius = 16;
+			this->btn_Submit->BorderThickness = 2;
+			this->btn_Submit->ButtonMode = Guna::UI2::WinForms::Enums::ButtonMode::RadioButton;
+			this->btn_Submit->CheckedState->Parent = this->btn_Submit;
+			this->btn_Submit->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btn_Submit->CustomImages->Parent = this->btn_Submit;
+			this->btn_Submit->FillColor = System::Drawing::Color::Transparent;
+			this->btn_Submit->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F));
+			this->btn_Submit->ForeColor = System::Drawing::Color::Navy;
+			this->btn_Submit->HoverState->Parent = this->btn_Submit;
+			this->btn_Submit->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btn_Submit.Image")));
+			this->btn_Submit->ImageAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			this->btn_Submit->ImageSize = System::Drawing::Size(28, 28);
+			this->btn_Submit->Location = System::Drawing::Point(246, 547);
+			this->btn_Submit->Name = L"btn_Submit";
+			this->btn_Submit->ShadowDecoration->Parent = this->btn_Submit;
+			this->btn_Submit->Size = System::Drawing::Size(99, 35);
+			this->btn_Submit->TabIndex = 20;
+			this->btn_Submit->Text = L"Submit";
+			this->btn_Submit->TextOffset = System::Drawing::Point(10, 0);
+			this->btn_Submit->UseTransparentBackground = true;
+			this->btn_Submit->Click += gcnew System::EventHandler(this, &Administrator::btn_Submit_Click);
+			// 
+			// bunifuDatePicker1
+			// 
+			this->bunifuDatePicker1->BackColor = System::Drawing::Color::Transparent;
+			this->bunifuDatePicker1->BorderRadius = 1;
+			this->bunifuDatePicker1->Color = System::Drawing::Color::Silver;
+			this->bunifuDatePicker1->DateBorderThickness = Bunifu::UI::WinForms::BunifuDatePicker::BorderThickness::Thin;
+			this->bunifuDatePicker1->DateTextAlign = Bunifu::UI::WinForms::BunifuDatePicker::TextAlign::Left;
+			this->bunifuDatePicker1->DisabledColor = System::Drawing::Color::Gray;
+			this->bunifuDatePicker1->DisplayWeekNumbers = false;
+			this->bunifuDatePicker1->DPHeight = 0;
+			this->bunifuDatePicker1->DropDownAlign = System::Windows::Forms::LeftRightAlignment::Right;
+			this->bunifuDatePicker1->FillDatePicker = false;
+			this->bunifuDatePicker1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
+			this->bunifuDatePicker1->ForeColor = System::Drawing::Color::Black;
+			this->bunifuDatePicker1->Icon = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bunifuDatePicker1.Icon")));
+			this->bunifuDatePicker1->IconColor = System::Drawing::Color::Gray;
+			this->bunifuDatePicker1->IconLocation = Bunifu::UI::WinForms::BunifuDatePicker::Indicator::Right;
+			this->bunifuDatePicker1->LeftTextMargin = 5;
+			this->bunifuDatePicker1->Location = System::Drawing::Point(171, 351);
+			this->bunifuDatePicker1->MinimumSize = System::Drawing::Size(4, 32);
+			this->bunifuDatePicker1->Name = L"bunifuDatePicker1";
+			this->bunifuDatePicker1->Size = System::Drawing::Size(200, 32);
+			this->bunifuDatePicker1->TabIndex = 19;
+			// 
+			// bunifuLabel40
+			// 
+			this->bunifuLabel40->AllowParentOverrides = false;
+			this->bunifuLabel40->AutoEllipsis = false;
+			this->bunifuLabel40->Cursor = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel40->CursorType = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel40->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bunifuLabel40->Location = System::Drawing::Point(36, 415);
+			this->bunifuLabel40->Name = L"bunifuLabel40";
+			this->bunifuLabel40->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->bunifuLabel40->Size = System::Drawing::Size(29, 15);
+			this->bunifuLabel40->TabIndex = 18;
+			this->bunifuLabel40->Text = L"Total";
+			this->bunifuLabel40->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
+			this->bunifuLabel40->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
+			// 
+			// bunifuLabel39
+			// 
+			this->bunifuLabel39->AllowParentOverrides = false;
+			this->bunifuLabel39->AutoEllipsis = false;
+			this->bunifuLabel39->Cursor = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel39->CursorType = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel39->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bunifuLabel39->Location = System::Drawing::Point(36, 95);
+			this->bunifuLabel39->Name = L"bunifuLabel39";
+			this->bunifuLabel39->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->bunifuLabel39->Size = System::Drawing::Size(69, 15);
+			this->bunifuLabel39->TabIndex = 17;
+			this->bunifuLabel39->Text = L"Client Name";
+			this->bunifuLabel39->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
+			this->bunifuLabel39->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
+			// 
+			// bunifuLabel38
+			// 
+			this->bunifuLabel38->AllowParentOverrides = false;
+			this->bunifuLabel38->AutoEllipsis = false;
+			this->bunifuLabel38->Cursor = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel38->CursorType = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel38->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bunifuLabel38->Location = System::Drawing::Point(36, 223);
+			this->bunifuLabel38->Name = L"bunifuLabel38";
+			this->bunifuLabel38->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->bunifuLabel38->Size = System::Drawing::Size(46, 15);
+			this->bunifuLabel38->TabIndex = 16;
+			this->bunifuLabel38->Text = L"Balance";
+			this->bunifuLabel38->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
+			this->bunifuLabel38->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
+			// 
+			// bunifuLabel37
+			// 
+			this->bunifuLabel37->AllowParentOverrides = false;
+			this->bunifuLabel37->AutoEllipsis = false;
+			this->bunifuLabel37->Cursor = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel37->CursorType = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel37->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bunifuLabel37->Location = System::Drawing::Point(36, 31);
+			this->bunifuLabel37->Name = L"bunifuLabel37";
+			this->bunifuLabel37->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->bunifuLabel37->Size = System::Drawing::Size(48, 15);
+			this->bunifuLabel37->TabIndex = 15;
+			this->bunifuLabel37->Text = L"Client ID";
+			this->bunifuLabel37->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
+			this->bunifuLabel37->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
+			// 
+			// bunifuLabel36
+			// 
+			this->bunifuLabel36->AllowParentOverrides = false;
+			this->bunifuLabel36->AutoEllipsis = false;
+			this->bunifuLabel36->Cursor = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel36->CursorType = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel36->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bunifuLabel36->Location = System::Drawing::Point(36, 287);
+			this->bunifuLabel36->Name = L"bunifuLabel36";
+			this->bunifuLabel36->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->bunifuLabel36->Size = System::Drawing::Size(33, 15);
+			this->bunifuLabel36->TabIndex = 14;
+			this->bunifuLabel36->Text = L"Credit";
+			this->bunifuLabel36->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
+			this->bunifuLabel36->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
+			// 
+			// bunifuLabel28
+			// 
+			this->bunifuLabel28->AllowParentOverrides = false;
+			this->bunifuLabel28->AutoEllipsis = false;
+			this->bunifuLabel28->Cursor = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel28->CursorType = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel28->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bunifuLabel28->Location = System::Drawing::Point(36, 479);
+			this->bunifuLabel28->Name = L"bunifuLabel28";
+			this->bunifuLabel28->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->bunifuLabel28->Size = System::Drawing::Size(81, 15);
+			this->bunifuLabel28->TabIndex = 12;
+			this->bunifuLabel28->Text = L"bunifuLabel28";
+			this->bunifuLabel28->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
+			this->bunifuLabel28->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
+			// 
+			// bunifuLabel26
+			// 
+			this->bunifuLabel26->AllowParentOverrides = false;
+			this->bunifuLabel26->AutoEllipsis = false;
+			this->bunifuLabel26->Cursor = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel26->CursorType = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel26->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bunifuLabel26->Location = System::Drawing::Point(36, 351);
+			this->bunifuLabel26->Name = L"bunifuLabel26";
+			this->bunifuLabel26->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->bunifuLabel26->Size = System::Drawing::Size(95, 15);
+			this->bunifuLabel26->TabIndex = 11;
+			this->bunifuLabel26->Text = L"Date of Payment";
+			this->bunifuLabel26->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
+			this->bunifuLabel26->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
+			// 
+			// bunifuLabel25
+			// 
+			this->bunifuLabel25->AllowParentOverrides = false;
+			this->bunifuLabel25->AutoEllipsis = false;
+			this->bunifuLabel25->Cursor = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel25->CursorType = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel25->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bunifuLabel25->Location = System::Drawing::Point(36, 159);
+			this->bunifuLabel25->Name = L"bunifuLabel25";
+			this->bunifuLabel25->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->bunifuLabel25->Size = System::Drawing::Size(107, 15);
+			this->bunifuLabel25->TabIndex = 10;
+			this->bunifuLabel25->Text = L"Reference Number";
+			this->bunifuLabel25->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
+			this->bunifuLabel25->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
+			// 
+			// guna2TextBox9
+			// 
+			this->guna2TextBox9->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->guna2TextBox9->DefaultText = L"";
+			this->guna2TextBox9->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
+			this->guna2TextBox9->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
+			this->guna2TextBox9->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->guna2TextBox9->DisabledState->Parent = this->guna2TextBox9;
+			this->guna2TextBox9->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->guna2TextBox9->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->guna2TextBox9->FocusedState->Parent = this->guna2TextBox9;
+			this->guna2TextBox9->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->guna2TextBox9->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->guna2TextBox9->HoverState->Parent = this->guna2TextBox9;
+			this->guna2TextBox9->Location = System::Drawing::Point(171, 31);
+			this->guna2TextBox9->Name = L"guna2TextBox9";
+			this->guna2TextBox9->PasswordChar = '\0';
+			this->guna2TextBox9->PlaceholderText = L"";
+			this->guna2TextBox9->SelectedText = L"";
+			this->guna2TextBox9->ShadowDecoration->Parent = this->guna2TextBox9;
+			this->guna2TextBox9->Size = System::Drawing::Size(200, 36);
+			this->guna2TextBox9->TabIndex = 8;
+			// 
+			// guna2TextBox8
+			// 
+			this->guna2TextBox8->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->guna2TextBox8->DefaultText = L"";
+			this->guna2TextBox8->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
+			this->guna2TextBox8->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
+			this->guna2TextBox8->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->guna2TextBox8->DisabledState->Parent = this->guna2TextBox8;
+			this->guna2TextBox8->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->guna2TextBox8->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->guna2TextBox8->FocusedState->Parent = this->guna2TextBox8;
+			this->guna2TextBox8->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->guna2TextBox8->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->guna2TextBox8->HoverState->Parent = this->guna2TextBox8;
+			this->guna2TextBox8->Location = System::Drawing::Point(171, 95);
+			this->guna2TextBox8->Name = L"guna2TextBox8";
+			this->guna2TextBox8->PasswordChar = '\0';
+			this->guna2TextBox8->PlaceholderText = L"";
+			this->guna2TextBox8->SelectedText = L"";
+			this->guna2TextBox8->ShadowDecoration->Parent = this->guna2TextBox8;
+			this->guna2TextBox8->Size = System::Drawing::Size(200, 36);
+			this->guna2TextBox8->TabIndex = 7;
+			// 
+			// guna2TextBox7
+			// 
+			this->guna2TextBox7->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->guna2TextBox7->DefaultText = L"";
+			this->guna2TextBox7->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
+			this->guna2TextBox7->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
+			this->guna2TextBox7->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->guna2TextBox7->DisabledState->Parent = this->guna2TextBox7;
+			this->guna2TextBox7->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->guna2TextBox7->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->guna2TextBox7->FocusedState->Parent = this->guna2TextBox7;
+			this->guna2TextBox7->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->guna2TextBox7->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->guna2TextBox7->HoverState->Parent = this->guna2TextBox7;
+			this->guna2TextBox7->Location = System::Drawing::Point(171, 159);
+			this->guna2TextBox7->Name = L"guna2TextBox7";
+			this->guna2TextBox7->PasswordChar = '\0';
+			this->guna2TextBox7->PlaceholderText = L"";
+			this->guna2TextBox7->SelectedText = L"";
+			this->guna2TextBox7->ShadowDecoration->Parent = this->guna2TextBox7;
+			this->guna2TextBox7->Size = System::Drawing::Size(200, 36);
+			this->guna2TextBox7->TabIndex = 6;
+			// 
+			// guna2TextBox5
+			// 
+			this->guna2TextBox5->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->guna2TextBox5->DefaultText = L"";
+			this->guna2TextBox5->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
+			this->guna2TextBox5->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
+			this->guna2TextBox5->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->guna2TextBox5->DisabledState->Parent = this->guna2TextBox5;
+			this->guna2TextBox5->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->guna2TextBox5->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->guna2TextBox5->FocusedState->Parent = this->guna2TextBox5;
+			this->guna2TextBox5->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->guna2TextBox5->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->guna2TextBox5->HoverState->Parent = this->guna2TextBox5;
+			this->guna2TextBox5->Location = System::Drawing::Point(171, 479);
+			this->guna2TextBox5->Name = L"guna2TextBox5";
+			this->guna2TextBox5->PasswordChar = '\0';
+			this->guna2TextBox5->PlaceholderText = L"";
+			this->guna2TextBox5->SelectedText = L"";
+			this->guna2TextBox5->ShadowDecoration->Parent = this->guna2TextBox5;
+			this->guna2TextBox5->Size = System::Drawing::Size(200, 36);
+			this->guna2TextBox5->TabIndex = 4;
+			// 
+			// guna2TextBox3
+			// 
+			this->guna2TextBox3->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->guna2TextBox3->DefaultText = L"";
+			this->guna2TextBox3->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
+			this->guna2TextBox3->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
+			this->guna2TextBox3->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->guna2TextBox3->DisabledState->Parent = this->guna2TextBox3;
+			this->guna2TextBox3->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->guna2TextBox3->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->guna2TextBox3->FocusedState->Parent = this->guna2TextBox3;
+			this->guna2TextBox3->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->guna2TextBox3->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->guna2TextBox3->HoverState->Parent = this->guna2TextBox3;
+			this->guna2TextBox3->Location = System::Drawing::Point(171, 223);
+			this->guna2TextBox3->Name = L"guna2TextBox3";
+			this->guna2TextBox3->PasswordChar = '\0';
+			this->guna2TextBox3->PlaceholderText = L"";
+			this->guna2TextBox3->SelectedText = L"";
+			this->guna2TextBox3->ShadowDecoration->Parent = this->guna2TextBox3;
+			this->guna2TextBox3->Size = System::Drawing::Size(200, 36);
+			this->guna2TextBox3->TabIndex = 2;
+			// 
+			// txt_Credit
+			// 
+			this->txt_Credit->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->txt_Credit->DefaultText = L"";
+			this->txt_Credit->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
+			this->txt_Credit->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
+			this->txt_Credit->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->txt_Credit->DisabledState->Parent = this->txt_Credit;
+			this->txt_Credit->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->txt_Credit->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->txt_Credit->FocusedState->Parent = this->txt_Credit;
+			this->txt_Credit->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->txt_Credit->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->txt_Credit->HoverState->Parent = this->txt_Credit;
+			this->txt_Credit->Location = System::Drawing::Point(171, 287);
+			this->txt_Credit->Name = L"txt_Credit";
+			this->txt_Credit->PasswordChar = '\0';
+			this->txt_Credit->PlaceholderText = L"";
+			this->txt_Credit->SelectedText = L"";
+			this->txt_Credit->ShadowDecoration->Parent = this->txt_Credit;
+			this->txt_Credit->Size = System::Drawing::Size(200, 36);
+			this->txt_Credit->TabIndex = 1;
+			this->txt_Credit->Validating += gcnew System::ComponentModel::CancelEventHandler(this, &Administrator::txt_Credit_Validating);
+			// 
+			// guna2TextBox1
+			// 
+			this->guna2TextBox1->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->guna2TextBox1->DefaultText = L"";
+			this->guna2TextBox1->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
+			this->guna2TextBox1->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
+			this->guna2TextBox1->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->guna2TextBox1->DisabledState->Parent = this->guna2TextBox1;
+			this->guna2TextBox1->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->guna2TextBox1->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->guna2TextBox1->FocusedState->Parent = this->guna2TextBox1;
+			this->guna2TextBox1->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->guna2TextBox1->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->guna2TextBox1->HoverState->Parent = this->guna2TextBox1;
+			this->guna2TextBox1->Location = System::Drawing::Point(171, 415);
+			this->guna2TextBox1->Name = L"guna2TextBox1";
+			this->guna2TextBox1->PasswordChar = '\0';
+			this->guna2TextBox1->PlaceholderText = L"";
+			this->guna2TextBox1->SelectedText = L"";
+			this->guna2TextBox1->ShadowDecoration->Parent = this->guna2TextBox1;
+			this->guna2TextBox1->Size = System::Drawing::Size(200, 36);
+			this->guna2TextBox1->TabIndex = 0;
+			// 
+			// FinanceTabPage
+			// 
+			this->FinanceTabPage->Controls->Add(this->guna2Panel14);
+			this->FinanceTabPage->Controls->Add(this->guna2Panel13);
+			this->FinanceTabPage->Location = System::Drawing::Point(4, 4);
+			this->FinanceTabPage->Name = L"FinanceTabPage";
+			this->FinanceTabPage->Padding = System::Windows::Forms::Padding(3);
+			this->FinanceTabPage->Size = System::Drawing::Size(1162, 643);
+			this->FinanceTabPage->TabIndex = 4;
+			this->FinanceTabPage->Text = L"Finance";
+			this->FinanceTabPage->UseVisualStyleBackColor = true;
 			// 
 			// guna2Panel14
 			// 
-			this->guna2Panel14->Controls->Add(this->bunifuDataGridView1);
+			this->guna2Panel14->Controls->Add(this->chartControl4);
+			this->guna2Panel14->Controls->Add(this->chartControl3);
 			this->guna2Panel14->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->guna2Panel14->Location = System::Drawing::Point(3, 103);
 			this->guna2Panel14->Name = L"guna2Panel14";
@@ -3261,77 +4112,53 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->guna2Panel14->Size = System::Drawing::Size(1156, 537);
 			this->guna2Panel14->TabIndex = 1;
 			// 
-			// bunifuDataGridView1
+			// chartControl4
 			// 
-			this->bunifuDataGridView1->AllowCustomTheming = false;
-			this->bunifuDataGridView1->AllowUserToAddRows = false;
-			this->bunifuDataGridView1->AllowUserToDeleteRows = false;
-			dataGridViewCellStyle19->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(248)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			dataGridViewCellStyle19->ForeColor = System::Drawing::Color::Black;
-			this->bunifuDataGridView1->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
-			this->bunifuDataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-			this->bunifuDataGridView1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->bunifuDataGridView1->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
-			this->bunifuDataGridView1->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			dataGridViewCellStyle20->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle20->BackColor = System::Drawing::Color::DodgerBlue;
-			dataGridViewCellStyle20->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 11.75F, System::Drawing::FontStyle::Bold));
-			dataGridViewCellStyle20->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle20->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)),
-				static_cast<System::Int32>(static_cast<System::Byte>(115)), static_cast<System::Int32>(static_cast<System::Byte>(204)));
-			dataGridViewCellStyle20->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle20->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->bunifuDataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
-			this->bunifuDataGridView1->ColumnHeadersHeight = 40;
-			this->bunifuDataGridView1->CurrentTheme->AlternatingRowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(248)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->bunifuDataGridView1->CurrentTheme->AlternatingRowsStyle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold));
-			this->bunifuDataGridView1->CurrentTheme->AlternatingRowsStyle->ForeColor = System::Drawing::Color::Black;
-			this->bunifuDataGridView1->CurrentTheme->AlternatingRowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(210)),
-				static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->bunifuDataGridView1->CurrentTheme->AlternatingRowsStyle->SelectionForeColor = System::Drawing::Color::Black;
-			this->bunifuDataGridView1->CurrentTheme->BackColor = System::Drawing::Color::White;
-			this->bunifuDataGridView1->CurrentTheme->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(221)),
-				static_cast<System::Int32>(static_cast<System::Byte>(238)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->bunifuDataGridView1->CurrentTheme->HeaderStyle->BackColor = System::Drawing::Color::DodgerBlue;
-			this->bunifuDataGridView1->CurrentTheme->HeaderStyle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 11.75F, System::Drawing::FontStyle::Bold));
-			this->bunifuDataGridView1->CurrentTheme->HeaderStyle->ForeColor = System::Drawing::Color::White;
-			this->bunifuDataGridView1->CurrentTheme->HeaderStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)),
-				static_cast<System::Int32>(static_cast<System::Byte>(115)), static_cast<System::Int32>(static_cast<System::Byte>(204)));
-			this->bunifuDataGridView1->CurrentTheme->HeaderStyle->SelectionForeColor = System::Drawing::Color::White;
-			this->bunifuDataGridView1->CurrentTheme->Name = nullptr;
-			this->bunifuDataGridView1->CurrentTheme->RowsStyle->BackColor = System::Drawing::Color::White;
-			this->bunifuDataGridView1->CurrentTheme->RowsStyle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold));
-			this->bunifuDataGridView1->CurrentTheme->RowsStyle->ForeColor = System::Drawing::Color::Black;
-			this->bunifuDataGridView1->CurrentTheme->RowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(210)),
-				static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->bunifuDataGridView1->CurrentTheme->RowsStyle->SelectionForeColor = System::Drawing::Color::Black;
-			dataGridViewCellStyle21->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle21->BackColor = System::Drawing::Color::White;
-			dataGridViewCellStyle21->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold));
-			dataGridViewCellStyle21->ForeColor = System::Drawing::Color::Black;
-			dataGridViewCellStyle21->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(210)),
-				static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			dataGridViewCellStyle21->SelectionForeColor = System::Drawing::Color::Black;
-			dataGridViewCellStyle21->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->bunifuDataGridView1->DefaultCellStyle = dataGridViewCellStyle21;
-			this->bunifuDataGridView1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->bunifuDataGridView1->EnableHeadersVisualStyles = false;
-			this->bunifuDataGridView1->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(221)),
-				static_cast<System::Int32>(static_cast<System::Byte>(238)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->bunifuDataGridView1->HeaderBackColor = System::Drawing::Color::DodgerBlue;
-			this->bunifuDataGridView1->HeaderBgColor = System::Drawing::Color::Empty;
-			this->bunifuDataGridView1->HeaderForeColor = System::Drawing::Color::White;
-			this->bunifuDataGridView1->Location = System::Drawing::Point(0, 0);
-			this->bunifuDataGridView1->Name = L"bunifuDataGridView1";
-			this->bunifuDataGridView1->ReadOnly = true;
-			this->bunifuDataGridView1->RowHeadersVisible = false;
-			this->bunifuDataGridView1->RowTemplate->Height = 40;
-			this->bunifuDataGridView1->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->bunifuDataGridView1->Size = System::Drawing::Size(1156, 537);
-			this->bunifuDataGridView1->TabIndex = 0;
-			this->bunifuDataGridView1->Theme = Bunifu::UI::WinForms::BunifuDataGridView::PresetThemes::Light;
+			this->chartControl4->AppearanceNameSerializable = L"Gray";
+			xyDiagram3->AxisX->Title->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			xyDiagram3->AxisX->Title->Text = L"Months";
+			xyDiagram3->AxisX->Title->Visibility = DevExpress::Utils::DefaultBoolean::True;
+			xyDiagram3->AxisX->VisibleInPanesSerializable = L"-1";
+			xyDiagram3->AxisY->Title->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			xyDiagram3->AxisY->Title->Text = L"Volume of Water";
+			xyDiagram3->AxisY->Title->Visibility = DevExpress::Utils::DefaultBoolean::True;
+			xyDiagram3->AxisY->VisibleInPanesSerializable = L"-1";
+			this->chartControl4->Diagram = xyDiagram3;
+			this->chartControl4->Legend->Name = L"Default Legend";
+			this->chartControl4->Location = System::Drawing::Point(564, 6);
+			this->chartControl4->Name = L"chartControl4";
+			series3->Name = L"Series 1";
+			sideBySideBarSeriesView1->Color = System::Drawing::Color::Navy;
+			series3->View = sideBySideBarSeriesView1;
+			this->chartControl4->SeriesSerializable = gcnew cli::array< DevExpress::XtraCharts::Series^  >(1) { series3 };
+			this->chartControl4->Size = System::Drawing::Size(587, 314);
+			this->chartControl4->TabIndex = 1;
+			chartTitle1->Text = L"Volume of Water Consumed";
+			this->chartControl4->Titles->AddRange(gcnew cli::array< DevExpress::XtraCharts::ChartTitle^  >(1) { chartTitle1 });
+			// 
+			// chartControl3
+			// 
+			xyDiagram4->AxisX->Title->Text = L"Months";
+			xyDiagram4->AxisX->Title->TextColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(96)));
+			xyDiagram4->AxisX->Title->Visibility = DevExpress::Utils::DefaultBoolean::True;
+			xyDiagram4->AxisX->VisibleInPanesSerializable = L"-1";
+			xyDiagram4->AxisY->Title->Text = L"Sales";
+			xyDiagram4->AxisY->Title->Visibility = DevExpress::Utils::DefaultBoolean::True;
+			xyDiagram4->AxisY->VisibleInPanesSerializable = L"-1";
+			this->chartControl3->Diagram = xyDiagram4;
+			this->chartControl3->Legend->Name = L"Default Legend";
+			this->chartControl3->Location = System::Drawing::Point(3, 6);
+			this->chartControl3->Name = L"chartControl3";
+			series4->Name = L"Series 1";
+			series4->View = lineSeriesView1;
+			this->chartControl3->SeriesSerializable = gcnew cli::array< DevExpress::XtraCharts::Series^  >(1) { series4 };
+			this->chartControl3->Size = System::Drawing::Size(542, 314);
+			this->chartControl3->TabIndex = 0;
+			chartTitle2->Text = L"Average Sales per Month";
+			this->chartControl3->Titles->AddRange(gcnew cli::array< DevExpress::XtraCharts::ChartTitle^  >(1) { chartTitle2 });
 			// 
 			// guna2Panel13
 			// 
@@ -3369,30 +4196,29 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->AllBillsDataGridView->AllowCustomTheming = true;
 			this->AllBillsDataGridView->AllowUserToAddRows = false;
 			this->AllBillsDataGridView->AllowUserToDeleteRows = false;
-			dataGridViewCellStyle22->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
+			dataGridViewCellStyle39->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
 				static_cast<System::Int32>(static_cast<System::Byte>(191)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
-			dataGridViewCellStyle22->ForeColor = System::Drawing::Color::Black;
-			this->AllBillsDataGridView->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+			dataGridViewCellStyle39->ForeColor = System::Drawing::Color::Black;
+			this->AllBillsDataGridView->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle39;
 			this->AllBillsDataGridView->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->AllBillsDataGridView->BackgroundColor = System::Drawing::SystemColors::Window;
 			this->AllBillsDataGridView->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->AllBillsDataGridView->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
 			this->AllBillsDataGridView->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			dataGridViewCellStyle23->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle23->BackColor = System::Drawing::Color::Navy;
-			dataGridViewCellStyle23->Font = (gcnew System::Drawing::Font(L"Saira", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle40->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle40->BackColor = System::Drawing::Color::Navy;
+			dataGridViewCellStyle40->Font = (gcnew System::Drawing::Font(L"Saira", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle23->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle23->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+			dataGridViewCellStyle40->ForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle40->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(102)));
-			dataGridViewCellStyle23->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle23->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->AllBillsDataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+			dataGridViewCellStyle40->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle40->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->AllBillsDataGridView->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle40;
 			this->AllBillsDataGridView->ColumnHeadersHeight = 40;
-			this->AllBillsDataGridView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(10) {
+			this->AllBillsDataGridView->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(9) {
 				this->Column19,
-					this->Column20, this->Column21, this->Column22, this->Column23, this->Column28, this->Column24, this->Column25, this->Column26,
-					this->Column27
+					this->Column20, this->Column21, this->Column22, this->Column23, this->Column28, this->Column27, this->Column24, this->Column25
 			});
 			this->AllBillsDataGridView->CurrentTheme->AlternatingRowsStyle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(191)),
 				static_cast<System::Int32>(static_cast<System::Byte>(191)), static_cast<System::Int32>(static_cast<System::Byte>(223)));
@@ -3421,17 +4247,17 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->AllBillsDataGridView->CurrentTheme->RowsStyle->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
 				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
 			this->AllBillsDataGridView->CurrentTheme->RowsStyle->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle24->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle24->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
+			dataGridViewCellStyle45->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle45->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)),
 				static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(229)));
-			dataGridViewCellStyle24->Font = (gcnew System::Drawing::Font(L"Sora", 9.749999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle45->Font = (gcnew System::Drawing::Font(L"Sora", 9.749999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle24->ForeColor = System::Drawing::Color::Black;
-			dataGridViewCellStyle24->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
+			dataGridViewCellStyle45->ForeColor = System::Drawing::Color::Black;
+			dataGridViewCellStyle45->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)),
 				static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
-			dataGridViewCellStyle24->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle24->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->AllBillsDataGridView->DefaultCellStyle = dataGridViewCellStyle24;
+			dataGridViewCellStyle45->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle45->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->AllBillsDataGridView->DefaultCellStyle = dataGridViewCellStyle45;
 			this->AllBillsDataGridView->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->AllBillsDataGridView->EnableHeadersVisualStyles = false;
 			this->AllBillsDataGridView->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(178)),
@@ -3478,66 +4304,65 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			// 
 			// Column22
 			// 
-			this->Column22->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column22->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->Column22->DataPropertyName = L"mobile_no";
 			this->Column22->HeaderText = L"Mobile No";
 			this->Column22->Name = L"Column22";
 			this->Column22->ReadOnly = true;
-			this->Column22->Width = 105;
+			this->Column22->ToolTipText = L"Mobile Number";
 			// 
 			// Column23
 			// 
-			this->Column23->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			this->Column23->DataPropertyName = L"bill_no";
-			this->Column23->HeaderText = L"Bill No.";
+			this->Column23->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column23->DataPropertyName = L"reference_no";
+			this->Column23->HeaderText = L"Ref No.";
 			this->Column23->Name = L"Column23";
 			this->Column23->ReadOnly = true;
-			this->Column23->Width = 82;
+			this->Column23->ToolTipText = L"Bill Number";
 			// 
 			// Column28
 			// 
-			this->Column28->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			this->Column28->DataPropertyName = L"meter_reading_date";
-			this->Column28->HeaderText = L"M. R. Date";
+			this->Column28->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column28->DataPropertyName = L"timestamp";
+			dataGridViewCellStyle41->Format = L"d";
+			dataGridViewCellStyle41->NullValue = nullptr;
+			this->Column28->DefaultCellStyle = dataGridViewCellStyle41;
+			this->Column28->HeaderText = L"Date";
 			this->Column28->Name = L"Column28";
 			this->Column28->ReadOnly = true;
-			this->Column28->Width = 103;
-			// 
-			// Column24
-			// 
-			this->Column24->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			this->Column24->DataPropertyName = L"previous_meter_reading";
-			this->Column24->HeaderText = L"P. M. Reading";
-			this->Column24->Name = L"Column24";
-			this->Column24->ReadOnly = true;
-			this->Column24->Width = 129;
-			// 
-			// Column25
-			// 
-			this->Column25->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			this->Column25->DataPropertyName = L"meter_reading";
-			this->Column25->HeaderText = L"C. M. Reading";
-			this->Column25->Name = L"Column25";
-			this->Column25->ReadOnly = true;
-			this->Column25->Width = 128;
-			// 
-			// Column26
-			// 
-			this->Column26->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			this->Column26->DataPropertyName = L"units_consumed";
-			this->Column26->HeaderText = L"Units";
-			this->Column26->Name = L"Column26";
-			this->Column26->ReadOnly = true;
-			this->Column26->Width = 69;
 			// 
 			// Column27
 			// 
-			this->Column27->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column27->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->Column27->DataPropertyName = L"debit";
+			dataGridViewCellStyle42->Format = L"N2";
+			dataGridViewCellStyle42->NullValue = L"0";
+			this->Column27->DefaultCellStyle = dataGridViewCellStyle42;
 			this->Column27->HeaderText = L"Debit";
 			this->Column27->Name = L"Column27";
 			this->Column27->ReadOnly = true;
-			this->Column27->Width = 69;
+			// 
+			// Column24
+			// 
+			this->Column24->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column24->DataPropertyName = L"Credit";
+			dataGridViewCellStyle43->Format = L"N2";
+			dataGridViewCellStyle43->NullValue = L"0";
+			this->Column24->DefaultCellStyle = dataGridViewCellStyle43;
+			this->Column24->HeaderText = L"Credit";
+			this->Column24->Name = L"Column24";
+			this->Column24->ReadOnly = true;
+			// 
+			// Column25
+			// 
+			this->Column25->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column25->DataPropertyName = L"balance";
+			dataGridViewCellStyle44->Format = L"N2";
+			dataGridViewCellStyle44->NullValue = L"0";
+			this->Column25->DefaultCellStyle = dataGridViewCellStyle44;
+			this->Column25->HeaderText = L"Balance";
+			this->Column25->Name = L"Column25";
+			this->Column25->ReadOnly = true;
 			// 
 			// guna2Panel15
 			// 
@@ -3561,7 +4386,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->AllBillsToDatePicker->BorderRadius = 1;
 			this->AllBillsToDatePicker->CalendarFont = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->AllBillsToDatePicker->Color = System::Drawing::Color::Silver;
+			this->AllBillsToDatePicker->Color = System::Drawing::Color::Navy;
 			this->AllBillsToDatePicker->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->AllBillsToDatePicker->DateBorderThickness = Bunifu::UI::WinForms::BunifuDatePicker::BorderThickness::Thin;
 			this->AllBillsToDatePicker->DateTextAlign = Bunifu::UI::WinForms::BunifuDatePicker::TextAlign::Left;
@@ -3582,6 +4407,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->AllBillsToDatePicker->Name = L"AllBillsToDatePicker";
 			this->AllBillsToDatePicker->Size = System::Drawing::Size(220, 32);
 			this->AllBillsToDatePicker->TabIndex = 4;
+			this->AllBillsToDatePicker->Value = System::DateTime(2021, 10, 23, 7, 31, 0, 0);
 			this->AllBillsToDatePicker->ValueChanged += gcnew System::EventHandler(this, &Administrator::AllBillsToDatePicker_ValueChanged);
 			// 
 			// bunifuLabel23
@@ -3605,9 +4431,9 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			// groupBox2
 			// 
 			this->groupBox2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->groupBox2->Controls->Add(this->guna2Button3);
-			this->groupBox2->Controls->Add(this->guna2Button2);
-			this->groupBox2->Controls->Add(this->guna2Button1);
+			this->groupBox2->Controls->Add(this->btnFilterBillsByAll);
+			this->groupBox2->Controls->Add(this->btnFilterBillsByDue);
+			this->groupBox2->Controls->Add(this->btnFilterBillsByPaid);
 			this->groupBox2->ForeColor = System::Drawing::Color::Navy;
 			this->groupBox2->Location = System::Drawing::Point(881, 3);
 			this->groupBox2->Name = L"groupBox2";
@@ -3616,76 +4442,79 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Filter by";
 			// 
-			// guna2Button3
+			// btnFilterBillsByAll
 			// 
-			this->guna2Button3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->guna2Button3->Animated = true;
-			this->guna2Button3->AutoRoundedCorners = true;
-			this->guna2Button3->BorderColor = System::Drawing::Color::Navy;
-			this->guna2Button3->BorderRadius = 16;
-			this->guna2Button3->BorderThickness = 2;
-			this->guna2Button3->ButtonMode = Guna::UI2::WinForms::Enums::ButtonMode::RadioButton;
-			this->guna2Button3->CheckedState->Parent = this->guna2Button3;
-			this->guna2Button3->CustomImages->Parent = this->guna2Button3;
-			this->guna2Button3->FillColor = System::Drawing::Color::Transparent;
-			this->guna2Button3->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F));
-			this->guna2Button3->ForeColor = System::Drawing::Color::Navy;
-			this->guna2Button3->HoverState->Parent = this->guna2Button3;
-			this->guna2Button3->Location = System::Drawing::Point(6, 22);
-			this->guna2Button3->Name = L"guna2Button3";
-			this->guna2Button3->ShadowDecoration->Parent = this->guna2Button3;
-			this->guna2Button3->Size = System::Drawing::Size(73, 35);
-			this->guna2Button3->TabIndex = 9;
-			this->guna2Button3->Text = L"All";
-			this->guna2Button3->UseTransparentBackground = true;
+			this->btnFilterBillsByAll->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->btnFilterBillsByAll->Animated = true;
+			this->btnFilterBillsByAll->AutoRoundedCorners = true;
+			this->btnFilterBillsByAll->BorderColor = System::Drawing::Color::Navy;
+			this->btnFilterBillsByAll->BorderRadius = 16;
+			this->btnFilterBillsByAll->BorderThickness = 2;
+			this->btnFilterBillsByAll->ButtonMode = Guna::UI2::WinForms::Enums::ButtonMode::RadioButton;
+			this->btnFilterBillsByAll->CheckedState->Parent = this->btnFilterBillsByAll;
+			this->btnFilterBillsByAll->CustomImages->Parent = this->btnFilterBillsByAll;
+			this->btnFilterBillsByAll->FillColor = System::Drawing::Color::Transparent;
+			this->btnFilterBillsByAll->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F));
+			this->btnFilterBillsByAll->ForeColor = System::Drawing::Color::Navy;
+			this->btnFilterBillsByAll->HoverState->Parent = this->btnFilterBillsByAll;
+			this->btnFilterBillsByAll->Location = System::Drawing::Point(6, 22);
+			this->btnFilterBillsByAll->Name = L"btnFilterBillsByAll";
+			this->btnFilterBillsByAll->ShadowDecoration->Parent = this->btnFilterBillsByAll;
+			this->btnFilterBillsByAll->Size = System::Drawing::Size(73, 35);
+			this->btnFilterBillsByAll->TabIndex = 9;
+			this->btnFilterBillsByAll->Text = L"All";
+			this->btnFilterBillsByAll->UseTransparentBackground = true;
+			this->btnFilterBillsByAll->Click += gcnew System::EventHandler(this, &Administrator::btnFilterBillsByAll_Click);
 			// 
-			// guna2Button2
+			// btnFilterBillsByDue
 			// 
-			this->guna2Button2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->guna2Button2->Animated = true;
-			this->guna2Button2->AutoRoundedCorners = true;
-			this->guna2Button2->BorderColor = System::Drawing::Color::Navy;
-			this->guna2Button2->BorderRadius = 16;
-			this->guna2Button2->BorderThickness = 2;
-			this->guna2Button2->ButtonMode = Guna::UI2::WinForms::Enums::ButtonMode::RadioButton;
-			this->guna2Button2->CheckedState->Parent = this->guna2Button2;
-			this->guna2Button2->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->guna2Button2->CustomImages->Parent = this->guna2Button2;
-			this->guna2Button2->FillColor = System::Drawing::Color::Transparent;
-			this->guna2Button2->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F));
-			this->guna2Button2->ForeColor = System::Drawing::Color::Navy;
-			this->guna2Button2->HoverState->Parent = this->guna2Button2;
-			this->guna2Button2->Location = System::Drawing::Point(98, 22);
-			this->guna2Button2->Name = L"guna2Button2";
-			this->guna2Button2->ShadowDecoration->Parent = this->guna2Button2;
-			this->guna2Button2->Size = System::Drawing::Size(73, 35);
-			this->guna2Button2->TabIndex = 2;
-			this->guna2Button2->Text = L"Due";
-			this->guna2Button2->UseTransparentBackground = true;
+			this->btnFilterBillsByDue->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->btnFilterBillsByDue->Animated = true;
+			this->btnFilterBillsByDue->AutoRoundedCorners = true;
+			this->btnFilterBillsByDue->BorderColor = System::Drawing::Color::Navy;
+			this->btnFilterBillsByDue->BorderRadius = 16;
+			this->btnFilterBillsByDue->BorderThickness = 2;
+			this->btnFilterBillsByDue->ButtonMode = Guna::UI2::WinForms::Enums::ButtonMode::RadioButton;
+			this->btnFilterBillsByDue->CheckedState->Parent = this->btnFilterBillsByDue;
+			this->btnFilterBillsByDue->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnFilterBillsByDue->CustomImages->Parent = this->btnFilterBillsByDue;
+			this->btnFilterBillsByDue->FillColor = System::Drawing::Color::Transparent;
+			this->btnFilterBillsByDue->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F));
+			this->btnFilterBillsByDue->ForeColor = System::Drawing::Color::Navy;
+			this->btnFilterBillsByDue->HoverState->Parent = this->btnFilterBillsByDue;
+			this->btnFilterBillsByDue->Location = System::Drawing::Point(98, 22);
+			this->btnFilterBillsByDue->Name = L"btnFilterBillsByDue";
+			this->btnFilterBillsByDue->ShadowDecoration->Parent = this->btnFilterBillsByDue;
+			this->btnFilterBillsByDue->Size = System::Drawing::Size(73, 35);
+			this->btnFilterBillsByDue->TabIndex = 2;
+			this->btnFilterBillsByDue->Text = L"Due";
+			this->btnFilterBillsByDue->UseTransparentBackground = true;
+			this->btnFilterBillsByDue->Click += gcnew System::EventHandler(this, &Administrator::btnFilterBillsByDue_Click);
 			// 
-			// guna2Button1
+			// btnFilterBillsByPaid
 			// 
-			this->guna2Button1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->guna2Button1->Animated = true;
-			this->guna2Button1->AutoRoundedCorners = true;
-			this->guna2Button1->BorderColor = System::Drawing::Color::Navy;
-			this->guna2Button1->BorderRadius = 16;
-			this->guna2Button1->BorderThickness = 2;
-			this->guna2Button1->ButtonMode = Guna::UI2::WinForms::Enums::ButtonMode::RadioButton;
-			this->guna2Button1->CheckedState->Parent = this->guna2Button1;
-			this->guna2Button1->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->guna2Button1->CustomImages->Parent = this->guna2Button1;
-			this->guna2Button1->FillColor = System::Drawing::Color::Transparent;
-			this->guna2Button1->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F));
-			this->guna2Button1->ForeColor = System::Drawing::Color::Navy;
-			this->guna2Button1->HoverState->Parent = this->guna2Button1;
-			this->guna2Button1->Location = System::Drawing::Point(190, 22);
-			this->guna2Button1->Name = L"guna2Button1";
-			this->guna2Button1->ShadowDecoration->Parent = this->guna2Button1;
-			this->guna2Button1->Size = System::Drawing::Size(73, 35);
-			this->guna2Button1->TabIndex = 1;
-			this->guna2Button1->Text = L"Paid";
-			this->guna2Button1->UseTransparentBackground = true;
+			this->btnFilterBillsByPaid->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->btnFilterBillsByPaid->Animated = true;
+			this->btnFilterBillsByPaid->AutoRoundedCorners = true;
+			this->btnFilterBillsByPaid->BorderColor = System::Drawing::Color::Navy;
+			this->btnFilterBillsByPaid->BorderRadius = 16;
+			this->btnFilterBillsByPaid->BorderThickness = 2;
+			this->btnFilterBillsByPaid->ButtonMode = Guna::UI2::WinForms::Enums::ButtonMode::RadioButton;
+			this->btnFilterBillsByPaid->CheckedState->Parent = this->btnFilterBillsByPaid;
+			this->btnFilterBillsByPaid->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnFilterBillsByPaid->CustomImages->Parent = this->btnFilterBillsByPaid;
+			this->btnFilterBillsByPaid->FillColor = System::Drawing::Color::Transparent;
+			this->btnFilterBillsByPaid->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F));
+			this->btnFilterBillsByPaid->ForeColor = System::Drawing::Color::Navy;
+			this->btnFilterBillsByPaid->HoverState->Parent = this->btnFilterBillsByPaid;
+			this->btnFilterBillsByPaid->Location = System::Drawing::Point(190, 22);
+			this->btnFilterBillsByPaid->Name = L"btnFilterBillsByPaid";
+			this->btnFilterBillsByPaid->ShadowDecoration->Parent = this->btnFilterBillsByPaid;
+			this->btnFilterBillsByPaid->Size = System::Drawing::Size(73, 35);
+			this->btnFilterBillsByPaid->TabIndex = 1;
+			this->btnFilterBillsByPaid->Text = L"Paid";
+			this->btnFilterBillsByPaid->UseTransparentBackground = true;
+			this->btnFilterBillsByPaid->Click += gcnew System::EventHandler(this, &Administrator::btnFilterBillsByPaid_Click);
 			// 
 			// bunifuLabel21
 			// 
@@ -3746,7 +4575,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->AllBillsFromDatePicker->CalendarFont = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->AllBillsFromDatePicker->CalendarForeColor = System::Drawing::Color::Navy;
-			this->AllBillsFromDatePicker->Color = System::Drawing::Color::Silver;
+			this->AllBillsFromDatePicker->Color = System::Drawing::Color::Navy;
 			this->AllBillsFromDatePicker->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->AllBillsFromDatePicker->DateBorderThickness = Bunifu::UI::WinForms::BunifuDatePicker::BorderThickness::Thin;
 			this->AllBillsFromDatePicker->DateTextAlign = Bunifu::UI::WinForms::BunifuDatePicker::TextAlign::Left;
@@ -3767,11 +4596,72 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->AllBillsFromDatePicker->Name = L"AllBillsFromDatePicker";
 			this->AllBillsFromDatePicker->Size = System::Drawing::Size(220, 32);
 			this->AllBillsFromDatePicker->TabIndex = 3;
+			this->AllBillsFromDatePicker->Value = System::DateTime(2021, 10, 23, 7, 31, 0, 0);
 			this->AllBillsFromDatePicker->ValueChanged += gcnew System::EventHandler(this, &Administrator::AllBillsFromDatePicker_ValueChanged);
 			// 
 			// errorProvider1
 			// 
 			this->errorProvider1->ContainerControl = this;
+			// 
+			// errorProvider2
+			// 
+			this->errorProvider2->ContainerControl = this;
+			// 
+			// Column18
+			// 
+			this->Column18->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column18->DataPropertyName = L"client_id";
+			this->Column18->HeaderText = L"Client ID";
+			this->Column18->Name = L"Column18";
+			this->Column18->ReadOnly = true;
+			this->Column18->Width = 97;
+			// 
+			// Column42
+			// 
+			this->Column42->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column42->DataPropertyName = L"name";
+			this->Column42->HeaderText = L"Client Name";
+			this->Column42->Name = L"Column42";
+			this->Column42->ReadOnly = true;
+			// 
+			// Column43
+			// 
+			this->Column43->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column43->DataPropertyName = L"mobile_no";
+			this->Column43->HeaderText = L"Mobile No";
+			this->Column43->Name = L"Column43";
+			this->Column43->ReadOnly = true;
+			// 
+			// Column44
+			// 
+			this->Column44->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column44->DataPropertyName = L"address";
+			this->Column44->HeaderText = L"Address";
+			this->Column44->Name = L"Column44";
+			this->Column44->ReadOnly = true;
+			// 
+			// Column45
+			// 
+			this->Column45->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column45->DataPropertyName = L"balance";
+			dataGridViewCellStyle29->Format = L"N2";
+			dataGridViewCellStyle29->NullValue = L"0";
+			this->Column45->DefaultCellStyle = dataGridViewCellStyle29;
+			this->Column45->HeaderText = L"Balance";
+			this->Column45->Name = L"Column45";
+			this->Column45->ReadOnly = true;
+			this->Column45->Width = 94;
+			// 
+			// Column46
+			// 
+			this->Column46->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column46->DataPropertyName = L"timestamp";
+			dataGridViewCellStyle30->Format = L"d";
+			dataGridViewCellStyle30->NullValue = nullptr;
+			this->Column46->DefaultCellStyle = dataGridViewCellStyle30;
+			this->Column46->HeaderText = L"Date";
+			this->Column46->Name = L"Column46";
+			this->Column46->ReadOnly = true;
 			// 
 			// Administrator
 			// 
@@ -3828,7 +4718,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->BillingTabPage->ResumeLayout(false);
 			this->guna2Panel7->ResumeLayout(false);
 			this->guna2Panel9->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bunifuDataGridView4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ClientFinancialStatusDataGridView))->EndInit();
 			this->guna2Panel8->ResumeLayout(false);
 			this->guna2Panel8->PerformLayout();
 			this->AddClientTabPage->ResumeLayout(false);
@@ -3841,12 +4731,25 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ClientsDataGridView))->EndInit();
 			this->guna2Panel18->ResumeLayout(false);
 			this->guna2Panel18->PerformLayout();
-			this->PaidBillsTabPage->ResumeLayout(false);
+			this->PaymentsTabPage->ResumeLayout(false);
+			this->bunifuPages3->ResumeLayout(false);
+			this->ClientsListTabPage->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ClientsPaymentsListDataGridView))->EndInit();
+			this->PaymentTabPage->ResumeLayout(false);
+			this->guna2Panel20->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PaymentDataGridView))->EndInit();
 			this->guna2Panel12->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PaidBillsDataGridView))->EndInit();
-			this->DueBillsTabPage->ResumeLayout(false);
+			this->guna2Panel12->PerformLayout();
+			this->FinanceTabPage->ResumeLayout(false);
 			this->guna2Panel14->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bunifuDataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(xyDiagram3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(sideBySideBarSeriesView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(series3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chartControl4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(xyDiagram4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(lineSeriesView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(series4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chartControl3))->EndInit();
 			this->AllBillsTabPage->ResumeLayout(false);
 			this->guna2Panel16->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->AllBillsDataGridView))->EndInit();
@@ -3854,6 +4757,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			this->guna2Panel15->PerformLayout();
 			this->groupBox2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->errorProvider1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->errorProvider2))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -3883,8 +4787,12 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 
 		bunifuPages1->PageName = "AddClientTabPage";
 	}
-	private: System::Void btnPaidBills_Click(System::Object^ sender, System::EventArgs^ e) {
-		bunifuPages1->PageName = "PaidBillsTabPage";
+	private: System::Void btnPayments_Click(System::Object^ sender, System::EventArgs^ e) {
+		fillClientsPaymentsListDataGridView();
+
+		
+		bunifuPages1->PageName = "PaymentsTabPage";
+		bunifuPages3->PageName = "ClientsListTabPage";
 	}
 	private: System::Void btnDueBills_Click(System::Object^ sender, System::EventArgs^ e) {
 		bunifuPages1->PageName = "DueBillsTabPage";
@@ -3986,7 +4894,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			   String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
 			   PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 			   try {
-				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT  payments_tbl.client_id, clients_tbl.name, payments_tbl.bill_no, payments_tbl.credit, payments_tbl.paid_date FROM payments_tbl INNER JOIN clients_tbl ON payments_tbl.client_id=clients_tbl.client_id ORDER  BY payments_tbl.paid_date DESC; ", conDatabase);
+				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT  payments_tbl.client_id, clients_tbl.name, payments_tbl.reference_no, payments_tbl.credit, payments_tbl.paid_date FROM payments_tbl INNER JOIN clients_tbl ON payments_tbl.client_id=clients_tbl.client_id WHERE payments_tbl.credit::numeric>0 ORDER  BY payments_tbl.paid_date DESC; ", conDatabase);
 				   PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
 				   sda->SelectCommand = cmdDatabase;
 				   DataTable^ dbdataset = gcnew DataTable();
@@ -4006,7 +4914,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			   String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
 			   PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 			   try {
-				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT DISTINCT ON (BILLING_TBL.CLIENT_ID)BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.MOBILE_NO,CLIENTS_TBL.ADDRESS,BILLING_TBL.METER_READING_DATE,LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS PREVIOUS_METER_READING, BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, (BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date)) * 100 AS debit, payments_tbl.credit FROM /*BILLING_TBL*/ clients_tbl INNER JOIN /*CLIENTS_TBL*/ BILLING_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID INNER JOIN payments_tbl ON clients_tbl.client_id = payments_tbl.client_id ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
+				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT CLIENTS_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.MOBILE_NO,CLIENTS_TBL.ADDRESS,BILLING_TBL.METER_READING_DATE,LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS PREVIOUS_METER_READING,BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, payments_tbl.balance FROM CLIENTS_TBL LEFT JOIN BILLING_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID left JOIN payments_tbl ON clients_tbl.client_id = payments_tbl.client_id ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
 				   PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
 				   sda->SelectCommand = cmdDatabase;
 				   DataTable^ dbdataset = gcnew DataTable();
@@ -4026,7 +4934,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			   String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
 			   PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 			   try {
-				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.BILL_NO,BILLING_TBL.METER_READING_DATE, BILLING_TBL.METER_READING, LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS PREVIOUS_METER_READING, BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, (BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date)) * 100 AS debit FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID  ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
+				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.reference_no,payments_tbl.timestamp, payments_tbl.debit,payments_tbl.balance  FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID INNER JOIN payments_tbl on clients_tbl.client_id= payments_tbl.client_id ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
 				   PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
 				   sda->SelectCommand = cmdDatabase;
 				   DataTable^ dbdataset = gcnew DataTable();
@@ -4061,11 +4969,32 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			   }
 		   }
 
+		   void fillClientsPaymentsListDataGridView()
+		   {
+			   String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+			   PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
+			   try {
+				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT CLIENTS_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.MOBILE_NO,CLIENTS_TBL.ADDRESS, payments_tbl.balance,payments_tbl.timestamp FROM CLIENTS_TBL left JOIN payments_tbl ON clients_tbl.client_id = payments_tbl.client_id ORDER BY payments_tbl.CLIENT_ID, payments_tbl.timestamp::date DESC", conDatabase);
+				   PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
+				   sda->SelectCommand = cmdDatabase;
+				   DataTable^ dbdataset = gcnew DataTable();
+				   sda->Fill(dbdataset);
+				   BindingSource^ bSource = gcnew BindingSource();
+				   bSource->DataSource = dbdataset;
+				   ClientsPaymentsListDataGridView->DataSource = bSource;
+				   sda->Update(dbdataset);
+			   }
+			   catch (Exception^ ex) {
+				   MessageBox::Show(ex->Message);
+			   }
+		   }
+		
+
 	private: System::Void txtAllBillsSearchBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 		String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
 		PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 		try {
-			PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.BILL_NO,BILLING_TBL.METER_READING_DATE, BILLING_TBL.METER_READING, LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS PREVIOUS_METER_READING, BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, (BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date)) * 100 AS debit FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID WHERE LOWER(billing_tbl.client_id) LIKE CONCAT('%',LOWER(@search::character varying),'%') OR LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.id_no) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(billing_tbl.bill_no) LIKE CONCAT('%',LOWER(@search::character varying),'%') ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
+			PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.reference_no,payments_tbl.timestamp, payments_tbl.debit,payments_tbl.balance::numeric  FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID INNER JOIN payments_tbl on clients_tbl.client_id= payments_tbl.client_id WHERE LOWER(billing_tbl.client_id) LIKE CONCAT('%',LOWER(@search::character varying),'%') OR LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.id_no) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(billing_tbl.reference_no) LIKE CONCAT('%',LOWER(@search::character varying),'%') ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
 			cmdDatabase->Parameters->AddWithValue("@search", txtAllBillsSearchBox->Text);
 			PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
 			sda->SelectCommand = cmdDatabase;
@@ -4080,6 +5009,49 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			MessageBox::Show(ex->Message);
 		}
 	}
+
+	private: System::Void btnFilterBillsByAll_Click(System::Object^ sender, System::EventArgs^ e) {
+		btnAllBills->PerformClick();
+	}
+	private: System::Void btnFilterBillsByDue_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+		PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
+		try {
+			PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.reference_no,payments_tbl.timestamp, payments_tbl.debit,payments_tbl.balance::numeric  FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID INNER JOIN payments_tbl on clients_tbl.client_id= payments_tbl.client_id WHERE (payments_tbl.balance::numeric>0) AND (LOWER(billing_tbl.client_id) LIKE CONCAT('%',LOWER(@search::character varying),'%') OR LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.id_no) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(billing_tbl.reference_no) LIKE CONCAT('%',LOWER(@search::character varying),'%')) ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC ", conDatabase);
+			cmdDatabase->Parameters->AddWithValue("@search", txtAllBillsSearchBox->Text);
+			PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
+			sda->SelectCommand = cmdDatabase;
+			DataTable^ dbdataset = gcnew DataTable();
+			sda->Fill(dbdataset);
+			BindingSource^ bSource = gcnew BindingSource();
+			bSource->DataSource = dbdataset;
+			AllBillsDataGridView->DataSource = bSource;
+			sda->Update(dbdataset);
+		}
+		catch (Exception^ ex) {
+			MessageBox::Show(ex->Message);
+		}
+	}
+	private: System::Void btnFilterBillsByPaid_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+		PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
+		try {
+			PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.reference_no,payments_tbl.timestamp, payments_tbl.debit,payments_tbl.balance::numeric  FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID INNER JOIN payments_tbl on clients_tbl.client_id= payments_tbl.client_id WHERE (payments_tbl.balance::numeric <= 0) AND (LOWER(billing_tbl.client_id) LIKE CONCAT('%',LOWER(@search::character varying),'%') OR LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.id_no) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(billing_tbl.reference_no) LIKE CONCAT('%',LOWER(@search::character varying),'%')) ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
+			cmdDatabase->Parameters->AddWithValue("@search", txtAllBillsSearchBox->Text);
+			PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
+			sda->SelectCommand = cmdDatabase;
+			DataTable^ dbdataset = gcnew DataTable();
+			sda->Fill(dbdataset);
+			BindingSource^ bSource = gcnew BindingSource();
+			bSource->DataSource = dbdataset;
+			AllBillsDataGridView->DataSource = bSource;
+			sda->Update(dbdataset);
+		}
+		catch (Exception^ ex) {
+			MessageBox::Show(ex->Message);
+		}
+	}
+	
 	private: System::Void bunifuLabel19_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void btn_Submt_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -4092,7 +5064,7 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			else
 				gender = rbtnFemale->Text;
 		}
-		
+
 		String^ constr = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
 		PgSqlConnection^ con = gcnew PgSqlConnection(constr);
 		try
@@ -4115,6 +5087,8 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			MessageBox::Show(ex->Message);
 		}
 		con->Close();
+
+		ClearTextbox();
 	}
 	private: System::Void ClientListDataGridView_CellMouseClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellMouseEventArgs^ e) {
 		if (e->RowIndex >= 0)
@@ -4122,9 +5096,30 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			DataGridViewRow^ row = ClientListDataGridView->Rows[e->RowIndex];
 			txt_ClientID->Text = row->Cells[0]->Value->ToString();
 			txt_ClientName->Text = row->Cells[1]->Value->ToString();
-			txt_PreviousMeterReading->Text = row->Cells[5]->Value->ToString();
+			txt_PricePerUnit->Text = "100";
 
-			GenerateBillNo();
+			//check if the client has no previous meter readings, to prevent null exception
+			if (row->Cells[5]->Value == DBNull::Value)
+			{
+				txt_PreviousMeterReading->Text = "0";
+			}
+			else
+			{
+				txt_PreviousMeterReading->Text = row->Cells[5]->Value->ToString();
+			}
+
+			if (row->Cells[6]->Value == DBNull::Value)
+			{
+				txt_Balance->Text = "0";
+			}
+			else
+			{
+				txt_Balance->Text = row->Cells[6]->Value->ToString();
+			}
+
+			GenerateReferenceNo();
+
+			fillClientFinancialStatusDataGridView();
 
 			bunifuPages2->PageName = "BillingTabPage";
 		}
@@ -4134,12 +5129,24 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 	}
 	private: System::Void txt_UnitsConsumed_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
+
+		   void Calculate_Units_Consumed()
+		   {
+			   txt_UnitsConsumed->Text = (Int32::Parse(txt_CurrentMeterReading->Text) - Int32::Parse(txt_PreviousMeterReading->Text)).ToString();
+		   }
+
 	private: System::Void txt_CurrentMeterReading_Leave(System::Object^ sender, System::EventArgs^ e) {
 		if (ValidateChildren(ValidationConstraints::Enabled))
 		{
-			txt_UnitsConsumed->Text = (Int32::Parse(txt_CurrentMeterReading->Text) - Int32::Parse(txt_PreviousMeterReading->Text)).ToString();
+		}
+		else
+		{
+			Calculate_Units_Consumed();
+			txt_Debit->Text = (CalculateDebit()).ToString();
+			txt_Balance->Text = (CalculateBalanceBillingPage()).ToString();
 		}
 	}
+
 	private: System::Void txt_CurrentMeterReading_Validating(System::Object^ sender, System::ComponentModel::CancelEventArgs^ e) {
 		if (String::IsNullOrEmpty(txt_CurrentMeterReading->Text))
 		{
@@ -4154,9 +5161,71 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 		}
 	}
 	private: System::Void btnSubmit_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (ValidateChildren(ValidationConstraints::Enabled))
+		{
+		}
+		else
+		{
+			Submit_Billing_Data();
+			fillClientFinancialStatusDataGridView();
+			ClearTextbox();
+		}
 	}
+		   void Submit_Billing_Data()
+		   {
+			   String^ constr = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+			   PgSqlConnection^ con = gcnew PgSqlConnection(constr);
+			   try
+			   {
+				   con->Open();
+				   PgSqlCommand^ cmd = gcnew PgSqlCommand("INSERT INTO billing_tbl(client_id,reference_no,meter_reading,meter_reading_date) VALUES(@client_id, @reference_no, @meter_reading, @meter_reading_date);", con);
+				   cmd->Parameters->AddWithValue("@client_id", txt_ClientID->Text);
+				   cmd->Parameters->AddWithValue("@reference_no", txt_RefNo->Text);
+				   cmd->Parameters->AddWithValue("@meter_reading", txt_CurrentMeterReading->Text);
+				   cmd->Parameters->AddWithValue("@meter_reading_date", txt_MeterReadingDateTimePicker->Value);
+				   cmd->ExecuteNonQuery();
+				   MessageBox::Show("Successfully Recorded.", "Success");
+			   }
+			   catch (Exception^ ex)
+			   {
+				   MessageBox::Show(ex->Message);
+			   }
+			   con->Close();
 
-		   void GenerateBillNo()
+			   try
+			   {
+				   con->Open();
+				   PgSqlCommand^ cmd = gcnew PgSqlCommand("INSERT INTO payments_tbl (client_id,reference_no,debit,balance) values(@client_id,@reference_no,@debit,@balance);", con);
+				   cmd->Parameters->AddWithValue("@client_id", txt_ClientID->Text);
+				   cmd->Parameters->AddWithValue("@reference_no", txt_RefNo->Text);
+				   cmd->Parameters->AddWithValue("@debit", txt_Debit->Text);
+				   cmd->Parameters->AddWithValue("@balance", txt_Balance->Text);
+				   cmd->ExecuteNonQuery();
+				   MessageBox::Show("Successfully Billed.", "Success");
+			   }
+			   catch (Exception^ ex)
+			   {
+				   MessageBox::Show(ex->Message);
+			   }
+			   con->Close();
+		   }
+
+		   double CalculateDebit()
+		   {
+			   double debit = Convert::ToInt32(txt_UnitsConsumed->Text) * Convert::ToDouble(txt_PricePerUnit->Text);
+			   return debit;
+		   }
+
+		   double CalculateBalanceBillingPage()
+		   {
+			   //new balance = debit - balance;
+			   //new balance = balance - credit;
+
+			   double balance = Convert::ToInt32(txt_Debit->Text) - Convert::ToDouble(txt_Balance->Text);
+			   return balance;
+		   }
+
+		   void GenerateReferenceNo()
 		   {
 			   string bill_no;
 			   srand(time(0));
@@ -4186,19 +5255,39 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 
 			   bill_no = to_string((now->tm_year + 1900)) + to_string((now->tm_mon + 1)) + to_string((now->tm_mday)) + "-" + (array[1]) + "-" + to_string(rand() % 11 + 0);
 			   String^ bill_no2 = gcnew String(bill_no.c_str());
-			   txt_BillNo->Text = bill_no2;
+			   txt_RefNo->Text = bill_no2;
 		   }
 
-		void GenerateClientID()
-	{
-			string client_id;
-			srand(time(0));
-			std::time_t t = std::time(0);
-			std::tm* now = std::localtime(&t);
-			client_id = "WMS" + to_string(rand() % 801 + 100) + "-" + to_string(rand() % 8001 + 1000) + "/" + to_string((now->tm_year + 1900) % 100);
-			String^ client_id2 = gcnew String(client_id.c_str());
-			txtClientID->Text = client_id2;
-	}
+		   void GenerateClientID()
+		   {
+			   string client_id;
+			   srand(time(0));
+			   std::time_t t = std::time(0);
+			   std::tm* now = std::localtime(&t);
+			   client_id = "WMS" + to_string(rand() % 801 + 100) + "-" + to_string(rand() % 8001 + 1000) + "/" + to_string((now->tm_year + 1900) % 100);
+			   String^ client_id2 = gcnew String(client_id.c_str());
+			   txtClientID->Text = client_id2;
+		   }
+
+		   void fillClientFinancialStatusDataGridView()
+		   {
+			   String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+			   PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
+			   try {
+				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("select timestamp,debit,credit,balance from payments_tbl where client_id='" + txt_ClientID->Text + "'", conDatabase);
+				   PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
+				   sda->SelectCommand = cmdDatabase;
+				   DataTable^ dbdataset = gcnew DataTable();
+				   sda->Fill(dbdataset);
+				   BindingSource^ bSource = gcnew BindingSource();
+				   bSource->DataSource = dbdataset;
+				   ClientFinancialStatusDataGridView->DataSource = bSource;
+				   sda->Update(dbdataset);
+			   }
+			   catch (Exception^ ex) {
+				   MessageBox::Show(ex->Message);
+			   }
+		   }
 	private: System::Void txt_Search_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 		String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
 		PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
@@ -4218,69 +5307,126 @@ private: Bunifu::UI::WinForms::BunifuDatePicker^ AllBillsFromDatePicker;
 			MessageBox::Show(ex->Message);
 		}
 	}
-private: System::Void txt_SearchBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-
-	String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
-	PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
-	try {
-		PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("Select DISTINCT ON (clients_tbl.client_id) clients_tbl.client_id, clients_tbl.name, clients_tbl.mobile_no, clients_tbl.address, /*coalesce(billing_tbl.meter_reading, 0)*/ billing_tbl.meter_reading AS previous_meter_reading, BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, (BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date)) * 100 AS debit, payments_tbl.credit, BILLING_TBL.METER_READING_DATE::date  from clients_tbl left join billing_tbl on clients_tbl.client_id=billing_tbl.client_id left JOIN payments_tbl ON clients_tbl.client_id = payments_tbl.client_id where LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') order by clients_tbl.client_id, BILLING_TBL.METER_READING_DATE::date desc NULLS LAST", conDatabase);
-		cmdDatabase->Parameters->AddWithValue("@search", txt_SearchBox->Text);
-		PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
-		sda->SelectCommand = cmdDatabase;
-		DataTable^ dbdataset = gcnew DataTable();
-		sda->Fill(dbdataset);
-		BindingSource^ bSource = gcnew BindingSource();
-		bSource->DataSource = dbdataset;
-		ClientListDataGridView->DataSource = bSource;
-		sda->Update(dbdataset);
+	private: System::Void txt_SearchBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+		PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
+		try {
+			PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT CLIENTS_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.MOBILE_NO,CLIENTS_TBL.ADDRESS,BILLING_TBL.METER_READING_DATE,LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS PREVIOUS_METER_READING,BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, payments_tbl.balance FROM CLIENTS_TBL LEFT JOIN BILLING_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID left JOIN payments_tbl ON clients_tbl.client_id = payments_tbl.client_id  where LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.client_id) LIKE CONCAT('%',LOWER(@search::text),'%') ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC NULLS LAST", conDatabase);
+			cmdDatabase->Parameters->AddWithValue("@search", txt_SearchBox->Text);
+			PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
+			sda->SelectCommand = cmdDatabase;
+			DataTable^ dbdataset = gcnew DataTable();
+			sda->Fill(dbdataset);
+			BindingSource^ bSource = gcnew BindingSource();
+			bSource->DataSource = dbdataset;
+			ClientListDataGridView->DataSource = bSource;
+			sda->Update(dbdataset);
+		}
+		catch (Exception^ ex) {
+			MessageBox::Show(ex->Message);
+		}
 	}
-	catch (Exception^ ex) {
-		MessageBox::Show(ex->Message);
+	private: System::Void bunifuDatePicker2_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-}
-private: System::Void bunifuDatePicker2_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void AllBillsFromDatePicker_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-	String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
-	PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
-	try {
-		PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.BILL_NO,BILLING_TBL.METER_READING_DATE, BILLING_TBL.METER_READING, LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS PREVIOUS_METER_READING, BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, (BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date)) * 100 AS debit FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID WHERE (LOWER(billing_tbl.client_id) LIKE CONCAT('%',LOWER(@search::character varying),'%') OR LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.id_no) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(billing_tbl.bill_no) LIKE CONCAT('%',LOWER(@search::character varying),'%')) AND BILLING_TBL.METER_READING_DATE::date >= (@FromDate) AND BILLING_TBL.METER_READING_DATE::date < (@ToDate) ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
-		cmdDatabase->Parameters->AddWithValue("@search", txtAllBillsSearchBox->Text);
-		cmdDatabase->Parameters->AddWithValue("@FromDate", AllBillsFromDatePicker->Value);
-		cmdDatabase->Parameters->AddWithValue("@ToDate", AllBillsToDatePicker->Value);
-		PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
-		sda->SelectCommand = cmdDatabase;
-		DataTable^ dbdataset = gcnew DataTable();
-		sda->Fill(dbdataset);
-		BindingSource^ bSource = gcnew BindingSource();
-		bSource->DataSource = dbdataset;
-		AllBillsDataGridView->DataSource = bSource;
-		sda->Update(dbdataset);
+	private: System::Void AllBillsFromDatePicker_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+		String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+		PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
+		try {
+			PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.BILL_NO,BILLING_TBL.METER_READING_DATE, BILLING_TBL.METER_READING, LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS PREVIOUS_METER_READING, BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, (BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date)) * 100 AS debit FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID WHERE (LOWER(billing_tbl.client_id) LIKE CONCAT('%',LOWER(@search::character varying),'%') OR LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.id_no) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(billing_tbl.bill_no) LIKE CONCAT('%',LOWER(@search::character varying),'%')) AND BILLING_TBL.METER_READING_DATE::date >= (@FromDate) AND BILLING_TBL.METER_READING_DATE::date < (@ToDate) ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
+			cmdDatabase->Parameters->AddWithValue("@search", txtAllBillsSearchBox->Text);
+			cmdDatabase->Parameters->AddWithValue("@FromDate", AllBillsFromDatePicker->Value);
+			cmdDatabase->Parameters->AddWithValue("@ToDate", AllBillsToDatePicker->Value);
+			PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
+			sda->SelectCommand = cmdDatabase;
+			DataTable^ dbdataset = gcnew DataTable();
+			sda->Fill(dbdataset);
+			BindingSource^ bSource = gcnew BindingSource();
+			bSource->DataSource = dbdataset;
+			AllBillsDataGridView->DataSource = bSource;
+			sda->Update(dbdataset);
+		}
+		catch (Exception^ ex) {
+			MessageBox::Show(ex->Message);
+		}
 	}
-	catch (Exception^ ex) {
-		MessageBox::Show(ex->Message);
+	private: System::Void AllBillsToDatePicker_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+		String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+		PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
+		try {
+			PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.BILL_NO,BILLING_TBL.METER_READING_DATE, BILLING_TBL.METER_READING, LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS PREVIOUS_METER_READING, BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, (BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date)) * 100 AS debit FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID WHERE (LOWER(billing_tbl.client_id) LIKE CONCAT('%',LOWER(@search::character varying),'%') OR LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.id_no) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(billing_tbl.bill_no) LIKE CONCAT('%',LOWER(@search::character varying),'%')) AND BILLING_TBL.METER_READING_DATE::date >= (@FromDate) AND BILLING_TBL.METER_READING_DATE::date < (@ToDate) ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
+			cmdDatabase->Parameters->AddWithValue("@search", txtAllBillsSearchBox->Text);
+			cmdDatabase->Parameters->AddWithValue("@FromDate", AllBillsFromDatePicker->Value);
+			cmdDatabase->Parameters->AddWithValue("@ToDate", AllBillsToDatePicker->Value);
+			PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
+			sda->SelectCommand = cmdDatabase;
+			DataTable^ dbdataset = gcnew DataTable();
+			sda->Fill(dbdataset);
+			BindingSource^ bSource = gcnew BindingSource();
+			bSource->DataSource = dbdataset;
+			AllBillsDataGridView->DataSource = bSource;
+			sda->Update(dbdataset);
+		}
+		catch (Exception^ ex) {
+			MessageBox::Show(ex->Message);
+		}
 	}
-}
-private: System::Void AllBillsToDatePicker_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-	String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
-	PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
-	try {
-		PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.BILL_NO,BILLING_TBL.METER_READING_DATE, BILLING_TBL.METER_READING, LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS PREVIOUS_METER_READING, BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, (BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date)) * 100 AS debit FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID WHERE (LOWER(billing_tbl.client_id) LIKE CONCAT('%',LOWER(@search::character varying),'%') OR LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.id_no) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(billing_tbl.bill_no) LIKE CONCAT('%',LOWER(@search::character varying),'%')) AND BILLING_TBL.METER_READING_DATE::date >= (@FromDate) AND BILLING_TBL.METER_READING_DATE::date < (@ToDate) ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
-		cmdDatabase->Parameters->AddWithValue("@search", txtAllBillsSearchBox->Text);
-		cmdDatabase->Parameters->AddWithValue("@FromDate", AllBillsFromDatePicker->Value);
-		cmdDatabase->Parameters->AddWithValue("@ToDate", AllBillsToDatePicker->Value);
-		PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
-		sda->SelectCommand = cmdDatabase;
-		DataTable^ dbdataset = gcnew DataTable();
-		sda->Fill(dbdataset);
-		BindingSource^ bSource = gcnew BindingSource();
-		bSource->DataSource = dbdataset;
-		AllBillsDataGridView->DataSource = bSource;
-		sda->Update(dbdataset);
+	private: System::Void txt_Credit_Validating(System::Object^ sender, System::ComponentModel::CancelEventArgs^ e) {
+		if (String::IsNullOrWhiteSpace(txt_Credit->Text->Trim()))
+		{
+			e->Cancel = true;
+			txt_Credit->Focus();
+			errorProvider2->SetError(txt_Credit, "Credit should not be left blank!");
+		}
+		else
+		{
+			e->Cancel = false;
+			errorProvider2->SetError(txt_Credit, "");
+		}
 	}
-	catch (Exception^ ex) {
-		MessageBox::Show(ex->Message);
+	private: System::Void btn_Submit_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (ValidateChildren(ValidationConstraints::Enabled))
+		{
+		}
+		else
+		{
+			ClearTextbox();
+		}
 	}
-}
-};
+	private: System::Void backgroundWorker1_DoWork(System::Object^ sender, System::ComponentModel::DoWorkEventArgs^ e) {
+	}
+		   void ClearTextbox()
+		   {
+			   txtAllBillsSearchBox->Clear();
+			   rbtnMale->Checked == false;
+			   rbtnFemale->Checked == false;
+			   txtClientID->Clear();;
+			   txtClientName->Clear();;
+			   txtIDNo->Clear();
+			   txtMobileNo->Clear();
+			   txtEmail->Clear();
+			   txtAddress->Clear();
+			   txt_ClientID->Clear();
+			   txt_ClientName->Clear();
+			   txt_PricePerUnit->Clear();
+			   txt_PreviousMeterReading->Clear();
+			   txt_PreviousMeterReading->Clear();
+			   txt_Balance->Clear();
+			   txt_Balance->Clear();
+			   txt_UnitsConsumed->Clear();
+			   txt_Debit->Clear();
+			   txt_Balance->Clear();
+			   txt_CurrentMeterReading->Clear();
+			   txt_ClientID->Clear();
+			   txt_RefNo->Clear();
+			   txt_CurrentMeterReading->Clear();
+			   //txt_MeterReadingDateTimePicker->Value = DateTime::Now;
+			   txt_Search->Clear();
+			   txt_SearchBox->Clear();
+			   txtAllBillsSearchBox->Clear();
+			   //AllBillsFromDatePicker->Value = DateTime::Now;
+			   //AllBillsToDatePicker->Value = DateTime::Now;
+			   txt_Credit->Clear();
+		   }
+	
+	};
 }
