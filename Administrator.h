@@ -56,7 +56,8 @@ namespace WaterManagementSystem {
 
 	private: Guna::UI2::WinForms::Guna2Button^ guna2Button9;
 	private: Guna::UI2::WinForms::Guna2Button^ guna2Button8;
-	private: Guna::UI2::WinForms::Guna2Button^ guna2Button7;
+	private: Guna::UI2::WinForms::Guna2Button^ btnFinance;
+
 	private: Guna::UI2::WinForms::Guna2Button^ btnAllBills;
 
 	private: Guna::UI2::WinForms::Guna2Button^ btnDueBills;
@@ -222,37 +223,44 @@ private: Bunifu::UI::WinForms::BunifuDataGridView^ ClientsPaymentsListDataGridVi
 	private: System::Windows::Forms::TabPage^ PaymentTabPage;
 	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel20;
 	private: Bunifu::UI::WinForms::BunifuDataGridView^ PaymentDataGridView;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column33;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column41;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column38;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column39;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column40;
+
+
+
+
+
 	private: Guna::UI2::WinForms::Guna2Panel^ guna2Panel12;
 	private: Guna::UI2::WinForms::Guna2Button^ btn_Submit;
+private: Bunifu::UI::WinForms::BunifuDatePicker^ DateOfPaymentDatePicker;
 
-	private: Bunifu::UI::WinForms::BunifuDatePicker^ bunifuDatePicker1;
-	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel40;
+
+
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel39;
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel38;
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel37;
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel36;
-	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel28;
+
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel26;
 	private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel25;
-	private: Guna::UI2::WinForms::Guna2TextBox^ guna2TextBox9;
-	private: Guna::UI2::WinForms::Guna2TextBox^ guna2TextBox8;
-	private: Guna::UI2::WinForms::Guna2TextBox^ guna2TextBox7;
-	private: Guna::UI2::WinForms::Guna2TextBox^ guna2TextBox5;
-	private: Guna::UI2::WinForms::Guna2TextBox^ guna2TextBox3;
-	private: Guna::UI2::WinForms::Guna2TextBox^ txt_Credit;
+private: Guna::UI2::WinForms::Guna2TextBox^ txt_client_id;
+private: Guna::UI2::WinForms::Guna2TextBox^ txt_client_name;
+private: Guna::UI2::WinForms::Guna2TextBox^ txt_reference_number;
 
-	private: Guna::UI2::WinForms::Guna2TextBox^ guna2TextBox1;
+
+
+
+
+private: Guna::UI2::WinForms::Guna2TextBox^ TxtBalance;
+private: Guna::UI2::WinForms::Guna2TextBox^ TxtCredit;
+
+
+
+
 	private: System::Windows::Forms::ErrorProvider^ errorProvider2;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column9;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column7;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column8;
+
+
+
+
+
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column10;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column11;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column17;
@@ -284,17 +292,43 @@ private: Bunifu::UI::WinForms::BunifuDataGridView^ ClientsPaymentsListDataGridVi
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column27;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column24;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column25;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column26;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
+
+
+
+
+
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column18;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column42;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column43;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column44;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column45;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
+private: DevExpress::DataAccess::Sql::SqlDataSource^ sqlDataSource1;
+private: Guna::UI2::WinForms::Guna2TextBox^ TxtTransactionCode;
+private: Bunifu::UI::WinForms::BunifuLabel^ bunifuLabel24;
+private: Guna::UI2::WinForms::Guna2Button^ btnBack;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column33;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column41;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column38;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column39;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column40;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column26;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column9;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column7;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column8;
+private: Guna::UI2::WinForms::Guna2TextBox^ TxtSearchBox;
+
+
+
+
+
+
 
 
 
@@ -407,6 +441,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle27 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle28 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle31 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle29 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle30 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle32 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle33 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle38 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
@@ -418,6 +454,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			DevExpress::XtraCharts::Series^ series3 = (gcnew DevExpress::XtraCharts::Series());
 			DevExpress::XtraCharts::SideBySideBarSeriesView^ sideBySideBarSeriesView1 = (gcnew DevExpress::XtraCharts::SideBySideBarSeriesView());
 			DevExpress::XtraCharts::ChartTitle^ chartTitle1 = (gcnew DevExpress::XtraCharts::ChartTitle());
+			DevExpress::DataAccess::Sql::CustomSqlQuery^ customSqlQuery1 = (gcnew DevExpress::DataAccess::Sql::CustomSqlQuery());
 			DevExpress::XtraCharts::XYDiagram^ xyDiagram4 = (gcnew DevExpress::XtraCharts::XYDiagram());
 			DevExpress::XtraCharts::Series^ series4 = (gcnew DevExpress::XtraCharts::Series());
 			DevExpress::XtraCharts::LineSeriesView^ lineSeriesView1 = (gcnew DevExpress::XtraCharts::LineSeriesView());
@@ -429,14 +466,12 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle42 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle43 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle44 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle29 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle30 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->guna2Panel1 = (gcnew Guna::UI2::WinForms::Guna2Panel());
 			this->bunifuLabel32 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
 			this->guna2PictureBox1 = (gcnew Guna::UI2::WinForms::Guna2PictureBox());
 			this->guna2Button9 = (gcnew Guna::UI2::WinForms::Guna2Button());
 			this->guna2Button8 = (gcnew Guna::UI2::WinForms::Guna2Button());
-			this->guna2Button7 = (gcnew Guna::UI2::WinForms::Guna2Button());
+			this->btnFinance = (gcnew Guna::UI2::WinForms::Guna2Button());
 			this->btnAllBills = (gcnew Guna::UI2::WinForms::Guna2Button());
 			this->btnDueBills = (gcnew Guna::UI2::WinForms::Guna2Button());
 			this->btnPayments = (gcnew Guna::UI2::WinForms::Guna2Button());
@@ -564,7 +599,14 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->bunifuPages3 = (gcnew Bunifu::UI::WinForms::BunifuPages());
 			this->ClientsListTabPage = (gcnew System::Windows::Forms::TabPage());
 			this->ClientsPaymentsListDataGridView = (gcnew Bunifu::UI::WinForms::BunifuDataGridView());
+			this->Column18 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column42 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column43 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column44 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column45 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column46 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->guna2Panel11 = (gcnew Guna::UI2::WinForms::Guna2Panel());
+			this->TxtSearchBox = (gcnew Guna::UI2::WinForms::Guna2TextBox());
 			this->PaymentTabPage = (gcnew System::Windows::Forms::TabPage());
 			this->guna2Panel20 = (gcnew Guna::UI2::WinForms::Guna2Panel());
 			this->PaymentDataGridView = (gcnew Bunifu::UI::WinForms::BunifuDataGridView());
@@ -574,26 +616,26 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->Column39 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column40 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->guna2Panel12 = (gcnew Guna::UI2::WinForms::Guna2Panel());
+			this->btnBack = (gcnew Guna::UI2::WinForms::Guna2Button());
+			this->TxtTransactionCode = (gcnew Guna::UI2::WinForms::Guna2TextBox());
 			this->btn_Submit = (gcnew Guna::UI2::WinForms::Guna2Button());
-			this->bunifuDatePicker1 = (gcnew Bunifu::UI::WinForms::BunifuDatePicker());
-			this->bunifuLabel40 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
+			this->DateOfPaymentDatePicker = (gcnew Bunifu::UI::WinForms::BunifuDatePicker());
 			this->bunifuLabel39 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
 			this->bunifuLabel38 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
 			this->bunifuLabel37 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
 			this->bunifuLabel36 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
-			this->bunifuLabel28 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
 			this->bunifuLabel26 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
+			this->bunifuLabel24 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
 			this->bunifuLabel25 = (gcnew Bunifu::UI::WinForms::BunifuLabel());
-			this->guna2TextBox9 = (gcnew Guna::UI2::WinForms::Guna2TextBox());
-			this->guna2TextBox8 = (gcnew Guna::UI2::WinForms::Guna2TextBox());
-			this->guna2TextBox7 = (gcnew Guna::UI2::WinForms::Guna2TextBox());
-			this->guna2TextBox5 = (gcnew Guna::UI2::WinForms::Guna2TextBox());
-			this->guna2TextBox3 = (gcnew Guna::UI2::WinForms::Guna2TextBox());
-			this->txt_Credit = (gcnew Guna::UI2::WinForms::Guna2TextBox());
-			this->guna2TextBox1 = (gcnew Guna::UI2::WinForms::Guna2TextBox());
+			this->txt_client_id = (gcnew Guna::UI2::WinForms::Guna2TextBox());
+			this->txt_client_name = (gcnew Guna::UI2::WinForms::Guna2TextBox());
+			this->txt_reference_number = (gcnew Guna::UI2::WinForms::Guna2TextBox());
+			this->TxtBalance = (gcnew Guna::UI2::WinForms::Guna2TextBox());
+			this->TxtCredit = (gcnew Guna::UI2::WinForms::Guna2TextBox());
 			this->FinanceTabPage = (gcnew System::Windows::Forms::TabPage());
 			this->guna2Panel14 = (gcnew Guna::UI2::WinForms::Guna2Panel());
 			this->chartControl4 = (gcnew DevExpress::XtraCharts::ChartControl());
+			this->sqlDataSource1 = (gcnew DevExpress::DataAccess::Sql::SqlDataSource(this->components));
 			this->chartControl3 = (gcnew DevExpress::XtraCharts::ChartControl());
 			this->guna2Panel13 = (gcnew Guna::UI2::WinForms::Guna2Panel());
 			this->AllBillsTabPage = (gcnew System::Windows::Forms::TabPage());
@@ -620,12 +662,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->AllBillsFromDatePicker = (gcnew Bunifu::UI::WinForms::BunifuDatePicker());
 			this->errorProvider1 = (gcnew System::Windows::Forms::ErrorProvider(this->components));
 			this->errorProvider2 = (gcnew System::Windows::Forms::ErrorProvider(this->components));
-			this->Column18 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column42 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column43 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column44 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column45 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column46 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->guna2Panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->guna2PictureBox1))->BeginInit();
 			this->guna2Panel2->SuspendLayout();
@@ -672,6 +708,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->bunifuPages3->SuspendLayout();
 			this->ClientsListTabPage->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ClientsPaymentsListDataGridView))->BeginInit();
+			this->guna2Panel11->SuspendLayout();
 			this->PaymentTabPage->SuspendLayout();
 			this->guna2Panel20->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PaymentDataGridView))->BeginInit();
@@ -702,7 +739,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->guna2Panel1->Controls->Add(this->guna2PictureBox1);
 			this->guna2Panel1->Controls->Add(this->guna2Button9);
 			this->guna2Panel1->Controls->Add(this->guna2Button8);
-			this->guna2Panel1->Controls->Add(this->guna2Button7);
+			this->guna2Panel1->Controls->Add(this->btnFinance);
 			this->guna2Panel1->Controls->Add(this->btnAllBills);
 			this->guna2Panel1->Controls->Add(this->btnDueBills);
 			this->guna2Panel1->Controls->Add(this->btnPayments);
@@ -723,14 +760,14 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->bunifuLabel32->AutoSize = false;
 			this->bunifuLabel32->Cursor = System::Windows::Forms::Cursors::Default;
 			this->bunifuLabel32->CursorType = System::Windows::Forms::Cursors::Default;
-			this->bunifuLabel32->Font = (gcnew System::Drawing::Font(L"Roboto", 12));
+			this->bunifuLabel32->Font = (gcnew System::Drawing::Font(L"Sora", 12));
 			this->bunifuLabel32->ForeColor = System::Drawing::SystemColors::Control;
-			this->bunifuLabel32->Location = System::Drawing::Point(3, 138);
+			this->bunifuLabel32->Location = System::Drawing::Point(2, 90);
 			this->bunifuLabel32->Name = L"bunifuLabel32";
 			this->bunifuLabel32->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->bunifuLabel32->Size = System::Drawing::Size(169, 66);
+			this->bunifuLabel32->Size = System::Drawing::Size(169, 83);
 			this->bunifuLabel32->TabIndex = 10;
-			this->bunifuLabel32->Text = L"Water Management System";
+			this->bunifuLabel32->Text = L"Crystal Chancery Aqua Centre \r\nWater Mangement System";
 			this->bunifuLabel32->TextAlignment = System::Drawing::ContentAlignment::MiddleCenter;
 			this->bunifuLabel32->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
 			// 
@@ -766,6 +803,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->guna2Button9->Size = System::Drawing::Size(147, 39);
 			this->guna2Button9->TabIndex = 8;
 			this->guna2Button9->Text = L"Logout";
+			this->guna2Button9->Visible = false;
 			// 
 			// guna2Button8
 			// 
@@ -787,26 +825,28 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->guna2Button8->TabIndex = 7;
 			this->guna2Button8->Text = L"Water consumption";
 			this->guna2Button8->TextOffset = System::Drawing::Point(18, 0);
+			this->guna2Button8->Visible = false;
 			// 
-			// guna2Button7
+			// btnFinance
 			// 
-			this->guna2Button7->BackColor = System::Drawing::Color::Transparent;
-			this->guna2Button7->ButtonMode = Guna::UI2::WinForms::Enums::ButtonMode::RadioButton;
-			this->guna2Button7->CheckedState->Parent = this->guna2Button7;
-			this->guna2Button7->CustomImages->Parent = this->guna2Button7;
-			this->guna2Button7->FillColor = System::Drawing::Color::Transparent;
-			this->guna2Button7->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F));
-			this->guna2Button7->ForeColor = System::Drawing::Color::White;
-			this->guna2Button7->HoverState->Parent = this->guna2Button7;
-			this->guna2Button7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"guna2Button7.Image")));
-			this->guna2Button7->ImageAlign = System::Windows::Forms::HorizontalAlignment::Left;
-			this->guna2Button7->ImageSize = System::Drawing::Size(30, 30);
-			this->guna2Button7->Location = System::Drawing::Point(12, 501);
-			this->guna2Button7->Name = L"guna2Button7";
-			this->guna2Button7->ShadowDecoration->Parent = this->guna2Button7;
-			this->guna2Button7->Size = System::Drawing::Size(147, 39);
-			this->guna2Button7->TabIndex = 6;
-			this->guna2Button7->Text = L"Finance";
+			this->btnFinance->BackColor = System::Drawing::Color::Transparent;
+			this->btnFinance->ButtonMode = Guna::UI2::WinForms::Enums::ButtonMode::RadioButton;
+			this->btnFinance->CheckedState->Parent = this->btnFinance;
+			this->btnFinance->CustomImages->Parent = this->btnFinance;
+			this->btnFinance->FillColor = System::Drawing::Color::Transparent;
+			this->btnFinance->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F));
+			this->btnFinance->ForeColor = System::Drawing::Color::White;
+			this->btnFinance->HoverState->Parent = this->btnFinance;
+			this->btnFinance->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnFinance.Image")));
+			this->btnFinance->ImageAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			this->btnFinance->ImageSize = System::Drawing::Size(30, 30);
+			this->btnFinance->Location = System::Drawing::Point(12, 501);
+			this->btnFinance->Name = L"btnFinance";
+			this->btnFinance->ShadowDecoration->Parent = this->btnFinance;
+			this->btnFinance->Size = System::Drawing::Size(147, 39);
+			this->btnFinance->TabIndex = 6;
+			this->btnFinance->Text = L"Finance";
+			this->btnFinance->Click += gcnew System::EventHandler(this, &Administrator::btnFinance_Click);
 			// 
 			// btnAllBills
 			// 
@@ -887,7 +927,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->btnAddClient->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnAddClient.Image")));
 			this->btnAddClient->ImageAlign = System::Windows::Forms::HorizontalAlignment::Left;
 			this->btnAddClient->ImageSize = System::Drawing::Size(30, 30);
-			this->btnAddClient->Location = System::Drawing::Point(12, 313);
+			this->btnAddClient->Location = System::Drawing::Point(12, 266);
 			this->btnAddClient->Name = L"btnAddClient";
 			this->btnAddClient->ShadowDecoration->Parent = this->btnAddClient;
 			this->btnAddClient->Size = System::Drawing::Size(147, 39);
@@ -910,7 +950,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->btnGenerateBill->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnGenerateBill.Image")));
 			this->btnGenerateBill->ImageAlign = System::Windows::Forms::HorizontalAlignment::Left;
 			this->btnGenerateBill->ImageSize = System::Drawing::Size(30, 30);
-			this->btnGenerateBill->Location = System::Drawing::Point(12, 266);
+			this->btnGenerateBill->Location = System::Drawing::Point(12, 313);
 			this->btnGenerateBill->Name = L"btnGenerateBill";
 			this->btnGenerateBill->ShadowDecoration->Parent = this->btnGenerateBill;
 			this->btnGenerateBill->Size = System::Drawing::Size(147, 39);
@@ -965,11 +1005,12 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->lblUserName->Location = System::Drawing::Point(1016, 23);
 			this->lblUserName->Name = L"lblUserName";
 			this->lblUserName->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->lblUserName->Size = System::Drawing::Size(73, 15);
+			this->lblUserName->Size = System::Drawing::Size(37, 15);
 			this->lblUserName->TabIndex = 1;
-			this->lblUserName->Text = L"lblUserName";
+			this->lblUserName->Text = L"HILDA";
 			this->lblUserName->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
 			this->lblUserName->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
+			this->lblUserName->Click += gcnew System::EventHandler(this, &Administrator::lblUserName_Click);
 			// 
 			// guna2CirclePictureBox1
 			// 
@@ -1138,6 +1179,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->bunifuLabel10->Text = L"bunifuLabel10";
 			this->bunifuLabel10->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
 			this->bunifuLabel10->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
+			this->bunifuLabel10->Visible = false;
 			// 
 			// bunifuShadowPanel6
 			// 
@@ -1195,6 +1237,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->bunifuLabel2->Text = L"lblMonthlyProfit";
 			this->bunifuLabel2->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
 			this->bunifuLabel2->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
+			this->bunifuLabel2->Visible = false;
 			// 
 			// bunifuShadowPanel5
 			// 
@@ -1313,6 +1356,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->lblTotalDueBills->Text = L"lblTotalDueBills";
 			this->lblTotalDueBills->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
 			this->lblTotalDueBills->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
+			this->lblTotalDueBills->Visible = false;
 			// 
 			// bunifuShadowPanel3
 			// 
@@ -1588,12 +1632,11 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			// 
 			// Column6
 			// 
-			this->Column6->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column6->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->Column6->DataPropertyName = L"name";
 			this->Column6->HeaderText = L"Name";
 			this->Column6->Name = L"Column6";
 			this->Column6->ReadOnly = true;
-			this->Column6->Width = 74;
 			// 
 			// Column9
 			// 
@@ -1718,12 +1761,11 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			// 
 			// Column2
 			// 
-			this->Column2->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column2->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->Column2->DataPropertyName = L"name";
 			this->Column2->HeaderText = L"Client Name";
 			this->Column2->Name = L"Column2";
 			this->Column2->ReadOnly = true;
-			this->Column2->Width = 117;
 			// 
 			// Column26
 			// 
@@ -1796,10 +1838,10 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->bunifuPages2->Location = System::Drawing::Point(3, 3);
 			this->bunifuPages2->Multiline = true;
 			this->bunifuPages2->Name = L"bunifuPages2";
-			this->bunifuPages2->Page = this->ClientListTabPage;
-			this->bunifuPages2->PageIndex = 0;
-			this->bunifuPages2->PageName = L"ClientListTabPage";
-			this->bunifuPages2->PageTitle = L"Clients List";
+			this->bunifuPages2->Page = this->BillingTabPage;
+			this->bunifuPages2->PageIndex = 1;
+			this->bunifuPages2->PageName = L"BillingTabPage";
+			this->bunifuPages2->PageTitle = L"BillingTabPage";
 			this->bunifuPages2->SelectedIndex = 0;
 			this->bunifuPages2->Size = System::Drawing::Size(1156, 637);
 			this->bunifuPages2->TabIndex = 0;
@@ -3497,15 +3539,104 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->ClientsPaymentsListDataGridView->Size = System::Drawing::Size(1142, 535);
 			this->ClientsPaymentsListDataGridView->TabIndex = 1;
 			this->ClientsPaymentsListDataGridView->Theme = Bunifu::UI::WinForms::BunifuDataGridView::PresetThemes::Navy;
+			this->ClientsPaymentsListDataGridView->CellMouseClick += gcnew System::Windows::Forms::DataGridViewCellMouseEventHandler(this, &Administrator::ClientsPaymentsListDataGridView_CellMouseClick);
+			// 
+			// Column18
+			// 
+			this->Column18->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column18->DataPropertyName = L"client_id";
+			this->Column18->HeaderText = L"Client ID";
+			this->Column18->Name = L"Column18";
+			this->Column18->ReadOnly = true;
+			this->Column18->Width = 97;
+			// 
+			// Column42
+			// 
+			this->Column42->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column42->DataPropertyName = L"name";
+			this->Column42->HeaderText = L"Client Name";
+			this->Column42->Name = L"Column42";
+			this->Column42->ReadOnly = true;
+			// 
+			// Column43
+			// 
+			this->Column43->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column43->DataPropertyName = L"mobile_no";
+			this->Column43->HeaderText = L"Mobile No";
+			this->Column43->Name = L"Column43";
+			this->Column43->ReadOnly = true;
+			// 
+			// Column44
+			// 
+			this->Column44->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column44->DataPropertyName = L"address";
+			this->Column44->HeaderText = L"Address";
+			this->Column44->Name = L"Column44";
+			this->Column44->ReadOnly = true;
+			// 
+			// Column45
+			// 
+			this->Column45->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column45->DataPropertyName = L"balance";
+			dataGridViewCellStyle29->Format = L"N2";
+			dataGridViewCellStyle29->NullValue = L"0";
+			this->Column45->DefaultCellStyle = dataGridViewCellStyle29;
+			this->Column45->HeaderText = L"Balance";
+			this->Column45->Name = L"Column45";
+			this->Column45->ReadOnly = true;
+			this->Column45->Width = 94;
+			// 
+			// Column46
+			// 
+			this->Column46->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column46->DataPropertyName = L"timestamp";
+			dataGridViewCellStyle30->Format = L"d";
+			dataGridViewCellStyle30->NullValue = nullptr;
+			this->Column46->DefaultCellStyle = dataGridViewCellStyle30;
+			this->Column46->HeaderText = L"Date";
+			this->Column46->Name = L"Column46";
+			this->Column46->ReadOnly = true;
 			// 
 			// guna2Panel11
 			// 
+			this->guna2Panel11->Controls->Add(this->TxtSearchBox);
 			this->guna2Panel11->Dock = System::Windows::Forms::DockStyle::Top;
 			this->guna2Panel11->Location = System::Drawing::Point(3, 3);
 			this->guna2Panel11->Name = L"guna2Panel11";
 			this->guna2Panel11->ShadowDecoration->Parent = this->guna2Panel11;
 			this->guna2Panel11->Size = System::Drawing::Size(1142, 68);
 			this->guna2Panel11->TabIndex = 0;
+			// 
+			// TxtSearchBox
+			// 
+			this->TxtSearchBox->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->TxtSearchBox->DefaultText = L"";
+			this->TxtSearchBox->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
+			this->TxtSearchBox->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
+			this->TxtSearchBox->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->TxtSearchBox->DisabledState->Parent = this->TxtSearchBox;
+			this->TxtSearchBox->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->TxtSearchBox->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->TxtSearchBox->FocusedState->Parent = this->TxtSearchBox;
+			this->TxtSearchBox->Font = (gcnew System::Drawing::Font(L"Roboto", 9));
+			this->TxtSearchBox->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->TxtSearchBox->HoverState->Parent = this->TxtSearchBox;
+			this->TxtSearchBox->Location = System::Drawing::Point(714, 15);
+			this->TxtSearchBox->Name = L"TxtSearchBox";
+			this->TxtSearchBox->PasswordChar = '\0';
+			this->TxtSearchBox->PlaceholderText = L"Search by: Client ID/Client Name";
+			this->TxtSearchBox->SelectedText = L"";
+			this->TxtSearchBox->ShadowDecoration->Parent = this->TxtSearchBox;
+			this->TxtSearchBox->Size = System::Drawing::Size(359, 36);
+			this->TxtSearchBox->Style = Guna::UI2::WinForms::Enums::TextBoxStyle::Material;
+			this->TxtSearchBox->TabIndex = 0;
+			this->TxtSearchBox->TextChanged += gcnew System::EventHandler(this, &Administrator::TxtSearchBox_TextChanged);
 			// 
 			// PaymentTabPage
 			// 
@@ -3614,81 +3745,128 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			// 
 			// Column33
 			// 
-			this->Column33->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column33->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column33->DataPropertyName = L"timestamp";
 			dataGridViewCellStyle34->Format = L"d";
 			dataGridViewCellStyle34->NullValue = nullptr;
 			this->Column33->DefaultCellStyle = dataGridViewCellStyle34;
 			this->Column33->HeaderText = L"Date";
 			this->Column33->Name = L"Column33";
 			this->Column33->ReadOnly = true;
-			this->Column33->Width = 70;
 			// 
 			// Column41
 			// 
-			this->Column41->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column41->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column41->DataPropertyName = L"reference_no";
 			this->Column41->HeaderText = L"Ref No.";
 			this->Column41->Name = L"Column41";
 			this->Column41->ReadOnly = true;
-			this->Column41->Width = 90;
 			// 
 			// Column38
 			// 
-			this->Column38->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column38->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column38->DataPropertyName = L"debit";
 			dataGridViewCellStyle35->Format = L"N2";
 			dataGridViewCellStyle35->NullValue = L"0";
 			this->Column38->DefaultCellStyle = dataGridViewCellStyle35;
 			this->Column38->HeaderText = L"Debit";
 			this->Column38->Name = L"Column38";
 			this->Column38->ReadOnly = true;
-			this->Column38->Width = 74;
 			// 
 			// Column39
 			// 
-			this->Column39->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column39->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column39->DataPropertyName = L"credit";
 			dataGridViewCellStyle36->Format = L"N2";
 			dataGridViewCellStyle36->NullValue = L"0";
 			this->Column39->DefaultCellStyle = dataGridViewCellStyle36;
 			this->Column39->HeaderText = L"Credit";
 			this->Column39->Name = L"Column39";
 			this->Column39->ReadOnly = true;
-			this->Column39->Width = 78;
 			// 
 			// Column40
 			// 
-			this->Column40->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Column40->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Column40->DataPropertyName = L"balance";
 			dataGridViewCellStyle37->Format = L"N2";
 			dataGridViewCellStyle37->NullValue = L"0";
 			this->Column40->DefaultCellStyle = dataGridViewCellStyle37;
 			this->Column40->HeaderText = L"Balance";
 			this->Column40->Name = L"Column40";
 			this->Column40->ReadOnly = true;
-			this->Column40->Width = 94;
 			// 
 			// guna2Panel12
 			// 
+			this->guna2Panel12->Controls->Add(this->btnBack);
+			this->guna2Panel12->Controls->Add(this->TxtTransactionCode);
 			this->guna2Panel12->Controls->Add(this->btn_Submit);
-			this->guna2Panel12->Controls->Add(this->bunifuDatePicker1);
-			this->guna2Panel12->Controls->Add(this->bunifuLabel40);
+			this->guna2Panel12->Controls->Add(this->DateOfPaymentDatePicker);
 			this->guna2Panel12->Controls->Add(this->bunifuLabel39);
 			this->guna2Panel12->Controls->Add(this->bunifuLabel38);
 			this->guna2Panel12->Controls->Add(this->bunifuLabel37);
 			this->guna2Panel12->Controls->Add(this->bunifuLabel36);
-			this->guna2Panel12->Controls->Add(this->bunifuLabel28);
 			this->guna2Panel12->Controls->Add(this->bunifuLabel26);
+			this->guna2Panel12->Controls->Add(this->bunifuLabel24);
 			this->guna2Panel12->Controls->Add(this->bunifuLabel25);
-			this->guna2Panel12->Controls->Add(this->guna2TextBox9);
-			this->guna2Panel12->Controls->Add(this->guna2TextBox8);
-			this->guna2Panel12->Controls->Add(this->guna2TextBox7);
-			this->guna2Panel12->Controls->Add(this->guna2TextBox5);
-			this->guna2Panel12->Controls->Add(this->guna2TextBox3);
-			this->guna2Panel12->Controls->Add(this->txt_Credit);
-			this->guna2Panel12->Controls->Add(this->guna2TextBox1);
+			this->guna2Panel12->Controls->Add(this->txt_client_id);
+			this->guna2Panel12->Controls->Add(this->txt_client_name);
+			this->guna2Panel12->Controls->Add(this->txt_reference_number);
+			this->guna2Panel12->Controls->Add(this->TxtBalance);
+			this->guna2Panel12->Controls->Add(this->TxtCredit);
 			this->guna2Panel12->Dock = System::Windows::Forms::DockStyle::Left;
 			this->guna2Panel12->Location = System::Drawing::Point(3, 3);
 			this->guna2Panel12->Name = L"guna2Panel12";
 			this->guna2Panel12->ShadowDecoration->Parent = this->guna2Panel12;
 			this->guna2Panel12->Size = System::Drawing::Size(438, 603);
 			this->guna2Panel12->TabIndex = 0;
+			this->guna2Panel12->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Administrator::guna2Panel12_Paint);
+			// 
+			// btnBack
+			// 
+			this->btnBack->ButtonMode = Guna::UI2::WinForms::Enums::ButtonMode::RadioButton;
+			this->btnBack->CheckedState->Parent = this->btnBack;
+			this->btnBack->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnBack->CustomImages->Parent = this->btnBack;
+			this->btnBack->FillColor = System::Drawing::Color::Transparent;
+			this->btnBack->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
+			this->btnBack->ForeColor = System::Drawing::Color::White;
+			this->btnBack->HoverState->Parent = this->btnBack;
+			this->btnBack->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnBack.Image")));
+			this->btnBack->ImageSize = System::Drawing::Size(30, 30);
+			this->btnBack->Location = System::Drawing::Point(3, 3);
+			this->btnBack->Name = L"btnBack";
+			this->btnBack->ShadowDecoration->Parent = this->btnBack;
+			this->btnBack->Size = System::Drawing::Size(45, 45);
+			this->btnBack->TabIndex = 22;
+			this->btnBack->UseTransparentBackground = true;
+			// 
+			// TxtTransactionCode
+			// 
+			this->TxtTransactionCode->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->TxtTransactionCode->DefaultText = L"";
+			this->TxtTransactionCode->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
+			this->TxtTransactionCode->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
+			this->TxtTransactionCode->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->TxtTransactionCode->DisabledState->Parent = this->TxtTransactionCode;
+			this->TxtTransactionCode->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
+			this->TxtTransactionCode->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->TxtTransactionCode->FocusedState->Parent = this->TxtTransactionCode;
+			this->TxtTransactionCode->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->TxtTransactionCode->HoverState->Parent = this->TxtTransactionCode;
+			this->TxtTransactionCode->Location = System::Drawing::Point(168, 329);
+			this->TxtTransactionCode->Name = L"TxtTransactionCode";
+			this->TxtTransactionCode->PasswordChar = '\0';
+			this->TxtTransactionCode->PlaceholderText = L"";
+			this->TxtTransactionCode->SelectedText = L"";
+			this->TxtTransactionCode->ShadowDecoration->Parent = this->TxtTransactionCode;
+			this->TxtTransactionCode->Size = System::Drawing::Size(199, 36);
+			this->TxtTransactionCode->TabIndex = 21;
 			// 
 			// btn_Submit
 			// 
@@ -3718,46 +3896,29 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->btn_Submit->UseTransparentBackground = true;
 			this->btn_Submit->Click += gcnew System::EventHandler(this, &Administrator::btn_Submit_Click);
 			// 
-			// bunifuDatePicker1
+			// DateOfPaymentDatePicker
 			// 
-			this->bunifuDatePicker1->BackColor = System::Drawing::Color::Transparent;
-			this->bunifuDatePicker1->BorderRadius = 1;
-			this->bunifuDatePicker1->Color = System::Drawing::Color::Silver;
-			this->bunifuDatePicker1->DateBorderThickness = Bunifu::UI::WinForms::BunifuDatePicker::BorderThickness::Thin;
-			this->bunifuDatePicker1->DateTextAlign = Bunifu::UI::WinForms::BunifuDatePicker::TextAlign::Left;
-			this->bunifuDatePicker1->DisabledColor = System::Drawing::Color::Gray;
-			this->bunifuDatePicker1->DisplayWeekNumbers = false;
-			this->bunifuDatePicker1->DPHeight = 0;
-			this->bunifuDatePicker1->DropDownAlign = System::Windows::Forms::LeftRightAlignment::Right;
-			this->bunifuDatePicker1->FillDatePicker = false;
-			this->bunifuDatePicker1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
-			this->bunifuDatePicker1->ForeColor = System::Drawing::Color::Black;
-			this->bunifuDatePicker1->Icon = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bunifuDatePicker1.Icon")));
-			this->bunifuDatePicker1->IconColor = System::Drawing::Color::Gray;
-			this->bunifuDatePicker1->IconLocation = Bunifu::UI::WinForms::BunifuDatePicker::Indicator::Right;
-			this->bunifuDatePicker1->LeftTextMargin = 5;
-			this->bunifuDatePicker1->Location = System::Drawing::Point(171, 351);
-			this->bunifuDatePicker1->MinimumSize = System::Drawing::Size(4, 32);
-			this->bunifuDatePicker1->Name = L"bunifuDatePicker1";
-			this->bunifuDatePicker1->Size = System::Drawing::Size(200, 32);
-			this->bunifuDatePicker1->TabIndex = 19;
-			// 
-			// bunifuLabel40
-			// 
-			this->bunifuLabel40->AllowParentOverrides = false;
-			this->bunifuLabel40->AutoEllipsis = false;
-			this->bunifuLabel40->Cursor = System::Windows::Forms::Cursors::Default;
-			this->bunifuLabel40->CursorType = System::Windows::Forms::Cursors::Default;
-			this->bunifuLabel40->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->bunifuLabel40->Location = System::Drawing::Point(36, 415);
-			this->bunifuLabel40->Name = L"bunifuLabel40";
-			this->bunifuLabel40->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->bunifuLabel40->Size = System::Drawing::Size(29, 15);
-			this->bunifuLabel40->TabIndex = 18;
-			this->bunifuLabel40->Text = L"Total";
-			this->bunifuLabel40->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
-			this->bunifuLabel40->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
+			this->DateOfPaymentDatePicker->BackColor = System::Drawing::Color::Transparent;
+			this->DateOfPaymentDatePicker->BorderRadius = 1;
+			this->DateOfPaymentDatePicker->Color = System::Drawing::Color::Silver;
+			this->DateOfPaymentDatePicker->DateBorderThickness = Bunifu::UI::WinForms::BunifuDatePicker::BorderThickness::Thin;
+			this->DateOfPaymentDatePicker->DateTextAlign = Bunifu::UI::WinForms::BunifuDatePicker::TextAlign::Left;
+			this->DateOfPaymentDatePicker->DisabledColor = System::Drawing::Color::Gray;
+			this->DateOfPaymentDatePicker->DisplayWeekNumbers = false;
+			this->DateOfPaymentDatePicker->DPHeight = 0;
+			this->DateOfPaymentDatePicker->DropDownAlign = System::Windows::Forms::LeftRightAlignment::Right;
+			this->DateOfPaymentDatePicker->FillDatePicker = false;
+			this->DateOfPaymentDatePicker->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
+			this->DateOfPaymentDatePicker->ForeColor = System::Drawing::Color::Black;
+			this->DateOfPaymentDatePicker->Icon = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"DateOfPaymentDatePicker.Icon")));
+			this->DateOfPaymentDatePicker->IconColor = System::Drawing::Color::Gray;
+			this->DateOfPaymentDatePicker->IconLocation = Bunifu::UI::WinForms::BunifuDatePicker::Indicator::Right;
+			this->DateOfPaymentDatePicker->LeftTextMargin = 5;
+			this->DateOfPaymentDatePicker->Location = System::Drawing::Point(168, 461);
+			this->DateOfPaymentDatePicker->MinimumSize = System::Drawing::Size(4, 32);
+			this->DateOfPaymentDatePicker->Name = L"DateOfPaymentDatePicker";
+			this->DateOfPaymentDatePicker->Size = System::Drawing::Size(200, 32);
+			this->DateOfPaymentDatePicker->TabIndex = 19;
 			// 
 			// bunifuLabel39
 			// 
@@ -3767,7 +3928,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->bunifuLabel39->CursorType = System::Windows::Forms::Cursors::Default;
 			this->bunifuLabel39->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bunifuLabel39->Location = System::Drawing::Point(36, 95);
+			this->bunifuLabel39->Location = System::Drawing::Point(35, 131);
 			this->bunifuLabel39->Name = L"bunifuLabel39";
 			this->bunifuLabel39->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->bunifuLabel39->Size = System::Drawing::Size(69, 15);
@@ -3784,7 +3945,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->bunifuLabel38->CursorType = System::Windows::Forms::Cursors::Default;
 			this->bunifuLabel38->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bunifuLabel38->Location = System::Drawing::Point(36, 223);
+			this->bunifuLabel38->Location = System::Drawing::Point(35, 263);
 			this->bunifuLabel38->Name = L"bunifuLabel38";
 			this->bunifuLabel38->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->bunifuLabel38->Size = System::Drawing::Size(46, 15);
@@ -3801,7 +3962,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->bunifuLabel37->CursorType = System::Windows::Forms::Cursors::Default;
 			this->bunifuLabel37->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bunifuLabel37->Location = System::Drawing::Point(36, 31);
+			this->bunifuLabel37->Location = System::Drawing::Point(35, 65);
 			this->bunifuLabel37->Name = L"bunifuLabel37";
 			this->bunifuLabel37->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->bunifuLabel37->Size = System::Drawing::Size(48, 15);
@@ -3818,7 +3979,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->bunifuLabel36->CursorType = System::Windows::Forms::Cursors::Default;
 			this->bunifuLabel36->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bunifuLabel36->Location = System::Drawing::Point(36, 287);
+			this->bunifuLabel36->Location = System::Drawing::Point(35, 395);
 			this->bunifuLabel36->Name = L"bunifuLabel36";
 			this->bunifuLabel36->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->bunifuLabel36->Size = System::Drawing::Size(33, 15);
@@ -3826,23 +3987,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->bunifuLabel36->Text = L"Credit";
 			this->bunifuLabel36->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
 			this->bunifuLabel36->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
-			// 
-			// bunifuLabel28
-			// 
-			this->bunifuLabel28->AllowParentOverrides = false;
-			this->bunifuLabel28->AutoEllipsis = false;
-			this->bunifuLabel28->Cursor = System::Windows::Forms::Cursors::Default;
-			this->bunifuLabel28->CursorType = System::Windows::Forms::Cursors::Default;
-			this->bunifuLabel28->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->bunifuLabel28->Location = System::Drawing::Point(36, 479);
-			this->bunifuLabel28->Name = L"bunifuLabel28";
-			this->bunifuLabel28->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->bunifuLabel28->Size = System::Drawing::Size(81, 15);
-			this->bunifuLabel28->TabIndex = 12;
-			this->bunifuLabel28->Text = L"bunifuLabel28";
-			this->bunifuLabel28->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
-			this->bunifuLabel28->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
 			// 
 			// bunifuLabel26
 			// 
@@ -3852,7 +3996,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->bunifuLabel26->CursorType = System::Windows::Forms::Cursors::Default;
 			this->bunifuLabel26->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bunifuLabel26->Location = System::Drawing::Point(36, 351);
+			this->bunifuLabel26->Location = System::Drawing::Point(35, 461);
 			this->bunifuLabel26->Name = L"bunifuLabel26";
 			this->bunifuLabel26->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->bunifuLabel26->Size = System::Drawing::Size(95, 15);
@@ -3860,6 +4004,23 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->bunifuLabel26->Text = L"Date of Payment";
 			this->bunifuLabel26->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
 			this->bunifuLabel26->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
+			// 
+			// bunifuLabel24
+			// 
+			this->bunifuLabel24->AllowParentOverrides = false;
+			this->bunifuLabel24->AutoEllipsis = false;
+			this->bunifuLabel24->Cursor = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel24->CursorType = System::Windows::Forms::Cursors::Default;
+			this->bunifuLabel24->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bunifuLabel24->Location = System::Drawing::Point(35, 197);
+			this->bunifuLabel24->Name = L"bunifuLabel24";
+			this->bunifuLabel24->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->bunifuLabel24->Size = System::Drawing::Size(107, 15);
+			this->bunifuLabel24->TabIndex = 10;
+			this->bunifuLabel24->Text = L"Reference Number";
+			this->bunifuLabel24->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
+			this->bunifuLabel24->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
 			// 
 			// bunifuLabel25
 			// 
@@ -3869,225 +4030,171 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->bunifuLabel25->CursorType = System::Windows::Forms::Cursors::Default;
 			this->bunifuLabel25->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bunifuLabel25->Location = System::Drawing::Point(36, 159);
+			this->bunifuLabel25->Location = System::Drawing::Point(35, 329);
 			this->bunifuLabel25->Name = L"bunifuLabel25";
 			this->bunifuLabel25->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->bunifuLabel25->Size = System::Drawing::Size(107, 15);
+			this->bunifuLabel25->Size = System::Drawing::Size(100, 15);
 			this->bunifuLabel25->TabIndex = 10;
-			this->bunifuLabel25->Text = L"Reference Number";
+			this->bunifuLabel25->Text = L"Transaction Code";
 			this->bunifuLabel25->TextAlignment = System::Drawing::ContentAlignment::TopLeft;
 			this->bunifuLabel25->TextFormat = Bunifu::UI::WinForms::BunifuLabel::TextFormattingOptions::Default;
 			// 
-			// guna2TextBox9
+			// txt_client_id
 			// 
-			this->guna2TextBox9->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->guna2TextBox9->DefaultText = L"";
-			this->guna2TextBox9->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+			this->txt_client_id->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->txt_client_id->DefaultText = L"";
+			this->txt_client_id->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
 				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
-			this->guna2TextBox9->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+			this->txt_client_id->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
 				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
-			this->guna2TextBox9->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+			this->txt_client_id->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
 				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->guna2TextBox9->DisabledState->Parent = this->guna2TextBox9;
-			this->guna2TextBox9->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+			this->txt_client_id->DisabledState->Parent = this->txt_client_id;
+			this->txt_client_id->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
 				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->guna2TextBox9->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+			this->txt_client_id->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->guna2TextBox9->FocusedState->Parent = this->guna2TextBox9;
-			this->guna2TextBox9->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->txt_client_id->FocusedState->Parent = this->txt_client_id;
+			this->txt_client_id->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->guna2TextBox9->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+			this->txt_client_id->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->guna2TextBox9->HoverState->Parent = this->guna2TextBox9;
-			this->guna2TextBox9->Location = System::Drawing::Point(171, 31);
-			this->guna2TextBox9->Name = L"guna2TextBox9";
-			this->guna2TextBox9->PasswordChar = '\0';
-			this->guna2TextBox9->PlaceholderText = L"";
-			this->guna2TextBox9->SelectedText = L"";
-			this->guna2TextBox9->ShadowDecoration->Parent = this->guna2TextBox9;
-			this->guna2TextBox9->Size = System::Drawing::Size(200, 36);
-			this->guna2TextBox9->TabIndex = 8;
+			this->txt_client_id->HoverState->Parent = this->txt_client_id;
+			this->txt_client_id->Location = System::Drawing::Point(168, 65);
+			this->txt_client_id->Name = L"txt_client_id";
+			this->txt_client_id->PasswordChar = '\0';
+			this->txt_client_id->PlaceholderText = L"";
+			this->txt_client_id->ReadOnly = true;
+			this->txt_client_id->SelectedText = L"";
+			this->txt_client_id->ShadowDecoration->Parent = this->txt_client_id;
+			this->txt_client_id->Size = System::Drawing::Size(200, 36);
+			this->txt_client_id->TabIndex = 8;
 			// 
-			// guna2TextBox8
+			// txt_client_name
 			// 
-			this->guna2TextBox8->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->guna2TextBox8->DefaultText = L"";
-			this->guna2TextBox8->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+			this->txt_client_name->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->txt_client_name->DefaultText = L"";
+			this->txt_client_name->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
 				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
-			this->guna2TextBox8->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+			this->txt_client_name->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
 				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
-			this->guna2TextBox8->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+			this->txt_client_name->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
 				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->guna2TextBox8->DisabledState->Parent = this->guna2TextBox8;
-			this->guna2TextBox8->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+			this->txt_client_name->DisabledState->Parent = this->txt_client_name;
+			this->txt_client_name->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
 				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->guna2TextBox8->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+			this->txt_client_name->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->guna2TextBox8->FocusedState->Parent = this->guna2TextBox8;
-			this->guna2TextBox8->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->txt_client_name->FocusedState->Parent = this->txt_client_name;
+			this->txt_client_name->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->guna2TextBox8->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+			this->txt_client_name->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->guna2TextBox8->HoverState->Parent = this->guna2TextBox8;
-			this->guna2TextBox8->Location = System::Drawing::Point(171, 95);
-			this->guna2TextBox8->Name = L"guna2TextBox8";
-			this->guna2TextBox8->PasswordChar = '\0';
-			this->guna2TextBox8->PlaceholderText = L"";
-			this->guna2TextBox8->SelectedText = L"";
-			this->guna2TextBox8->ShadowDecoration->Parent = this->guna2TextBox8;
-			this->guna2TextBox8->Size = System::Drawing::Size(200, 36);
-			this->guna2TextBox8->TabIndex = 7;
+			this->txt_client_name->HoverState->Parent = this->txt_client_name;
+			this->txt_client_name->Location = System::Drawing::Point(168, 131);
+			this->txt_client_name->Name = L"txt_client_name";
+			this->txt_client_name->PasswordChar = '\0';
+			this->txt_client_name->PlaceholderText = L"";
+			this->txt_client_name->ReadOnly = true;
+			this->txt_client_name->SelectedText = L"";
+			this->txt_client_name->ShadowDecoration->Parent = this->txt_client_name;
+			this->txt_client_name->Size = System::Drawing::Size(200, 36);
+			this->txt_client_name->TabIndex = 7;
 			// 
-			// guna2TextBox7
+			// txt_reference_number
 			// 
-			this->guna2TextBox7->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->guna2TextBox7->DefaultText = L"";
-			this->guna2TextBox7->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+			this->txt_reference_number->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->txt_reference_number->DefaultText = L"";
+			this->txt_reference_number->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
 				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
-			this->guna2TextBox7->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+			this->txt_reference_number->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
 				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
-			this->guna2TextBox7->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+			this->txt_reference_number->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
 				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->guna2TextBox7->DisabledState->Parent = this->guna2TextBox7;
-			this->guna2TextBox7->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+			this->txt_reference_number->DisabledState->Parent = this->txt_reference_number;
+			this->txt_reference_number->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
 				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->guna2TextBox7->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+			this->txt_reference_number->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->guna2TextBox7->FocusedState->Parent = this->guna2TextBox7;
-			this->guna2TextBox7->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->txt_reference_number->FocusedState->Parent = this->txt_reference_number;
+			this->txt_reference_number->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->guna2TextBox7->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+			this->txt_reference_number->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->guna2TextBox7->HoverState->Parent = this->guna2TextBox7;
-			this->guna2TextBox7->Location = System::Drawing::Point(171, 159);
-			this->guna2TextBox7->Name = L"guna2TextBox7";
-			this->guna2TextBox7->PasswordChar = '\0';
-			this->guna2TextBox7->PlaceholderText = L"";
-			this->guna2TextBox7->SelectedText = L"";
-			this->guna2TextBox7->ShadowDecoration->Parent = this->guna2TextBox7;
-			this->guna2TextBox7->Size = System::Drawing::Size(200, 36);
-			this->guna2TextBox7->TabIndex = 6;
+			this->txt_reference_number->HoverState->Parent = this->txt_reference_number;
+			this->txt_reference_number->Location = System::Drawing::Point(168, 197);
+			this->txt_reference_number->Name = L"txt_reference_number";
+			this->txt_reference_number->PasswordChar = '\0';
+			this->txt_reference_number->PlaceholderText = L"";
+			this->txt_reference_number->ReadOnly = true;
+			this->txt_reference_number->SelectedText = L"";
+			this->txt_reference_number->ShadowDecoration->Parent = this->txt_reference_number;
+			this->txt_reference_number->Size = System::Drawing::Size(200, 36);
+			this->txt_reference_number->TabIndex = 6;
 			// 
-			// guna2TextBox5
+			// TxtBalance
 			// 
-			this->guna2TextBox5->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->guna2TextBox5->DefaultText = L"";
-			this->guna2TextBox5->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+			this->TxtBalance->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->TxtBalance->DefaultText = L"";
+			this->TxtBalance->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
 				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
-			this->guna2TextBox5->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+			this->TxtBalance->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
 				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
-			this->guna2TextBox5->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+			this->TxtBalance->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
 				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->guna2TextBox5->DisabledState->Parent = this->guna2TextBox5;
-			this->guna2TextBox5->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+			this->TxtBalance->DisabledState->Parent = this->TxtBalance;
+			this->TxtBalance->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
 				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->guna2TextBox5->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+			this->TxtBalance->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->guna2TextBox5->FocusedState->Parent = this->guna2TextBox5;
-			this->guna2TextBox5->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->TxtBalance->FocusedState->Parent = this->TxtBalance;
+			this->TxtBalance->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->guna2TextBox5->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+			this->TxtBalance->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->guna2TextBox5->HoverState->Parent = this->guna2TextBox5;
-			this->guna2TextBox5->Location = System::Drawing::Point(171, 479);
-			this->guna2TextBox5->Name = L"guna2TextBox5";
-			this->guna2TextBox5->PasswordChar = '\0';
-			this->guna2TextBox5->PlaceholderText = L"";
-			this->guna2TextBox5->SelectedText = L"";
-			this->guna2TextBox5->ShadowDecoration->Parent = this->guna2TextBox5;
-			this->guna2TextBox5->Size = System::Drawing::Size(200, 36);
-			this->guna2TextBox5->TabIndex = 4;
+			this->TxtBalance->HoverState->Parent = this->TxtBalance;
+			this->TxtBalance->Location = System::Drawing::Point(168, 263);
+			this->TxtBalance->Name = L"TxtBalance";
+			this->TxtBalance->PasswordChar = '\0';
+			this->TxtBalance->PlaceholderText = L"";
+			this->TxtBalance->ReadOnly = true;
+			this->TxtBalance->SelectedText = L"";
+			this->TxtBalance->ShadowDecoration->Parent = this->TxtBalance;
+			this->TxtBalance->Size = System::Drawing::Size(200, 36);
+			this->TxtBalance->TabIndex = 2;
+			this->TxtBalance->Validating += gcnew System::ComponentModel::CancelEventHandler(this, &Administrator::TxtBalance_Validating);
 			// 
-			// guna2TextBox3
+			// TxtCredit
 			// 
-			this->guna2TextBox3->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->guna2TextBox3->DefaultText = L"";
-			this->guna2TextBox3->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+			this->TxtCredit->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->TxtCredit->DefaultText = L"";
+			this->TxtCredit->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
 				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
-			this->guna2TextBox3->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+			this->TxtCredit->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
 				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
-			this->guna2TextBox3->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+			this->TxtCredit->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
 				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->guna2TextBox3->DisabledState->Parent = this->guna2TextBox3;
-			this->guna2TextBox3->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
+			this->TxtCredit->DisabledState->Parent = this->TxtCredit;
+			this->TxtCredit->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
 				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->guna2TextBox3->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+			this->TxtCredit->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->guna2TextBox3->FocusedState->Parent = this->guna2TextBox3;
-			this->guna2TextBox3->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->TxtCredit->FocusedState->Parent = this->TxtCredit;
+			this->TxtCredit->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->guna2TextBox3->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
+			this->TxtCredit->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
 				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->guna2TextBox3->HoverState->Parent = this->guna2TextBox3;
-			this->guna2TextBox3->Location = System::Drawing::Point(171, 223);
-			this->guna2TextBox3->Name = L"guna2TextBox3";
-			this->guna2TextBox3->PasswordChar = '\0';
-			this->guna2TextBox3->PlaceholderText = L"";
-			this->guna2TextBox3->SelectedText = L"";
-			this->guna2TextBox3->ShadowDecoration->Parent = this->guna2TextBox3;
-			this->guna2TextBox3->Size = System::Drawing::Size(200, 36);
-			this->guna2TextBox3->TabIndex = 2;
-			// 
-			// txt_Credit
-			// 
-			this->txt_Credit->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->txt_Credit->DefaultText = L"";
-			this->txt_Credit->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
-				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
-			this->txt_Credit->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
-				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
-			this->txt_Credit->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
-				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->txt_Credit->DisabledState->Parent = this->txt_Credit;
-			this->txt_Credit->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
-				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->txt_Credit->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
-				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->txt_Credit->FocusedState->Parent = this->txt_Credit;
-			this->txt_Credit->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->txt_Credit->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
-				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->txt_Credit->HoverState->Parent = this->txt_Credit;
-			this->txt_Credit->Location = System::Drawing::Point(171, 287);
-			this->txt_Credit->Name = L"txt_Credit";
-			this->txt_Credit->PasswordChar = '\0';
-			this->txt_Credit->PlaceholderText = L"";
-			this->txt_Credit->SelectedText = L"";
-			this->txt_Credit->ShadowDecoration->Parent = this->txt_Credit;
-			this->txt_Credit->Size = System::Drawing::Size(200, 36);
-			this->txt_Credit->TabIndex = 1;
-			this->txt_Credit->Validating += gcnew System::ComponentModel::CancelEventHandler(this, &Administrator::txt_Credit_Validating);
-			// 
-			// guna2TextBox1
-			// 
-			this->guna2TextBox1->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->guna2TextBox1->DefaultText = L"";
-			this->guna2TextBox1->DisabledState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
-				static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(208)));
-			this->guna2TextBox1->DisabledState->FillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
-				static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(226)));
-			this->guna2TextBox1->DisabledState->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
-				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->guna2TextBox1->DisabledState->Parent = this->guna2TextBox1;
-			this->guna2TextBox1->DisabledState->PlaceholderForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(138)),
-				static_cast<System::Int32>(static_cast<System::Byte>(138)), static_cast<System::Int32>(static_cast<System::Byte>(138)));
-			this->guna2TextBox1->FocusedState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
-				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->guna2TextBox1->FocusedState->Parent = this->guna2TextBox1;
-			this->guna2TextBox1->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->guna2TextBox1->HoverState->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)),
-				static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->guna2TextBox1->HoverState->Parent = this->guna2TextBox1;
-			this->guna2TextBox1->Location = System::Drawing::Point(171, 415);
-			this->guna2TextBox1->Name = L"guna2TextBox1";
-			this->guna2TextBox1->PasswordChar = '\0';
-			this->guna2TextBox1->PlaceholderText = L"";
-			this->guna2TextBox1->SelectedText = L"";
-			this->guna2TextBox1->ShadowDecoration->Parent = this->guna2TextBox1;
-			this->guna2TextBox1->Size = System::Drawing::Size(200, 36);
-			this->guna2TextBox1->TabIndex = 0;
+			this->TxtCredit->HoverState->Parent = this->TxtCredit;
+			this->TxtCredit->Location = System::Drawing::Point(168, 395);
+			this->TxtCredit->Name = L"TxtCredit";
+			this->TxtCredit->PasswordChar = '\0';
+			this->TxtCredit->PlaceholderText = L"";
+			this->TxtCredit->SelectedText = L"";
+			this->TxtCredit->ShadowDecoration->Parent = this->TxtCredit;
+			this->TxtCredit->Size = System::Drawing::Size(200, 36);
+			this->TxtCredit->TabIndex = 1;
+			this->TxtCredit->Leave += gcnew System::EventHandler(this, &Administrator::TxtCredit_Leave);
+			this->TxtCredit->Validating += gcnew System::ComponentModel::CancelEventHandler(this, &Administrator::TxtCredit_Validating);
 			// 
 			// FinanceTabPage
 			// 
@@ -4115,6 +4222,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			// chartControl4
 			// 
 			this->chartControl4->AppearanceNameSerializable = L"Gray";
+			this->chartControl4->DataSource = this->sqlDataSource1;
 			xyDiagram3->AxisX->Title->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			xyDiagram3->AxisX->Title->Text = L"Months";
@@ -4133,10 +4241,23 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			sideBySideBarSeriesView1->Color = System::Drawing::Color::Navy;
 			series3->View = sideBySideBarSeriesView1;
 			this->chartControl4->SeriesSerializable = gcnew cli::array< DevExpress::XtraCharts::Series^  >(1) { series3 };
+			this->chartControl4->SeriesTemplate->ArgumentDataMember = L"Query.client_id";
+			this->chartControl4->SeriesTemplate->ValueDataMembersSerializable = L"Query.balance";
 			this->chartControl4->Size = System::Drawing::Size(587, 314);
 			this->chartControl4->TabIndex = 1;
 			chartTitle1->Text = L"Volume of Water Consumed";
 			this->chartControl4->Titles->AddRange(gcnew cli::array< DevExpress::XtraCharts::ChartTitle^  >(1) { chartTitle1 });
+			// 
+			// sqlDataSource1
+			// 
+			this->sqlDataSource1->ConnectionName = L"localhost_Water_Management_System_Database_Connection";
+			this->sqlDataSource1->Name = L"sqlDataSource1";
+			customSqlQuery1->Name = L"Query";
+			customSqlQuery1->Sql = L"select payments_tbl.client_id, payments_tbl.balance from payments_tbl";
+			this->sqlDataSource1->Queries->AddRange(gcnew cli::array< DevExpress::DataAccess::Sql::SqlQuery^  >(1) { customSqlQuery1 });
+			this->sqlDataSource1->ResultSchemaSerializable = L"PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZ"
+				L"T0iY2xpZW50X2lkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImJhbGFuY2UiIFR5cGU9IkRlY"
+				L"2ltYWwiIC8+PC9WaWV3PjwvRGF0YVNldD4=";
 			// 
 			// chartControl3
 			// 
@@ -4607,62 +4728,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			// 
 			this->errorProvider2->ContainerControl = this;
 			// 
-			// Column18
-			// 
-			this->Column18->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			this->Column18->DataPropertyName = L"client_id";
-			this->Column18->HeaderText = L"Client ID";
-			this->Column18->Name = L"Column18";
-			this->Column18->ReadOnly = true;
-			this->Column18->Width = 97;
-			// 
-			// Column42
-			// 
-			this->Column42->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->Column42->DataPropertyName = L"name";
-			this->Column42->HeaderText = L"Client Name";
-			this->Column42->Name = L"Column42";
-			this->Column42->ReadOnly = true;
-			// 
-			// Column43
-			// 
-			this->Column43->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->Column43->DataPropertyName = L"mobile_no";
-			this->Column43->HeaderText = L"Mobile No";
-			this->Column43->Name = L"Column43";
-			this->Column43->ReadOnly = true;
-			// 
-			// Column44
-			// 
-			this->Column44->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->Column44->DataPropertyName = L"address";
-			this->Column44->HeaderText = L"Address";
-			this->Column44->Name = L"Column44";
-			this->Column44->ReadOnly = true;
-			// 
-			// Column45
-			// 
-			this->Column45->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			this->Column45->DataPropertyName = L"balance";
-			dataGridViewCellStyle29->Format = L"N2";
-			dataGridViewCellStyle29->NullValue = L"0";
-			this->Column45->DefaultCellStyle = dataGridViewCellStyle29;
-			this->Column45->HeaderText = L"Balance";
-			this->Column45->Name = L"Column45";
-			this->Column45->ReadOnly = true;
-			this->Column45->Width = 94;
-			// 
-			// Column46
-			// 
-			this->Column46->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->Column46->DataPropertyName = L"timestamp";
-			dataGridViewCellStyle30->Format = L"d";
-			dataGridViewCellStyle30->NullValue = nullptr;
-			this->Column46->DefaultCellStyle = dataGridViewCellStyle30;
-			this->Column46->HeaderText = L"Date";
-			this->Column46->Name = L"Column46";
-			this->Column46->ReadOnly = true;
-			// 
 			// Administrator
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(7, 15);
@@ -4735,6 +4800,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			this->bunifuPages3->ResumeLayout(false);
 			this->ClientsListTabPage->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ClientsPaymentsListDataGridView))->EndInit();
+			this->guna2Panel11->ResumeLayout(false);
 			this->PaymentTabPage->ResumeLayout(false);
 			this->guna2Panel20->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PaymentDataGridView))->EndInit();
@@ -4780,6 +4846,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 		fillClientListDatagridview();
 
 		bunifuPages1->PageName = "GenerateBillTabPage";
+		bunifuPages2->PageName = "ClientListTabPage";
 	}
 	private: System::Void btnAddClient_Click(System::Object^ sender, System::EventArgs^ e) {
 		fillClientsDatagridview();
@@ -4805,7 +4872,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 
 		   void countNumberOfClients()
 		   {
-			   String^ constr = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+			   String^ constr = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 			   PgSqlConnection^ con = gcnew PgSqlConnection(constr);
 			   try
 			   {
@@ -4828,7 +4895,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 
 		   void countNumberOfBills()
 		   {
-			   String^ constr = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+			   String^ constr="User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 			   PgSqlConnection^ con = gcnew PgSqlConnection(constr);
 			   try
 			   {
@@ -4850,7 +4917,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 
 		   void countNumberOfPaidBills()
 		   {
-			   String^ constr = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+			   String^ constr = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 			   PgSqlConnection^ con = gcnew PgSqlConnection(constr);
 			   try
 			   {
@@ -4872,10 +4939,10 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 
 		   void fillLatestMeterReadingsDatagridview()
 		   {
-			   String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+			   String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 			   PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 			   try {
-				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT DISTINCT ON (BILLING_TBL.CLIENT_ID) BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME, BILLING_TBL.METER_READING_DATE, BILLING_TBL.METER_READING, LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS PREVIOUS_METER_READING,BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC ", conDatabase);
+				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT DISTINCT ON (BILLING_TBL.CLIENT_ID) BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME, BILLING_TBL.METER_READING_DATE, BILLING_TBL.METER_READING,BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC ", conDatabase);
 				   PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
 				   sda->SelectCommand = cmdDatabase;
 				   DataTable^ dbdataset = gcnew DataTable();
@@ -4891,7 +4958,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 		   }
 		   void fillLatestPaidBillsDatagridview()
 		   {
-			   String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+			   String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 			   PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 			   try {
 				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT  payments_tbl.client_id, clients_tbl.name, payments_tbl.reference_no, payments_tbl.credit, payments_tbl.paid_date FROM payments_tbl INNER JOIN clients_tbl ON payments_tbl.client_id=clients_tbl.client_id WHERE payments_tbl.credit::numeric>0 ORDER  BY payments_tbl.paid_date DESC; ", conDatabase);
@@ -4911,10 +4978,10 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 
 		   void fillClientListDatagridview()
 		   {
-			   String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+			   String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 			   PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 			   try {
-				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT CLIENTS_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.MOBILE_NO,CLIENTS_TBL.ADDRESS,BILLING_TBL.METER_READING_DATE,LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS PREVIOUS_METER_READING,BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, payments_tbl.balance FROM CLIENTS_TBL LEFT JOIN BILLING_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID left JOIN payments_tbl ON clients_tbl.client_id = payments_tbl.client_id ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
+				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT distinct on (CLIENTS_TBL.CLIENT_ID) CLIENTS_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.MOBILE_NO,CLIENTS_TBL.ADDRESS,BILLING_TBL.METER_READING_DATE,/*LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date DESC)*/BILLING_TBL.METER_READING AS PREVIOUS_METER_READING,BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, payments_tbl.balance FROM CLIENTS_TBL LEFT JOIN BILLING_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID left JOIN payments_tbl ON clients_tbl.client_id = payments_tbl.client_id ORDER BY CLIENTS_TBL.CLIENT_ID,BILLING_TBL.METER_READING desc,payments_tbl.balance desc, BILLING_TBL.METER_READING_DATE::date DESC NULLS LAST", conDatabase);
 				   PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
 				   sda->SelectCommand = cmdDatabase;
 				   DataTable^ dbdataset = gcnew DataTable();
@@ -4931,7 +4998,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 
 		   void fillAllBillsDatagridview()
 		   {
-			   String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+			   String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 			   PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 			   try {
 				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.reference_no,payments_tbl.timestamp, payments_tbl.debit,payments_tbl.balance  FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID INNER JOIN payments_tbl on clients_tbl.client_id= payments_tbl.client_id ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
@@ -4951,7 +5018,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 
 		   void fillClientsDatagridview()
 		   {
-			   String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+			   String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 			   PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 			   try {
 				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT client_id,name,id_no,mobile_no from clients_tbl", conDatabase);
@@ -4971,10 +5038,10 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 
 		   void fillClientsPaymentsListDataGridView()
 		   {
-			   String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+			   String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 			   PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 			   try {
-				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT CLIENTS_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.MOBILE_NO,CLIENTS_TBL.ADDRESS, payments_tbl.balance,payments_tbl.timestamp FROM CLIENTS_TBL left JOIN payments_tbl ON clients_tbl.client_id = payments_tbl.client_id ORDER BY payments_tbl.CLIENT_ID, payments_tbl.timestamp::date DESC", conDatabase);
+				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT distinct on (CLIENTS_TBL.client_id) CLIENTS_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.MOBILE_NO,CLIENTS_TBL.ADDRESS, payments_tbl.balance,payments_tbl.timestamp FROM CLIENTS_TBL left JOIN payments_tbl ON clients_tbl.client_id = payments_tbl.client_id  ORDER BY CLIENTS_TBL.client_id,  payments_tbl.timestamp DESC", conDatabase);
 				   PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
 				   sda->SelectCommand = cmdDatabase;
 				   DataTable^ dbdataset = gcnew DataTable();
@@ -4991,7 +5058,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 		
 
 	private: System::Void txtAllBillsSearchBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+		String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 		PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 		try {
 			PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.reference_no,payments_tbl.timestamp, payments_tbl.debit,payments_tbl.balance::numeric  FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID INNER JOIN payments_tbl on clients_tbl.client_id= payments_tbl.client_id WHERE LOWER(billing_tbl.client_id) LIKE CONCAT('%',LOWER(@search::character varying),'%') OR LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.id_no) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(billing_tbl.reference_no) LIKE CONCAT('%',LOWER(@search::character varying),'%') ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
@@ -5014,7 +5081,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 		btnAllBills->PerformClick();
 	}
 	private: System::Void btnFilterBillsByDue_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+		String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 		PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 		try {
 			PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.reference_no,payments_tbl.timestamp, payments_tbl.debit,payments_tbl.balance::numeric  FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID INNER JOIN payments_tbl on clients_tbl.client_id= payments_tbl.client_id WHERE (payments_tbl.balance::numeric>0) AND (LOWER(billing_tbl.client_id) LIKE CONCAT('%',LOWER(@search::character varying),'%') OR LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.id_no) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(billing_tbl.reference_no) LIKE CONCAT('%',LOWER(@search::character varying),'%')) ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC ", conDatabase);
@@ -5033,7 +5100,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 		}
 	}
 	private: System::Void btnFilterBillsByPaid_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+		String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 		PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 		try {
 			PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.reference_no,payments_tbl.timestamp, payments_tbl.debit,payments_tbl.balance::numeric  FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID INNER JOIN payments_tbl on clients_tbl.client_id= payments_tbl.client_id WHERE (payments_tbl.balance::numeric <= 0) AND (LOWER(billing_tbl.client_id) LIKE CONCAT('%',LOWER(@search::character varying),'%') OR LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.id_no) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(billing_tbl.reference_no) LIKE CONCAT('%',LOWER(@search::character varying),'%')) ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
@@ -5065,7 +5132,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 				gender = rbtnFemale->Text;
 		}
 
-		String^ constr = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+		String^ constr = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 		PgSqlConnection^ con = gcnew PgSqlConnection(constr);
 		try
 		{
@@ -5089,6 +5156,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 		con->Close();
 
 		ClearTextbox();
+		fillClientsDatagridview();
+		GenerateClientID();
 	}
 	private: System::Void ClientListDataGridView_CellMouseClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellMouseEventArgs^ e) {
 		if (e->RowIndex >= 0)
@@ -5097,6 +5166,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			txt_ClientID->Text = row->Cells[0]->Value->ToString();
 			txt_ClientName->Text = row->Cells[1]->Value->ToString();
 			txt_PricePerUnit->Text = "100";
+			txt_RefNo->Text= GenerateReferenceNo();
 
 			//check if the client has no previous meter readings, to prevent null exception
 			if (row->Cells[5]->Value == DBNull::Value)
@@ -5108,16 +5178,14 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 				txt_PreviousMeterReading->Text = row->Cells[5]->Value->ToString();
 			}
 
-			if (row->Cells[6]->Value == DBNull::Value)
+			if (row->Cells[7]->Value == DBNull::Value)
 			{
 				txt_Balance->Text = "0";
 			}
 			else
 			{
-				txt_Balance->Text = row->Cells[6]->Value->ToString();
+				txt_Balance->Text = row->Cells[7]->Value->ToString();
 			}
-
-			GenerateReferenceNo();
 
 			fillClientFinancialStatusDataGridView();
 
@@ -5173,7 +5241,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 	}
 		   void Submit_Billing_Data()
 		   {
-			   String^ constr = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+			   String^ constr = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 			   PgSqlConnection^ con = gcnew PgSqlConnection(constr);
 			   try
 			   {
@@ -5221,11 +5289,20 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			   //new balance = debit - balance;
 			   //new balance = balance - credit;
 
-			   double balance = Convert::ToInt32(txt_Debit->Text) - Convert::ToDouble(txt_Balance->Text);
+			   double balance = Convert::ToInt32(txt_Debit->Text) + Convert::ToDouble(txt_Balance->Text);
 			   return balance;
 		   }
 
-		   void GenerateReferenceNo()
+		   double CalculateBalancePaymentsPage()
+		   {
+			   //new balance = debit - balance;
+			   //new balance = balance - credit;
+
+			   double balance = Convert::ToInt32(TxtBalance->Text) - Convert::ToDouble(TxtCredit->Text);
+			   return balance;
+		   }
+
+		   String^ GenerateReferenceNo()
 		   {
 			   string bill_no;
 			   srand(time(0));
@@ -5233,9 +5310,17 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			   std::tm* now = std::localtime(&t);
 			   String^ client_id2;
 			   int i = 0;
-
-			   client_id2 = txt_ClientID->Text;
-
+		
+		//differentiating btn the two client_id textboxes, for generating reference no.
+			    if (txt_ClientID->Text->Length!=0)
+			    {
+					client_id2 = txt_ClientID->Text;
+				}
+				else
+				{
+					client_id2 = txt_client_id->Text;
+				}
+			
 			   msclr::interop::marshal_context context;
 			   std::string client_id = context.marshal_as<std::string>(client_id2);
 
@@ -5255,7 +5340,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 
 			   bill_no = to_string((now->tm_year + 1900)) + to_string((now->tm_mon + 1)) + to_string((now->tm_mday)) + "-" + (array[1]) + "-" + to_string(rand() % 11 + 0);
 			   String^ bill_no2 = gcnew String(bill_no.c_str());
-			   txt_RefNo->Text = bill_no2;
+			   return bill_no2;
+			   
 		   }
 
 		   void GenerateClientID()
@@ -5271,7 +5357,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 
 		   void fillClientFinancialStatusDataGridView()
 		   {
-			   String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+			   String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 			   PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 			   try {
 				   PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("select timestamp,debit,credit,balance from payments_tbl where client_id='" + txt_ClientID->Text + "'", conDatabase);
@@ -5289,7 +5375,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			   }
 		   }
 	private: System::Void txt_Search_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+		String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 		PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 		try {
 			PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT client_id, name, id_no, mobile_no from clients_tbl WHERE LOWER(clients_tbl.client_id) LIKE CONCAT('%',LOWER(@search::character varying),'%') OR LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.id_no) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.mobile_no) LIKE CONCAT('%',LOWER(@search::text),'%') ORDER BY clients_tbl.CLIENT_ID", conDatabase);
@@ -5308,10 +5394,10 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 		}
 	}
 	private: System::Void txt_SearchBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+		String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 		PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 		try {
-			PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT CLIENTS_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.MOBILE_NO,CLIENTS_TBL.ADDRESS,BILLING_TBL.METER_READING_DATE,LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS PREVIOUS_METER_READING,BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, payments_tbl.balance FROM CLIENTS_TBL LEFT JOIN BILLING_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID left JOIN payments_tbl ON clients_tbl.client_id = payments_tbl.client_id  where LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.client_id) LIKE CONCAT('%',LOWER(@search::text),'%') ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC NULLS LAST", conDatabase);
+			PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT distinct on (CLIENTS_TBL.CLIENT_ID) CLIENTS_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.MOBILE_NO,CLIENTS_TBL.ADDRESS,BILLING_TBL.METER_READING_DATE,/*LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date DESC)*/BILLING_TBL.METER_READING AS PREVIOUS_METER_READING,BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, payments_tbl.balance FROM CLIENTS_TBL LEFT JOIN BILLING_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID left JOIN payments_tbl ON clients_tbl.client_id = payments_tbl.client_id  where LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.client_id) LIKE CONCAT('%',LOWER(@search::text),'%') ORDER BY CLIENTS_TBL.CLIENT_ID,BILLING_TBL.METER_READING desc,payments_tbl.balance desc, BILLING_TBL.METER_READING_DATE::date DESC NULLS LAST", conDatabase);
 			cmdDatabase->Parameters->AddWithValue("@search", txt_SearchBox->Text);
 			PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
 			sda->SelectCommand = cmdDatabase;
@@ -5329,7 +5415,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 	private: System::Void bunifuDatePicker2_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void AllBillsFromDatePicker_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+		String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 		PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 		try {
 			PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.BILL_NO,BILLING_TBL.METER_READING_DATE, BILLING_TBL.METER_READING, LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS PREVIOUS_METER_READING, BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, (BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date)) * 100 AS debit FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID WHERE (LOWER(billing_tbl.client_id) LIKE CONCAT('%',LOWER(@search::character varying),'%') OR LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.id_no) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(billing_tbl.bill_no) LIKE CONCAT('%',LOWER(@search::character varying),'%')) AND BILLING_TBL.METER_READING_DATE::date >= (@FromDate) AND BILLING_TBL.METER_READING_DATE::date < (@ToDate) ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
@@ -5350,7 +5436,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 		}
 	}
 	private: System::Void AllBillsToDatePicker_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = ConfigurationManager::ConnectionStrings["PostgreSql"]->ConnectionString;
+		String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
 		PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
 		try {
 			PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT /*DISTINCT ON (BILLING_TBL.CLIENT_ID)*/ BILLING_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.ID_NO,CLIENTS_TBL.MOBILE_NO,BILLING_TBL.BILL_NO,BILLING_TBL.METER_READING_DATE, BILLING_TBL.METER_READING, LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS PREVIOUS_METER_READING, BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date) AS UNITS_CONSUMED, (BILLING_TBL.METER_READING - LAG(BILLING_TBL.METER_READING) OVER(PARTITION BY BILLING_TBL.CLIENT_ID ORDER BY BILLING_TBL.METER_READING_DATE::date)) * 100 AS debit FROM BILLING_TBL INNER JOIN CLIENTS_TBL ON BILLING_TBL.CLIENT_ID = CLIENTS_TBL.CLIENT_ID WHERE (LOWER(billing_tbl.client_id) LIKE CONCAT('%',LOWER(@search::character varying),'%') OR LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.id_no) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(billing_tbl.bill_no) LIKE CONCAT('%',LOWER(@search::character varying),'%')) AND BILLING_TBL.METER_READING_DATE::date >= (@FromDate) AND BILLING_TBL.METER_READING_DATE::date < (@ToDate) ORDER BY BILLING_TBL.CLIENT_ID, BILLING_TBL.METER_READING_DATE::date DESC", conDatabase);
@@ -5371,17 +5457,17 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 		}
 	}
 	private: System::Void txt_Credit_Validating(System::Object^ sender, System::ComponentModel::CancelEventArgs^ e) {
-		if (String::IsNullOrWhiteSpace(txt_Credit->Text->Trim()))
+		/*if (String::IsNullOrWhiteSpace(TxtCredit->Text->Trim()))
 		{
 			e->Cancel = true;
-			txt_Credit->Focus();
-			errorProvider2->SetError(txt_Credit, "Credit should not be left blank!");
+			TxtCredit->Focus();
+			errorProvider2->SetError(TxtCredit, "Credit should not be left blank!");
 		}
 		else
 		{
 			e->Cancel = false;
-			errorProvider2->SetError(txt_Credit, "");
-		}
+			errorProvider2->SetError(TxtCredit, "");
+		}*/
 	}
 	private: System::Void btn_Submit_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (ValidateChildren(ValidationConstraints::Enabled))
@@ -5389,11 +5475,59 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 		}
 		else
 		{
+			Submit_Payment_Data();
+			fillPaymentDatagridview();
+			
 			ClearTextbox();
 		}
 	}
 	private: System::Void backgroundWorker1_DoWork(System::Object^ sender, System::ComponentModel::DoWorkEventArgs^ e) {
 	}
+
+		   void Submit_Payment_Data()
+		   {
+			   String^ constr = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
+			   PgSqlConnection^ con = gcnew PgSqlConnection(constr);
+			   try
+			   {
+				   con->Open();
+				   PgSqlCommand^ cmd = gcnew PgSqlCommand("INSERT INTO payments_tbl(client_id,reference_no,credit,transaction_code,paid_date,balance) VALUES(@client_id, @reference_no, @credit, @transaction_code, @paid_date, @balance);", con);
+				   cmd->Parameters->AddWithValue("@client_id", txt_client_id->Text);
+				   cmd->Parameters->AddWithValue("@reference_no", txt_reference_number->Text);
+				   cmd->Parameters->AddWithValue("@credit", TxtCredit->Text);
+				   cmd->Parameters->AddWithValue("@transaction_code", TxtTransactionCode->Text);
+				   cmd->Parameters->AddWithValue("@paid_date", DateOfPaymentDatePicker->Value);
+				   cmd->Parameters->AddWithValue("@balance", TxtBalance->Text);
+				   cmd->ExecuteNonQuery();
+				   MessageBox::Show("Successfully Recorded.", "Success");
+			   }
+			   catch (Exception^ ex)
+			   {
+				   MessageBox::Show(ex->Message);
+			   }
+			   con->Close();
+		   }
+
+		void fillPaymentDatagridview()
+	{
+			String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
+			PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
+			try {
+				PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("select payments_tbl.timestamp,payments_tbl.debit,payments_tbl.credit,payments_tbl.balance from payments_tbl where client_id='" + txt_client_id->Text + "'", conDatabase);
+				PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
+				sda->SelectCommand = cmdDatabase;
+				DataTable^ dbdataset = gcnew DataTable();
+				sda->Fill(dbdataset);
+				BindingSource^ bSource = gcnew BindingSource();
+				bSource->DataSource = dbdataset;
+				PaymentDataGridView->DataSource = bSource;
+				sda->Update(dbdataset);
+			}
+			catch (Exception^ ex) {
+				MessageBox::Show(ex->Message);
+			}
+	}
+		
 		   void ClearTextbox()
 		   {
 			   txtAllBillsSearchBox->Clear();
@@ -5425,8 +5559,87 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
 			   txtAllBillsSearchBox->Clear();
 			   //AllBillsFromDatePicker->Value = DateTime::Now;
 			   //AllBillsToDatePicker->Value = DateTime::Now;
-			   txt_Credit->Clear();
+			   TxtCredit->Clear();
+			   TxtBalance->Clear();
+				   TxtTransactionCode->Clear();
 		   }
 	
-	};
+	private: System::Void btnFinance_Click(System::Object^ sender, System::EventArgs^ e) {
+		bunifuPages1->PageName = "FinanceTabPage";
+	}
+private: System::Void ClientsPaymentsListDataGridView_CellMouseClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellMouseEventArgs^ e) {
+
+	if (e->RowIndex >= 0)
+	{
+		DataGridViewRow^ row = ClientsPaymentsListDataGridView->Rows[e->RowIndex];
+		txt_client_id->Text = row->Cells[0]->Value->ToString();
+		txt_client_name->Text = row->Cells[1]->Value->ToString();
+		txt_reference_number->Text = GenerateReferenceNo();
+
+		//check if the client has no previous meter readings, to prevent null exception
+		if (row->Cells[4]->Value == DBNull::Value)
+		{
+			TxtBalance->Text = "0";
+		}
+		else
+		{
+			TxtBalance->Text = row->Cells[4]->Value->ToString();
+		}
+
+		
+		fillPaymentDatagridview();
+
+		bunifuPages3->PageName = "PaymentTabPage";
+	}
+	
+}
+private: System::Void guna2Panel12_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void TxtCredit_Leave(System::Object^ sender, System::EventArgs^ e) {
+	if (ValidateChildren(ValidationConstraints::Enabled))
+	{
+	}
+	else
+	{
+		TxtBalance->Text=CalculateBalancePaymentsPage().ToString();
+	}
+}
+private: System::Void TxtBalance_Validating(System::Object^ sender, System::ComponentModel::CancelEventArgs^ e) {
+	
+}
+private: System::Void TxtCredit_Validating(System::Object^ sender, System::ComponentModel::CancelEventArgs^ e) {
+	if (String::IsNullOrWhiteSpace(TxtCredit->Text->Trim()))
+	{
+		e->Cancel = true;
+		TxtCredit->Focus();
+		errorProvider2->SetError(TxtCredit, "Credit should not be left blank!");
+	}
+	else
+	{
+		e->Cancel = false;
+		errorProvider2->SetError(TxtCredit, "");
+	}
+}
+private: System::Void lblUserName_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void TxtSearchBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ constring = "User Id=postgres;Host=localhost;Database=Water_Management_System_Database;Password=electrospark;Persist Security Info=True;Initial Schema=public;";
+	PgSqlConnection^ conDatabase = gcnew PgSqlConnection(constring);
+	try {
+		PgSqlCommand^ cmdDatabase = gcnew PgSqlCommand("SELECT distinct on (CLIENTS_TBL.client_id) CLIENTS_TBL.CLIENT_ID,CLIENTS_TBL.NAME,CLIENTS_TBL.MOBILE_NO,CLIENTS_TBL.ADDRESS, payments_tbl.balance,payments_tbl.timestamp FROM CLIENTS_TBL left JOIN payments_tbl ON clients_tbl.client_id = payments_tbl.client_id where LOWER(clients_tbl.name) LIKE CONCAT('%',LOWER(@search::text),'%') OR LOWER(clients_tbl.client_id) LIKE CONCAT('%',LOWER(@search::text),'%') ORDER BY CLIENTS_TBL.client_id,  payments_tbl.timestamp DESC", conDatabase);
+		cmdDatabase->Parameters->AddWithValue("@search", TxtSearchBox->Text);
+		PgSqlDataAdapter^ sda = gcnew PgSqlDataAdapter();
+		sda->SelectCommand = cmdDatabase;
+		DataTable^ dbdataset = gcnew DataTable();
+		sda->Fill(dbdataset);
+		BindingSource^ bSource = gcnew BindingSource();
+		bSource->DataSource = dbdataset;
+		ClientsPaymentsListDataGridView->DataSource = bSource;
+		sda->Update(dbdataset);
+	}
+	catch (Exception^ ex) {
+		MessageBox::Show(ex->Message);
+	}
+}
+};
 }

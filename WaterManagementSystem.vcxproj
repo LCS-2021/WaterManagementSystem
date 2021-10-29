@@ -379,15 +379,29 @@
     <ClCompile Include="FillBillingTable.cpp" />
     <ClCompile Include="FillClientsTable.cpp" />
     <ClCompile Include="FillPaymentsTable.cpp" />
+    <ClCompile Include="Login.cpp" />
+    <ClCompile Include="SplashScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Administrator.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Login.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="SplashScreen.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Administrator.resx">
       <DependentUpon>Administrator.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

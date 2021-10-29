@@ -12,7 +12,7 @@ using namespace System;
 using namespace System::Windows::Forms;
 [STAThreadAttribute]
 
-void main(array<String^>^ args)
+void mainqq(array<String^>^ args)
 {
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::EnableVisualStyles();
